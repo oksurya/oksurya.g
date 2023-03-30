@@ -95,9 +95,9 @@ const Header = () => {
       
         <a
     onClick={() => setSlideClose(true)} // add onClick handler
-    className="focus:text-indigo-500 hover:text-indigo-500 inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
+    className="focus:text-indigo-700 hover:text-indigo-700 inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
   >
-    <svg class="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/></svg>
+    <svg class="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/></svg>
 
   </a>
  
