@@ -90,7 +90,7 @@ const Header = () => {
   return (
     <>
    
-<div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-4 border-indigo-500">
+<div class="md:block hidden fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-4 border-indigo-500">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
       
         <a
