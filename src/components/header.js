@@ -90,14 +90,14 @@ const Header = () => {
   return (
     <>
    
-<div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+<div class="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-4 border-indigo-500">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
       
         <a
     onClick={() => setSlideClose(true)} // add onClick handler
     className="focus:text-indigo-500 hover:text-indigo-500 inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
   >
-    <svg class="w-6 h-6 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/></svg>
+    <svg class="w-7 h-7 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/></svg>
 
   </a>
  
@@ -111,7 +111,7 @@ const Header = () => {
 </div>
 
 
-    <header className="relative z-10 border-t-4 border-indigo-500 bg-indigo-700">
+    <header className="relative z-10 border-b-4 border-indigo-500 bg-indigo-700">
        <Transition.Root show={closesearch} as={Fragment}>
       <Dialog as="div" className="fixed z-10 inset-0 overflow-hidden" onClose={setSlideClose}>
         <div className="absolute inset-0 overflow-hidden">
