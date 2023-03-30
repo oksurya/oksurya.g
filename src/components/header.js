@@ -86,23 +86,108 @@ function classNames(...classes) {
 }
 const Header = () => {
   const [closesearch, setSlideClose] = useState(false)
+  let [dopen, setdopenpen] = useState(false)
+  function closeModal() {
+    setdopenpen(false)
+  }
 
+  function openModal() {
+    setdopenpen(true)
+  }
   return (
     <>
    
-<div class="md:visible fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-4 border-indigo-500">
+
+      <Transition appear show={dopen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                 
+                  <div className="mt-2">
+
+                  <div class=" font-sans w-full flex flex-row justify-center items-center">
+  <div class="">
+         <div class="text-center mt-2 text-3xl font-medium">Jayasurya Mailsamy</div>
+     <div class="text-center mt-2 font-light text-sm">@oksurya</div>
+     <div class="text-center font-normal text-lg">Tamil Nadu</div>
+     <div class="px-6 text-center mt-2 font-light text-sm">
+       <p>
+         Front end Developer
+       </p>
+     </div>
+     
+  </div>
+</div>
+
+
+
+                  
+                  </div>
+
+               
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+
+
+
+
+
+      
+<div class="md:invisible fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-2 border-indigo-500">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
       
-        <a
+        <Link
+    to="/" // add onClick handler
+    className="focus:text-indigo-700 hover:text-indigo-700 inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700" viewBox="0 0 24 24"><g fill="currentColor"><path d="M9.447 15.397a.75.75 0 1 0-.894 1.205A5.766 5.766 0 0 0 12 17.75a5.766 5.766 0 0 0 3.447-1.148a.75.75 0 1 0-.893-1.205A4.267 4.267 0 0 1 12 16.25a4.267 4.267 0 0 1-2.553-.853Z"/><path fill-rule="evenodd" d="M12 1.25c-.725 0-1.387.2-2.11.537c-.702.327-1.512.81-2.528 1.415l-1.456.867c-1.119.667-2.01 1.198-2.686 1.706C2.523 6.3 2 6.84 1.66 7.551c-.342.711-.434 1.456-.405 2.325c.029.841.176 1.864.36 3.146l.293 2.032c.237 1.65.426 2.959.707 3.978c.29 1.05.702 1.885 1.445 2.524c.742.64 1.63.925 2.716 1.062c1.056.132 2.387.132 4.066.132h2.316c1.68 0 3.01 0 4.066-.132c1.086-.137 1.974-.422 2.716-1.061c.743-.64 1.155-1.474 1.445-2.525c.281-1.02.47-2.328.707-3.978l.292-2.032c.185-1.282.332-2.305.36-3.146c.03-.87-.062-1.614-.403-2.325C22 6.84 21.477 6.3 20.78 5.775c-.675-.508-1.567-1.039-2.686-1.706l-1.456-.867c-1.016-.605-1.826-1.088-2.527-1.415c-.724-.338-1.386-.537-2.111-.537ZM8.096 4.511c1.057-.63 1.803-1.073 2.428-1.365c.609-.284 1.047-.396 1.476-.396c.43 0 .867.112 1.476.396c.625.292 1.37.735 2.428 1.365l1.385.825c1.165.694 1.986 1.184 2.59 1.638c.587.443.91.809 1.11 1.225c.199.416.282.894.257 1.626c-.026.75-.16 1.691-.352 3.026l-.28 1.937c-.246 1.714-.422 2.928-.675 3.845c-.247.896-.545 1.415-.977 1.787c-.433.373-.994.593-1.925.71c-.951.119-2.188.12-3.93.12h-2.213c-1.743 0-2.98-.001-3.931-.12c-.93-.117-1.492-.337-1.925-.71c-.432-.372-.73-.891-.977-1.787c-.253-.917-.43-2.131-.676-3.845l-.279-1.937c-.192-1.335-.326-2.277-.352-3.026c-.025-.732.058-1.21.258-1.626c.2-.416.521-.782 1.11-1.225c.603-.454 1.424-.944 2.589-1.638l1.385-.825Z" clip-rule="evenodd"/></g></svg>
+
+  </Link>
+ 
+  <a
     onClick={() => setSlideClose(true)} // add onClick handler
     className="focus:text-indigo-700 hover:text-indigo-700 inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
   >
     <svg class="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/></svg>
 
   </a>
- 
 
 
+  <button
+          type="button"
+          onClick={openModal}
+          className="focus:text-indigo-700 hover:text-indigo-700 inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
+        >
+       
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700" viewBox="0 0 48 48"><g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M14.809 34.714c6.845-1 11.558-.914 18.412.035A2.077 2.077 0 0 1 35 36.818c0 .48-.165.946-.463 1.31A61.165 61.165 0 0 1 32.941 40h2.641c.166-.198.333-.4.502-.605A4.071 4.071 0 0 0 37 36.819c0-2.025-1.478-3.77-3.505-4.05c-7.016-.971-11.92-1.064-18.975-.033c-2.048.299-3.52 2.071-3.52 4.11c0 .905.295 1.8.854 2.525c.165.214.328.424.49.63h2.577a57.88 57.88 0 0 1-1.482-1.85A2.144 2.144 0 0 1 13 36.845c0-1.077.774-1.98 1.809-2.131ZM24 25a6 6 0 1 0 0-12a6 6 0 0 0 0 12Zm0 2a8 8 0 1 0 0-16a8 8 0 0 0 0 16Z"/><path d="M24 42c9.941 0 18-8.059 18-18S33.941 6 24 6S6 14.059 6 24s8.059 18 18 18Zm0 2c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"/></g></svg>
+   
+        </button>
 
 
 
@@ -111,7 +196,7 @@ const Header = () => {
 </div>
 
 
-    <header className="relative z-10 border-b-4 border-indigo-500 bg-indigo-700">
+    <header className="relative z-10 border-b-2 border-indigo-500 bg-indigo-700">
        <Transition.Root show={closesearch} as={Fragment}>
       <Dialog as="div" className="fixed z-10 inset-0 overflow-hidden" onClose={setSlideClose}>
         <div className="absolute inset-0 overflow-hidden">
@@ -187,6 +272,7 @@ const Header = () => {
             <MenuIcon className="h-8 w-8" aria-hidden="true" />
           </Popover.Button>
         </div>
+        
         <Popover.Group as="nav" className="hidden md:flex space-x-10">
         <Link to="/blog">
             <span className="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Blog</span>
