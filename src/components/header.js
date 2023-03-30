@@ -88,8 +88,25 @@ const Header = () => {
   const [closesearch, setSlideClose] = useState(false)
 
   return (
+    <>
+    <div class="border-t-2 border-indigo-500 z-10 fixed bottom-0 left-0 w-full bg-white py-4">
+  <div class="container mx-auto flex justify-center inline-block text-center px-4">
+    <div>
+    <Popover>
+    <Popover.Button
+    className="border-none h-8 w-8 focus:text-indigo-500 hover:text-indigo-500"
+    onClick={() => setSlideClose(true)} // add onClick handler
+    >
+  <span className="sr-only">Search</span>
+  <svg xmlns="http://www.w3.org/2000/svg" className="" viewBox="0 0 256 256"><path fill="currentColor" d="M80 120h96a8 8 0 0 0 8-8V64a8 8 0 0 0-8-8H80a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8Zm8-48h80v32H88Zm112-48H56a16 16 0 0 0-16 16v176a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16V40a16 16 0 0 0-16-16Zm0 192H56V40h144Zm-100-68a12 12 0 1 1-12-12a12 12 0 0 1 12 12Zm40 0a12 12 0 1 1-12-12a12 12 0 0 1 12 12Zm40 0a12 12 0 1 1-12-12a12 12 0 0 1 12 12Zm-80 40a12 12 0 1 1-12-12a12 12 0 0 1 12 12Zm40 0a12 12 0 1 1-12-12a12 12 0 0 1 12 12Zm40 0a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z"/></svg>
+  </Popover.Button>
+  </Popover>
+    </div>
     
-    <header className="relative z-10 border-b border-slate-900/10 bg-indigo-700">
+  </div>
+</div>
+
+    <header className="relative z-10 border-b-2 border-indigo-500 bg-indigo-700">
        <Transition.Root show={closesearch} as={Fragment}>
       <Dialog as="div" className="fixed z-10 inset-0 overflow-hidden" onClose={setSlideClose}>
         <div className="absolute inset-0 overflow-hidden">
@@ -348,7 +365,7 @@ const Header = () => {
   </Popover>
 
   </header>
-
+  </>
   )
 }
 

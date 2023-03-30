@@ -8,6 +8,8 @@ const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
+  const url = typeof window !== 'undefined' ? window.location.href : '';
+
   const siteTitle = site.siteMetadata?.title || `Title`
 const author = site.siteMetadata.author.name
   return (
@@ -19,7 +21,7 @@ const author = site.siteMetadata.author.name
       >
 <div class="mx-auto max-w-2xl text-center"><h1 itemProp="headline" class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{post.frontmatter.title}</h1>
 <p class="mt-2 text-sm font-semibold text-gray-400">{post.frontmatter.date}</p>
-<p class="mt-2 text-sm font-semibold text-gray-500">by {author} </p></div>
+<p class="mt-2 text-sm font-semibold text-gray-500">by {author} {url}</p></div>
 <div class="min-h-full	 bg-gray-50 py-8 flex flex-col justify-center relative overflow-hidden lg:py-12">
   <div class="absolute inset-0 bg-top [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
   <div class="relative w-full px-2 py-5   shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
