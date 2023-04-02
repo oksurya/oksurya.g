@@ -1,13 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import React from 'react';
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
 
-const AboutPage = () => {
+function DMCA() {
   return (
     <Layout>
-    
-    
+
 <div className="relative py-5 bg-white overflow-hidden">
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div className="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
@@ -80,19 +78,36 @@ const AboutPage = () => {
         <div className="text-lg max-w-prose mx-auto">
           <h1>
             <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              About
+              DMCA
             </span>
           </h1>
         </div>
         <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-        <p>Greetings and welcome to Jayasurya Blog, a platform committed to delivering professional educational content that will captivate and engage you. Our focus is on dependability and providing you with the best educational resources, including tips on how to earn online. We are passionate about education and are dedicated to transforming that passion into a successful online presence. We hope you enjoy our content as much as we enjoy offering it to you, and we promise to continue posting important updates and insights. Thank you for visiting our site, and we appreciate your support and love. Have a wonderful day!.</p>
+        <p>If you require any more information or have any questions about our site's disclaimer, please feel free to contact us by email at jayasuryaofficial1@gmail.com.</p>
+
+<h2>Disclaimers for oksurya</h2>
+
+<p>All the information on this website - https://www.oksurya.in - is published in good faith and for general information purpose only. oksurya does not make any warranties about the completeness, reliability and accuracy of this information. Any action you take upon the information you find on this website (oksurya), is strictly at your own risk. oksurya will not be liable for any losses and/or damages in connection with the use of our website.</p>
+
+<p>From our website, you can visit other websites by following hyperlinks to such external sites. While we strive to provide only quality links to useful and ethical websites, we have no control over the content and nature of these sites. These links to other websites do not imply a recommendation for all the content found on these sites. Site owners and content may change without notice and may occur before we have the opportunity to remove a link which may have gone 'bad'.</p>
+
+<p>Please be also aware that when you leave our website, other sites may have different privacy policies and terms which are beyond our control. Please be sure to check the Privacy Policies of these sites as well as their "Terms of Service" before engaging in any business or uploading any information.</p>
+
+<h2>Consent</h2>
+
+<p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
+
+<h2>Update</h2>
+
+<p>Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
+     
         </div>
       </div>
     </div>
-    
-    </Layout>
-  )
-}
-export const Head = () => <Seo title="About Us" />
 
-export default AboutPage
+    </Layout>
+  );
+}
+export const Head = () => <Seo title="DMCA" />
+
+export default DMCA;

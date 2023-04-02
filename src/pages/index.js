@@ -28,7 +28,7 @@ const BlogIndex = ({ data, location }) => {
 
     <div class="mx-auto max-w-2xl text-center">
       <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{data.site.siteMetadata.title}</h1>
-      <p class="mt-2 text-sm font-semibold text-gray-400">{Description}</p>
+      <p class="mt-2 text-sm font-semibold trueGray-600">{Description}</p>
       </div>      
       <div class="mx-auto my-4 max-w-5xl"></div>
       <div class="grid gap-8 md:grid-cols-3 md:gap-x-12 md:gap-y-12">

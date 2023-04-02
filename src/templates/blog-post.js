@@ -13,52 +13,47 @@ const BlogPostTemplate = ({
 const author = site.siteMetadata.author.name
   return (
     <Layout location={location} title={siteTitle}>
-          <article
-        className="font-sans	"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-<div class="mx-auto max-w-2xl text-center"><h1 itemProp="headline" class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{post.frontmatter.title}</h1>
-<p class="mt-2 text-sm font-semibold text-gray-400">{post.frontmatter.date}</p>
-<p class="mt-2 text-sm font-semibold text-gray-500">by {author}</p></div>
-<div class="min-h-full	 bg-gray-50 py-8 flex flex-col justify-center relative overflow-hidden lg:py-12">
-  <div class="absolute inset-0 bg-top [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-  <div class="relative w-full px-2 py-5   shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
-    <div class="max-w-3xl prose mx-auto lg:text-lg">
 
-       
-        <section
+
+<div class="mx-auto -my-12 xl:px-12">
+    <article class="relative mx-auto max-w-3xl pt-10 xl:grid xl:max-w-none xl:grid-cols-[1fr_50rem] xl:gap-x-8">
+        <h1 class="col-span-full text-3xl font-extrabold tracking-tight text-slate-900 sm:text-center sm:text-4xl xl:mb-16">{post.frontmatter.title}</h1>
+        <div class="mb-16 text-sm leading-6 xl:mb-0">
+            <div class="mb-5 hidden border-b border-slate-200 pb-5 xl:block"><Link className="group flex font-semibold text-slate-700 hover:text-slate-900" to="/"><svg viewBox="0 -9 3 24" class="mr-3 h-6 w-auto overflow-visible text-slate-400 group-hover:text-slate-600"><path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Home</Link></div>
+            <dl>
+                <dd class="absolute inset-x-0 top-0 text-slate-700 sm:text-center"><time>{post.frontmatter.date}</time></dd>
+                <div class="sm:flex sm:flex-wrap sm:justify-center xl:block">
+                    <dd class="mt-6 flex items-center font-medium sm:mx-3 xl:mx-0">
+                      <img src="https://pbs.twimg.com/profile_images/1595420759165632512/zlS7jyNx_400x400.jpg" alt="Jayasurya Mailsamy" class="mr-3 h-10 w-10 rounded-full" loading="lazy"/>
+                        <div>
+                            <div class="text-slate-900"><Link className="hover:text-sky-500" to="/about">{author}</Link></div><a target="_blank" rel="noopener noreferrer " href="https://twitter.com/jayasuryatweet" class="text-slate-500 hover:text-sky-500">@oksurya</a></div>
+                    </dd>
+                </div>
+            </dl>
+            
+              </div>
+        <div>
+            <div class="prose prose-slate max-w-full">
+            <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
-        />
-        
-      
-      
-      
-        <div class="flex gap-x-2 pt-8 text-sm font-semibold">
+                  />
+
+            </div>
+            <div class="flex gap-x-2 pt-8 text-sm font-semibold">
           {post.frontmatter.tags && post.frontmatter.tags.map((tag, index) => (
          <span class="mr-1.5 rounded-full px-3 py-1 bg-purple-100 text-purple-800">{tag}</span>
           ))}
         </div>
-      
-       
-
-
-
-
-
-
-    
-
-
-      
-    </div>
-    
-  </div> 
+        </div>
+    </article>
 </div>
 
-      </article>
 
+
+
+
+        
 <nav class="mt-12 flex items-center justify-between border-t border-gray-200 px-4 pt-12 sm:px-6" aria-label="Pagination">
 
 {previous && (

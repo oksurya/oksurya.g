@@ -50,6 +50,6 @@ Calculate your age with our easy-to-use age calculator tool
     </Layout>
   );
 }
-export const Head = () => <Seo title="Age Calculator" />
+export const Head = () => <Seo title="Age Calculator" description="Calculate your age with our easy-to-use age calculator tool"/>
 
 export default AgeCalculator;

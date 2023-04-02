@@ -13,6 +13,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-remark-autolink-headers`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,

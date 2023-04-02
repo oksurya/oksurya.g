@@ -1,78 +1,55 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import React from 'react';
 import { Link } from "gatsby"
 import SearchPage from './search'
-
+import TopLoadingBar from "react-top-loading-bar"
 import { Dialog, Popover, Transition } from '@headlessui/react'
-import ChartBarIcon from '@heroicons/react/outline/ChartBarIcon';
-import {
-  BookmarkAltIcon,
-  CalendarIcon,
-  CursorClickIcon,
-  MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  SupportIcon,
-  ViewGridIcon,
-  SearchIcon,
-  XIcon,
-} from '@heroicons/react/outline'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { MdClose } from "react-icons/md";
+
+import { 
+  FaYoutube,
+  FaFacebookF,
+  FaInstagram,
+  FaAngleDown,
+ } from 'react-icons/fa';
+ import { 
+  BiSearch,
+  BiHomeSmile,
+  BiUser,
+  BiBadgeCheck,
+  BiMenu,
+
+ } from 'react-icons/bi';
+
+ 
 
 const solutions = [
   {
     name: 'Age Calculator',
     description: 'Simply enter your birthdate and the tool will calculate your age in years.',
     href: '/tools/age-calculator/',
-    icon: ChartBarIcon,
+    icon: FaInstagram,
   },
   {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
-    icon: CursorClickIcon,
+    name: 'Password Generator',
+    description: 'Keep your online accounts safe and secure with a unique password generated just for you.',
+    href: '/tools/password-generator/',
+    icon: FaInstagram,
   },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
-  {
-    name: 'Integrations',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: ViewGridIcon,
-  },
-  {
-    name: 'Automations',
-    description: 'Build strategic funnels that will drive your customers to convert',
-    href: '#',
-    icon: RefreshIcon,
-  },
+  { name: 'Instagram Embed Tool', description: "Your customers' data will be safe and secure.", href: '/tools/embed-instagram/', icon: FaInstagram },
+  { name: 'Love Calculator', description: "Simply enter your name and your partner's name to calculate your love percentage.", href: '/tools/love-calculator/', icon: FaInstagram },
+
 ]
 const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
+  { name: 'Instagram', href: 'https://www.instagram.com/jayasurya_ig', icon: FaInstagram },
+  { name: 'Facebook', href: 'https://www.facebook.com/oksurya', icon: FaFacebookF },
+  { name: 'Youtube', href: 'https://www.youtube.com/@jsurya', icon: FaYoutube },
+
 ]
 const resources = [
-  {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
-    icon: SupportIcon,
-  },
-  {
-    name: 'Guides',
-    description: 'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
-    icon: BookmarkAltIcon,
-  },
-  {
-    name: 'Events',
-    description: 'See what meet-ups and other events we might be planning near you.',
-    href: '#',
-    icon: CalendarIcon,
-  },
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
+  
+  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: FaInstagram },
 ]
 const recentPosts = [
   { id: 1, name: 'Boost your conversion rate', href: '#' },
@@ -94,6 +71,27 @@ const Header = () => {
   function openModal() {
     setdopenpen(true)
   }
+  const [loadingProgress, setLoadingProgress] = useState(0);
+
+
+  useEffect(() => {
+    // Update the loading progress every 100ms
+    const intervalId = setInterval(() => {
+      setLoadingProgress((prevProgress) => {
+        if (prevProgress >= 100) {
+          clearInterval(intervalId);
+        }
+        const randomIncrement = Math.floor(Math.random() * 70) + 1; // Simulating progress using random increments
+        return prevProgress + randomIncrement;
+      });
+    }, 100);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
+
   return (
     <>
    
@@ -134,7 +132,7 @@ const Header = () => {
      <div class="text-center font-normal text-lg">Tamil Nadu</div>
      <div class="px-6 text-center mt-2 font-light text-sm">
        <p>
-         Front end Developer
+         Fron end Developer
        </p>
      </div>
      
@@ -163,44 +161,54 @@ const Header = () => {
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
       
         <Link
+    aria-label="Home"
+    id="homebtn"
     to="/" // add onClick handler
     className="focus:text-indigo-700 hover:text-indigo-700 inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700" viewBox="0 0 24 24"><g fill="currentColor"><path d="M9.447 15.397a.75.75 0 1 0-.894 1.205A5.766 5.766 0 0 0 12 17.75a5.766 5.766 0 0 0 3.447-1.148a.75.75 0 1 0-.893-1.205A4.267 4.267 0 0 1 12 16.25a4.267 4.267 0 0 1-2.553-.853Z"/><path fill-rule="evenodd" d="M12 1.25c-.725 0-1.387.2-2.11.537c-.702.327-1.512.81-2.528 1.415l-1.456.867c-1.119.667-2.01 1.198-2.686 1.706C2.523 6.3 2 6.84 1.66 7.551c-.342.711-.434 1.456-.405 2.325c.029.841.176 1.864.36 3.146l.293 2.032c.237 1.65.426 2.959.707 3.978c.29 1.05.702 1.885 1.445 2.524c.742.64 1.63.925 2.716 1.062c1.056.132 2.387.132 4.066.132h2.316c1.68 0 3.01 0 4.066-.132c1.086-.137 1.974-.422 2.716-1.061c.743-.64 1.155-1.474 1.445-2.525c.281-1.02.47-2.328.707-3.978l.292-2.032c.185-1.282.332-2.305.36-3.146c.03-.87-.062-1.614-.403-2.325C22 6.84 21.477 6.3 20.78 5.775c-.675-.508-1.567-1.039-2.686-1.706l-1.456-.867c-1.016-.605-1.826-1.088-2.527-1.415c-.724-.338-1.386-.537-2.111-.537ZM8.096 4.511c1.057-.63 1.803-1.073 2.428-1.365c.609-.284 1.047-.396 1.476-.396c.43 0 .867.112 1.476.396c.625.292 1.37.735 2.428 1.365l1.385.825c1.165.694 1.986 1.184 2.59 1.638c.587.443.91.809 1.11 1.225c.199.416.282.894.257 1.626c-.026.75-.16 1.691-.352 3.026l-.28 1.937c-.246 1.714-.422 2.928-.675 3.845c-.247.896-.545 1.415-.977 1.787c-.433.373-.994.593-1.925.71c-.951.119-2.188.12-3.93.12h-2.213c-1.743 0-2.98-.001-3.931-.12c-.93-.117-1.492-.337-1.925-.71c-.432-.372-.73-.891-.977-1.787c-.253-.917-.43-2.131-.676-3.845l-.279-1.937c-.192-1.335-.326-2.277-.352-3.026c-.025-.732.058-1.21.258-1.626c.2-.416.521-.782 1.11-1.225c.603-.454 1.424-.944 2.589-1.638l1.385-.825Z" clip-rule="evenodd"/></g></svg>
+<BiHomeSmile  className="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700"></BiHomeSmile>
 
   </Link>
  
-  <a
+  <button
+  id="searchbtn" 
+  aria-label="Search"
     onClick={() => setSlideClose(true)} // add onClick handler
     className="focus:text-indigo-700 hover:text-indigo-700 inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
   >
-    <svg class="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd"/></svg>
-
-  </a>
-
+<BiSearch  className="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700"></BiSearch>
+  </button>
 
   <button
+  id="authorpanel" 
+  aria-label="Author"
           type="button"
           onClick={openModal}
           className="focus:text-indigo-700 hover:text-indigo-700 inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
         >
        
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700" viewBox="0 0 48 48"><g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M14.809 34.714c6.845-1 11.558-.914 18.412.035A2.077 2.077 0 0 1 35 36.818c0 .48-.165.946-.463 1.31A61.165 61.165 0 0 1 32.941 40h2.641c.166-.198.333-.4.502-.605A4.071 4.071 0 0 0 37 36.819c0-2.025-1.478-3.77-3.505-4.05c-7.016-.971-11.92-1.064-18.975-.033c-2.048.299-3.52 2.071-3.52 4.11c0 .905.295 1.8.854 2.525c.165.214.328.424.49.63h2.577a57.88 57.88 0 0 1-1.482-1.85A2.144 2.144 0 0 1 13 36.845c0-1.077.774-1.98 1.809-2.131ZM24 25a6 6 0 1 0 0-12a6 6 0 0 0 0 12Zm0 2a8 8 0 1 0 0-16a8 8 0 0 0 0 16Z"/><path d="M24 42c9.941 0 18-8.059 18-18S33.941 6 24 6S6 14.059 6 24s8.059 18 18 18Zm0 2c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"/></g></svg>
+       <BiUser className="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700"></BiUser>
    
         </button>
 
 
         <Link
+            aria-label="Twitter"
+            id="twitterbtn"
     to="https://twitter.com/jayasuryatweet" // add onClick handler
     className="focus:text-indigo-700 hover:text-indigo-700 inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700" viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 3.589a.5.5 0 0 0-.755-.43a7.938 7.938 0 0 1-2.266.912a4.662 4.662 0 0 0-3.238-1.29a4.731 4.731 0 0 0-4.707 5.135a11.527 11.527 0 0 1-7.717-4.18a.5.5 0 0 0-.82.067a4.777 4.777 0 0 0-.633 2.377a4.724 4.724 0 0 0 .762 2.579l-.06-.033a.504.504 0 0 0-.497.03a.543.543 0 0 0-.247.458c-.004.118.003.237.022.353a4.692 4.692 0 0 0 1.818 3.383a.5.5 0 0 0-.335.632a4.704 4.704 0 0 0 3.088 3.057a7.998 7.998 0 0 1-4.854.963a.5.5 0 0 0-.332.917A12.442 12.442 0 0 0 8.468 20.5a12.299 12.299 0 0 0 11.986-9.006c.339-1.137.512-2.318.514-3.505c0-.12 0-.245-.003-.372A5.37 5.37 0 0 0 22.5 3.59zm-2.424 3.533a.498.498 0 0 0-.117.349a11.366 11.366 0 0 1-.464 3.741A11.174 11.174 0 0 1 8.468 19.5a11.45 11.45 0 0 1-4.443-.897a8.867 8.867 0 0 0 4.525-1.86a.5.5 0 0 0-.3-.893A3.71 3.71 0 0 1 5.1 14c.425.001.847-.057 1.254-.174a.5.5 0 0 0-.042-.97a3.706 3.706 0 0 1-2.905-2.898a4.72 4.72 0 0 0 1.313.228a.473.473 0 0 0 .492-.35a.5.5 0 0 0-.2-.567a3.696 3.696 0 0 1-1.648-3.09c0-.413.067-.823.2-1.213a12.515 12.515 0 0 0 8.54 3.995a.45.45 0 0 0 .409-.179a.5.5 0 0 0 .103-.434a3.642 3.642 0 0 1-.1-.842A3.73 3.73 0 0 1 16.24 3.78a3.68 3.68 0 0 1 2.71 1.179a.499.499 0 0 0 .462.148a8.94 8.94 0 0 0 2.055-.671a4.92 4.92 0 0 1-1.392 2.686z"/></svg>
+<BiBadgeCheck className="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-700"></BiBadgeCheck>
 
   </Link>
         
     </div>
 </div>
-
+<TopLoadingBar
+        color="#6366f1"
+        progress={loadingProgress}
+        onLoaderFinished={() => setLoadingProgress(0)}
+      />
 
     <header className="relative z-10 border-b-2 border-indigo-500 bg-indigo-700">
        <Transition.Root show={closesearch} as={Fragment}>
@@ -230,7 +238,7 @@ const Header = () => {
                           onClick={() => setSlideClose(false)}
                         >
                           <span className="sr-only">Close panel</span>
-                          <XIcon className="h-6 w-6" aria-hidden="true" />
+                          <MdClose className="h-6 w-6" aria-hidden="true" />
                         </button>
                       </div>
                     </div>
@@ -262,7 +270,7 @@ const Header = () => {
             <span className="sr-only">Workflow</span>
             <img
               className="h-8 w-auto sm:h-10"
-              src="/logo.png"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcgAAACNCAMAAAAEnRqzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAolBMVEUAAABPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRttPRtv///824GH3AAAANHRSTlMAyIB01FKcvjhwrEhY0PRU/Mx8TPiSqv1gT3ktNyxz/oHPqSVsr7OXxlCfiaWE0cSoiDYwpCWM5QAAAAFiS0dENd622WsAAAAJb0ZGcwAAACAAAAAvAM+ai5UAAAAJdnBBZwAAAj8AAAE6AFMKrRYAAAKoSURBVHja7d1ZU9NQHMbhuiEuLAquqIA7uCvf/7N50ZkUT48NSSgk7zy/25z8k/SZ3mTSZjY7G9qs6UZ1+81ZpVvVpbdn6h3IkECGBDIkkCGBDAlkSCBDAhkSyIzugMxoA2RGIEMCGRLIkECGBDIkkCGBDAlkSCBDAhlSHfLuZqV7IEdcHfJ+bekDkCMOZEggQwIZEsiQQIYEMiSQIYEMaayQD8/6tLUYsF1dsNNyBq0Dqu0u9npUXfC42b5X3b7fNqCtfZAdB1QDWQQS5DyQRSBBLgUSZOdAFoEEuRRIkJ0DWXSZkBu153+eVJeeg3za63pAFl0mZFvPnje96PUxngtk0VVC7taOBbJbILsOaLsEkCBBLgJZBBJk50CCXApkEUiQnQMJcimQRWOFfLm5uoO1Q1bP4NUlQr5uucQ3EZA7swu3Jsi2MxgM2db/BoAECRIkSJAgQYIECRIkSJDTgjzcaDpazDruNWv9t+jWDjneW3RZz7WCBAny4oEsAglyKZAgOweyCCTIpUCC7BzIomlBbjW9Bflv1w/57v3qPgx1mBbkx+bCP00Msq3BDtOCbB8AEiRIkCBBggQJEiRIkCBBDof8fFLp6Coh905Wd9rP4cvQAf0gvzaH/dYPsn3AWF8EuqYfug4e0A+yrbXda+0SSJBlIEHOAzkgkCDLQIKcB3JAIEGWgQQ5D+SAQI4C8nuv/c53/ZA/mk57DTj82fRrspC+kd0GgAS5IpBFIAcEEmQZSJDzQA4IJMgykCDngRwQyFFA6mob/KeCGkcgQwIZEsiQQIYEMiSQIYEMCWRIIKfX7y6vf9TIOthucqt0yv3pwAdyxIEMCWRIIEMCGRLIkECGBDIkkCGBDAlkSCBDAhkSyJBAhgQyJJAhgQwJZEggQ7ouyL8AEFnaIh5OMgAAAABJRU5ErkJggg=="
               alt=""
             />
           </Link>
@@ -273,9 +281,11 @@ const Header = () => {
         <div className="-mr-2 -my-2 md:hidden">
         
         
-          <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+          <Popover.Button 
+          id="Menubtn"
+          className="bg-white rounded-md p-2 inline-flex items-center justify-center text-indigo-500 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
             <span className="sr-only">Open menu</span>
-            <MenuIcon className="h-8 w-8" aria-hidden="true" />
+            <BiMenu className="h-8 w-8" aria-hidden="true" />
           </Popover.Button>
         </div>
         
@@ -292,8 +302,8 @@ const Header = () => {
                     'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                   )}
                 >
-                  <span>Solutions</span>
-                  <ChevronDownIcon
+                  <span>Tools</span>
+                  <FaAngleDown
                     className={classNames(
                       open ? 'text-gray-600' : 'text-gray-400',
                       'ml-2 h-5 w-5 group-hover:text-gray-500'
@@ -323,7 +333,7 @@ const Header = () => {
                             
                             <div>
                               <p className="text-base font-medium text-gray-900">{item.name}</p>
-                              <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                              
                             </div>
                           </Link>
                         ))}
@@ -348,12 +358,7 @@ const Header = () => {
             )}
           </Popover>
 
-          <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-            Pricing
-          </a>
-          <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-            Docs
-          </a>
+         
 
          
         </Popover.Group>
@@ -362,11 +367,12 @@ const Header = () => {
         
         <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
         <Popover.Button
+        id="Searchbtntop"
     onClick={() => setSlideClose(true)} // add onClick handler
     className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
   >
               <span className="sr-only">Search</span>
-            <SearchIcon className="h-6 w-6" aria-hidden="true" />
+            <BiSearch className="h-6 w-6" aria-hidden="true" />
   </Popover.Button>
           
         </div>
@@ -386,17 +392,11 @@ const Header = () => {
         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
           <div className="pt-5 pb-6 px-5">
             <div className="flex items-center justify-between">
-              <div>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                  alt="Workflow"
-                />
-              </div>
+              
               <div className="-mr-2">
                 <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                   <span className="sr-only">Close menu</span>
-                  <XIcon className="h-6 w-6" aria-hidden="true" />
+                  <MdClose className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
             </div>
@@ -408,47 +408,14 @@ const Header = () => {
                     href={item.href}
                     className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                   >
-                    <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                    
                     <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                   </a>
                 ))}
               </nav>
             </div>
           </div>
-          <div className="py-6 px-5 space-y-6">
-            <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-              <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                Pricing
-              </a>
-
-              <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                Docs
-              </a>
-              {resources.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
-            <div>
-              <a
-                href="#"
-                className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-              >
-                Sign up
-              </a>
-              <p className="mt-6 text-center text-base font-medium text-gray-500">
-                Existing customer?{' '}
-                <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                  Sign in
-                </a>
-              </p>
-            </div>
-          </div>
+          
         </div>
       </Popover.Panel>
     </Transition>
