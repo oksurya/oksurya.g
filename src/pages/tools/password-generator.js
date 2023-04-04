@@ -38,7 +38,7 @@ Generate strong and secure passwords with our free password generator tool.
     </p>
 </div>
 
-<div class="mx-auto mt-12 lg:max-w-4xl ">
+<div class="mmax-w-2xl prose mx-auto mt-10 lg:text-lg">
     <div class="mx-auto max-w-xs lg:col-span-4">
         <div class="grid grid-cols-12 gap-6 text-gray-600">
             <div class="col-span-12"><label for="Password_Length" class="block tb-5 text-sm font-medium text-gray-700">Password Length:</label>
@@ -80,8 +80,23 @@ Generate strong and secure passwords with our free password generator tool.
     <label lass="block tb-5 text-sm font-medium text-gray-700">Your Password: </label>
       <input type="text" class="block w-full rounded-md border-gray-300 font-medium shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value={password} readOnly />
        
-    </div> </div>
+    </div> 
     </div>
+    </div>
+
+    <div className="prose mx-auto mt-12 max-w-2xl">
+<p>
+    A password generator React JS tool is a web application that is built the use of the React JS framework and is designed to generate complicated and comfortable passwords. React JS is a famous the front-give up framework that is used to build dynamic and responsive internet applications. The password generator React JS tool is one such software this is built the usage of this framework and gives numerous functions to create strong and precise passwords.
+    </p><p>
+The password generator React JS tool is consumer-friendly and clean to apply. It presents customers with the capacity to customize the password generation process by way of letting them specify the length of the password, the characters for use, and other parameters. The device also can generate passwords based totally on various standards including the use of most effective upper-case or lower-case letters, numbers, or special characters.
+</p><p>
+One of the key benefits of the use of a password generator React JS device is that it may help users to create stronger and greater secure passwords. These passwords are often extra tough to wager or crack, making them less prone to cyber attacks which includes hacking or phishing. Moreover, the tool can also help users to keep time by automatically generating passwords, in preference to requiring them to provide you with their own passwords manually.
+</p><p>
+Any other advantage of using a password generator React JS tool is that it is able to be without difficulty customized to match the unique wishes of different users. For example, some customers might also prefer to use passwords which can be shorter or longer, or that include particular characters. The tool can be without problems modified to accommodate these preferences.
+</p><p>
+In conclusion, a password generator React JS tool is a powerful and beneficial application that could help users to create robust and secure passwords. Through leveraging the capabilities of the React JS framework, these equipment are consumer-friendly, customizable, and notably effective in generating passwords which might be tough to wager or crack.
+</p>
+</div> 
 </div>   
     </Layout>
   );

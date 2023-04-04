@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 const navigation = {
     main: [
       { name: 'About', href: '/about/' },
+      { name: 'Contact', href: '/contact/' },
       { name: 'DMCA', href: '/p/dmca/' },
       { name: 'Privacy Policy', href: '/p/privacy' },
 

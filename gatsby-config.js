@@ -15,6 +15,7 @@ module.exports = {
   plugins: [
     `gatsby-remark-autolink-headers`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-postcss',
@@ -120,7 +121,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Oksurya Blog RSS Feed",
           },
         ],
       },
@@ -128,15 +129,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Oksurya`,
+        short_name: `Oksurya`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/oksurya-icon.png`, // This path is relative to the root of the site.
       },
     },
    

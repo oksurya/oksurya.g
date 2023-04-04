@@ -10,7 +10,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
-
+  const tagTemplate = path.resolve(`./src/templates/tag.js`)
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
@@ -44,6 +44,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMarkdownRemark.nodes
+  const tags = new Set()
 
   createPaginatedPages({
     edges: posts,
@@ -60,7 +61,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
-
+      post.frontmatter.tags?.forEach((tag) => {
+        tags.add(tag)
+      })
       createPage({
         path: post.fields.slug,
         component: blogPost,
@@ -69,6 +72,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           previousPostId,
           nextPostId,
         },
+      })
+    })
+
+    // ==============================================
+    //  Tags
+    // ==============================================
+
+    Array.from(tags).forEach(tag => {
+      createPage({
+        path: `/topic/${tag}/`,
+        component: tagTemplate,
+        context: {
+          tag
+        }
       })
     })
   }

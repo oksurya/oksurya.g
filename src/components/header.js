@@ -11,7 +11,7 @@ import {
   FaYoutube,
   FaFacebookF,
   FaInstagram,
-  FaAngleDown,
+  FaAngleDown,FaRegClock,
  } from 'react-icons/fa';
  import { 
   BiSearch,
@@ -19,7 +19,8 @@ import {
   BiUser,
   BiBadgeCheck,
   BiMenu,
-
+  BiKey,
+  BiHeart,
  } from 'react-icons/bi';
 
  
@@ -29,16 +30,16 @@ const solutions = [
     name: 'Age Calculator',
     description: 'Simply enter your birthdate and the tool will calculate your age in years.',
     href: '/tools/age-calculator/',
-    icon: FaInstagram,
+    icon: FaRegClock,
   },
   {
     name: 'Password Generator',
     description: 'Keep your online accounts safe and secure with a unique password generated just for you.',
     href: '/tools/password-generator/',
-    icon: FaInstagram,
+    icon: BiKey,
   },
   { name: 'Instagram Embed Tool', description: "Your customers' data will be safe and secure.", href: '/tools/embed-instagram/', icon: FaInstagram },
-  { name: 'Love Calculator', description: "Simply enter your name and your partner's name to calculate your love percentage.", href: '/tools/love-calculator/', icon: FaInstagram },
+  { name: 'Love Calculator', description: "Simply enter your name and your partner's name to calculate your love percentage.", href: '/tools/love-calculator/', icon: BiHeart },
 
 ]
 const callsToAction = [
@@ -330,8 +331,8 @@ const Header = () => {
                             to={item.href}
                             className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                           >
-                            
-                            <div>
+                             <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                            <div className="ml-4">
                               <p className="text-base font-medium text-gray-900">{item.name}</p>
                               
                             </div>

@@ -40,9 +40,13 @@ const author = site.siteMetadata.author.name
                   />
 
             </div>
-            <div class="flex gap-x-2 pt-8 text-sm font-semibold">
+            <div class="flex gap-x-2 pt-10 text-sm font-semibold">
+
+            
+        
           {post.frontmatter.tags && post.frontmatter.tags.map((tag, index) => (
-         <span class="mr-1.5 rounded-full px-3 py-1 bg-purple-100 text-purple-800">{tag}</span>
+         <Link to={`/topic/${tag}`} key={tag}><span class="mr-1.5 rounded-full px-3 py-1 bg-purple-100 text-purple-800">{tag}</span></Link>
+
           ))}
         </div>
         </div>

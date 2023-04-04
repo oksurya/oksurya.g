@@ -1,39 +1,23 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
-const BlogIndex = ({ data, location }) => {
+const TagTemplate = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  const pagetitle = data.site.siteMetadata.homepagetitle
-  const Description = data.site.siteMetadata.description
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
+  const { tag } = pageContext
 
   return (
     <Layout location={location} title={siteTitle}>
 
-    <div class="mx-auto max-w-2xl text-center">
-      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{data.site.siteMetadata.title}</h1>
-      <p class="mt-2 text-sm font-semibold trueGray-600">{Description}</p>
-      </div>      
 
+<div class="mx-auto max-w-2xl text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{tag}</h1>
+      <p class="mt-2 text-sm font-semibold trueGray-600">{posts.length} post{posts.length !== 1 ? 's' : ''}</p>
+      </div>
 
-
-      
       <div class="mx-auto my-4 max-w-5xl"></div>
       <div class="grid gap-8 md:grid-cols-3 md:gap-x-12 md:gap-y-12">
       {posts.map(post => {
@@ -66,44 +50,33 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export const Head = ({ pageContext }) => {
+  const { tag } = pageContext
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Discover the Latest Tech Trends with Our Expert Tips and Tutorials" description="Join us on a journey of discovery as we explore the cutting-edge of technology together." />
+  return <Seo title={`Discover ${tag}: Tech Guides and Tutorials`} />
+}
+
+export default TagTemplate
 
 export const pageQuery = graphql`
-  {
+  query BlogPostsByTag($tag: String!) {
     site {
       siteMetadata {
         title
-        siteUrl
-        description
-        homepagetitle
-        social {
-          twitter
-        }
-        author {
-          name
-          summary
-        }
       }
     }
-  
-    allMarkdownRemark(limit: 6, sort: {frontmatter: {date: DESC}})
-
-    {
+    allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+    ) {
       nodes {
         excerpt
         fields {
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
           title
+          date(formatString: "MMMM DD, YYYY")
           description
           tags
         }

@@ -44,8 +44,10 @@ const PaginatedTemplate = ({ pageContext }) => {
       
              
       <div class="mt-6 hidden items-center text-xs font-medium sm:flex">
-                {post.frontmatter.tags && post.frontmatter.tags.map((tag, index) => (
-               <span class="mr-1.5 rounded-full px-3 py-1 bg-purple-100 text-purple-800">{tag}</span>
+      {post.frontmatter.tags && post.frontmatter.tags.slice(0, 3).map((tag, index) => (
+               <span class="mr-1.5 rounded-full px-3 py-1 bg-purple-100 text-purple-800">
+              <Link to={`/topic/${tag}`} key={tag}>  {tag}</Link>
+                </span>
                 ))}
               </div>
             </Link>

@@ -85,7 +85,7 @@ const AboutPage = () => {
           </h1>
         </div>
         <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-        <p>Greetings and welcome to Jayasurya Blog, a platform committed to delivering professional educational content that will captivate and engage you. Our focus is on dependability and providing you with the best educational resources, including tips on how to earn online. We are passionate about education and are dedicated to transforming that passion into a successful online presence. We hope you enjoy our content as much as we enjoy offering it to you, and we promise to continue posting important updates and insights. Thank you for visiting our site, and we appreciate your support and love. Have a wonderful day!.</p>
+        <p>Greetings and welcome to Oksurya.in Website, a platform committed to delivering professional educational content that will captivate and engage you. Our focus is on dependability and providing you with the best educational resources, including tips on how to earn online. We are passionate about education and are dedicated to transforming that passion into a successful online presence. We hope you enjoy our content as much as we enjoy offering it to you, and we promise to continue posting important updates and insights. Thank you for visiting our site, and we appreciate your support and love. Have a wonderful day!.</p>
         </div>
       </div>
     </div>
