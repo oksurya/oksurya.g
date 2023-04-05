@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Layout from "../../components/layout"
-import Seo from "../../components/seo"
+import Layout from "../../../components/layout"
+import Seo from "../../../components/seo"
 const PasswordGenerator = () => {
   const [password, setPassword] = useState('');
   const [length, setLength] = useState(12);
@@ -41,7 +41,8 @@ Generate strong and secure passwords with our free password generator tool.
 <div class="mmax-w-2xl prose mx-auto mt-10 lg:text-lg">
     <div class="mx-auto max-w-xs lg:col-span-4">
         <div class="grid grid-cols-12 gap-6 text-gray-600">
-            <div class="col-span-12"><label for="Password_Length" class="block tb-5 text-sm font-medium text-gray-700">Password Length:</label>
+            <div class="col-span-12">
+              <label id="passlength" htmlFor="Password_Length" class="block tb-5 text-sm font-medium text-gray-700">Password Length:</label>
                 <div class="mt-1">
                     
                     
@@ -54,11 +55,11 @@ Generate strong and secure passwords with our free password generator tool.
             <div class="col-span-12">
             
         <input type="checkbox" checked={includeNumbers} onChange={(e) => setIncludeNumbers(e.target.checked)} />
-        <label lass="block tb-5 text-sm font-medium text-gray-700"> Include Numbers</label>
+        <label htmlFor="incnumb" class="block tb-5 text-sm font-medium text-gray-700"> Include Numbers</label>
      <br></br>
         
         <input type="checkbox" checked={includeSymbols} onChange={(e) => setIncludeSymbols(e.target.checked)} />
-        <label lass="block tb-5 text-sm font-medium text-gray-700"> Include Symbols</label>
+        <label  htmlFor="incsymb" class="block tb-5 text-sm font-medium text-gray-700"> Include Symbols</label>
 
 
         </div>
@@ -77,7 +78,7 @@ Generate strong and secure passwords with our free password generator tool.
     </div>
 
     <div class="col-span-12">
-    <label lass="block tb-5 text-sm font-medium text-gray-700">Your Password: </label>
+    <label  htmlFor="yourpass" class="block tb-5 text-sm font-medium text-gray-700">Your Password: </label>
       <input type="text" class="block w-full rounded-md border-gray-300 font-medium shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value={password} readOnly />
        
     </div> 

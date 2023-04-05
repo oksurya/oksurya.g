@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 
-import Layout from "../../components/layout"
-import Seo from "../../components/seo"
+import Layout from "../../../components/layout"
+import Seo from "../../../components/seo"
 import { Dialog, Transition } from '@headlessui/react'
 const LoveCalculator = () => {
   const [name1, setName1] = useState("");

@@ -29,17 +29,25 @@ const solutions = [
   {
     name: 'Age Calculator',
     description: 'Simply enter your birthdate and the tool will calculate your age in years.',
-    href: '/tools/age-calculator/',
+    href: '/tools/calculators/age-calculator/',
     icon: FaRegClock,
   },
   {
     name: 'Password Generator',
     description: 'Keep your online accounts safe and secure with a unique password generated just for you.',
-    href: '/tools/password-generator/',
+    href: '/tools/generators/password-generator/',
     icon: BiKey,
   },
-  { name: 'Instagram Embed Tool', description: "Your customers' data will be safe and secure.", href: '/tools/embed-instagram/', icon: FaInstagram },
-  { name: 'Love Calculator', description: "Simply enter your name and your partner's name to calculate your love percentage.", href: '/tools/love-calculator/', icon: BiHeart },
+  { name: 'Instagram Embed Tool', 
+  description: "Your customers' data will be safe and secure.", 
+  href: '/tools/instagram/embed-instagram/', 
+  icon: FaInstagram 
+},
+  { name: 'Love Calculator', 
+  description: "Simply enter your name and your partner's name to calculate your love percentage.", 
+  href: '/tools/calculators/love-calculator/', 
+  icon: BiHeart 
+},
 
 ]
 const callsToAction = [
@@ -48,15 +56,7 @@ const callsToAction = [
   { name: 'Youtube', href: 'https://www.youtube.com/@jsurya', icon: FaYoutube },
 
 ]
-const resources = [
-  
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: FaInstagram },
-]
-const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
-]
+
 
 
 function classNames(...classes) {

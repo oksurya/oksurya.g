@@ -7,7 +7,6 @@ import Seo from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  const pagetitle = data.site.siteMetadata.homepagetitle
   const Description = data.site.siteMetadata.description
 
   if (posts.length === 0) {

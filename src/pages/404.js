@@ -26,7 +26,7 @@ const NotFoundPage = ({ data, location }) => {
                     class="min-w-0 flex-1">
                     <h3 class="text-base font-medium text-gray-900">
                       <span class="rounded-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2">
-                        <a target="_blank" rel="noopener noreferrer " href="https://digitalinspiration.com/docs" class="focus:outline-none">
+                        <a target="_blank" rel="noopener noreferrer " href="https://twitter.com/jayasuryatweet" class="focus:outline-none">
                           <span class="absolute inset-0" aria-hidden="true"></span>Follow on Twitter</a>
                         </span>
                     </h3>
@@ -43,7 +43,7 @@ const NotFoundPage = ({ data, location }) => {
             <div class="min-w-0 flex-1">
               <h3 class="text-base font-medium text-gray-900">
                 <span class="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                  <a href="#" class="focus:outline-none">
+                  <a href="/blog" class="focus:outline-none">
                     <span class="absolute inset-0" aria-hidden="true"></span>
                     Blog
                   </a>

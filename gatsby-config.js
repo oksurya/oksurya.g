@@ -13,6 +13,7 @@ module.exports = {
     },
   },
   plugins: [
+
     `gatsby-remark-autolink-headers`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
@@ -20,7 +21,18 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
-    
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.oksurya.in`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `${__dirname}/src/utils/typography`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -29,6 +41,7 @@ module.exports = {
         policy: [{userAgent: '*', allow: '/'}]
       }
     },
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -59,6 +72,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,

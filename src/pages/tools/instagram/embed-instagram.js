@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import Layout from "../../components/layout"
-import Seo from "../../components/seo"
+import Layout from "../../../components/layout"
+import Seo from "../../../components/seo"
 import { useRef } from 'react';
 const InstagramEmbedGenerator = () => {
   const [url, setUrl] = useState('');
   const [height, setHeight] = useState('600');
-  const [width, setWidth] = useState('500');
   const [copySuccess, setCopySuccess] = useState(false);
   const textareaRef = useRef(null);
 
@@ -28,9 +27,7 @@ const InstagramEmbedGenerator = () => {
     setHeight(e.target.value);
   };
 
-  const handleWidthChange = (e) => {
-    setWidth(e.target.value);
-  };
+  
   const handleCopyClick = () => {
     if (textareaRef.current) {
         textareaRef.current.select();
@@ -54,11 +51,11 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
 
 
 
-<div class="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-center py-5 px-4 sm:px-6 lg:px-8">
     <div class="w-full max-w-md">
         <form onSubmit={handleSubmit} class="mt-8 space-y-8">
             <div>
-            <label for="url" class="block text-sm font-medium text-gray-600">Instagram Link</label>
+            <label htmlfor="url" class="block text-sm font-medium text-gray-600">Instagram Link</label>
             <div class="mt-1">
 <input type="text" value={url} onChange={handleUrlChange} maxlength="15525" required="" class="block w-full rounded-md border-gray-300 font-medium shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"/>
 
@@ -66,7 +63,7 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
     </div>
 
     <div>
-            <label for="height" class="block text-sm font-medium text-gray-600">Embed Height</label>
+            <label htmlfor="height" class="block text-sm font-medium text-gray-600">Embed Height</label>
             <div class="mt-1">
 <input type="number" value={height} onChange={handleHeightChange} maxlength="125" class="block w-full rounded-md border-gray-300 font-medium shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"/>
 
@@ -82,8 +79,8 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
     </form>
 
     {code && (
-  <div className="mt-4">
-    <label className="block text-sm font-medium text-gray-600">Embed Code:</label>
+  <div className="mt-3">
+    <label htmlfor="codeem" className="block text-sm font-medium text-gray-600">Embed Code:</label>
     <textarea ref={textareaRef} value={code} readOnly className="w-full p-2 border border-gray-400 rounded-md" rows="5" />
     <button onClick={handleCopyClick} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
       {copySuccess ? 'Copied!' : 'Copy'}
@@ -95,7 +92,9 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
 )}
       
     </div>
-    <div className="prose mx-auto mt-12 max-w-2xl">
+    
+     </div>
+     <div className="prose mx-auto mt-12 max-w-2xl">
 <p>
     The Instagram Embed tool in React JS is a web application that allows customers to embed Instagram posts into their personal websites or programs. React JS is a famous the front-quit framework used for building consumer interfaces. The Instagram Embed device constructed with React JS makes it easy for builders to embed Instagram posts into their net pages or programs, improving their content material and improving their consumer enjoy.
     </p><p>
@@ -108,10 +107,9 @@ Some other gain of using the Instagram Embed device in React JS is that it may a
 The Instagram Embed device in React JS also gives builders the ability to personalize the arrival of embedded posts to healthy their internet site or application design. Developers can customise the dimensions, layout, and color scheme of the embedded Instagram posts to suit their emblem or layout aesthetic.
 </p><p>
 In conclusion, the Instagram Embed device in React JS is a beneficial and powerful software that lets in developers to effortlessly embed Instagram posts into their web sites or applications. By way of improving the consumer revel in and growing social media engagement, it could help to improve the general fulfillment of web sites and applications. With its consumer-pleasant interface and customization alternatives, the Instagram Embed tool in React JS is a valuable device for developers trying to upload extra visible content material to their internet pages or packages.
-</p></div> </div>
+</p></div>
 
-
-
+    
 
 
 

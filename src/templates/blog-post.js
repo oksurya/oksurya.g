@@ -3,12 +3,11 @@ import { Link, graphql } from "gatsby"
 import '../styles/s.css'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
-
+  const tableOfContents = post.tableOfContents
   const siteTitle = site.siteMetadata?.title || `Title`
 const author = site.siteMetadata.author.name
   return (
@@ -18,8 +17,17 @@ const author = site.siteMetadata.author.name
 <div class="mx-auto -my-12 xl:px-12">
     <article class="relative mx-auto max-w-3xl pt-10 xl:grid xl:max-w-none xl:grid-cols-[1fr_50rem] xl:gap-x-8">
         <h1 class="col-span-full text-3xl font-extrabold tracking-tight text-slate-900 sm:text-center sm:text-4xl xl:mb-16">{post.frontmatter.title}</h1>
-        <div class="mb-16 text-sm leading-6 xl:mb-0">
-            <div class="mb-5 hidden border-b border-slate-200 pb-5 xl:block"><Link className="group flex font-semibold text-slate-700 hover:text-slate-900" to="/"><svg viewBox="0 -9 3 24" class="mr-3 h-6 w-auto overflow-visible text-slate-400 group-hover:text-slate-600"><path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Home</Link></div>
+        <div class=" mb-16 text-sm leading-6 xl:mb-0">
+            <div class="mb-5 hidden border-b border-slate-200 pb-5 xl:block">
+    <Link className="group flex font-semibold text-slate-700 hover:text-slate-900" to="/">
+      <svg viewBox="0 -9 3 24" class="mr-3 h-6 w-auto overflow-visible text-slate-400 group-hover:text-slate-600">
+        <path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          </path></svg>Home</Link>
+          </div>
+
+
+
+
             <dl>
                 <dd class="absolute inset-x-0 top-0 text-slate-700 sm:text-center"><time>{post.frontmatter.date}</time></dd>
                 <div class="sm:flex sm:flex-wrap sm:justify-center xl:block">
@@ -30,11 +38,14 @@ const author = site.siteMetadata.author.name
                     </dd>
                 </div>
             </dl>
-            
+            <div class="page-toc border-t border-slate-200 mt-5 mb-5 hidden border-b border-slate-200 pb-5 xl:block">
+            <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+            </div>
               </div>
         <div>
             <div class="prose prose-slate max-w-full">
-            <section
+            
+                        <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
                   />
@@ -44,7 +55,7 @@ const author = site.siteMetadata.author.name
 
             
         
-          {post.frontmatter.tags && post.frontmatter.tags.map((tag, index) => (
+            {post.frontmatter.tags && post.frontmatter.tags.slice(0, 3).map((tag, index) => (
          <Link to={`/topic/${tag}`} key={tag}><span class="mr-1.5 rounded-full px-3 py-1 bg-purple-100 text-purple-800">{tag}</span></Link>
 
           ))}
@@ -52,8 +63,6 @@ const author = site.siteMetadata.author.name
         </div>
     </article>
 </div>
-
-
 
 
 
@@ -85,7 +94,6 @@ const author = site.siteMetadata.author.name
 }
 
 export const Head = ({ data: { site, markdownRemark: post }, location }) => {
-  const fullUrl = `${site.siteMetadata.siteUrl}`
   return (
     <Seo
       title={post.frontmatter.title}
@@ -113,6 +121,7 @@ export const pageQuery = graphql`
       }
     }
     markdownRemark(id: { eq: $id }) {
+      tableOfContents(absolute: false)
       id
       excerpt(pruneLength: 160)
       html

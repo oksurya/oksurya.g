@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 
 
 const PaginatedTemplate = ({ pageContext }) => {
-  const { pageCount, group, index, first, last } = pageContext
+  const {  group, index, first, last } = pageContext
   const previousIndex = index - 1
   const nextIndex = index + 1
 
