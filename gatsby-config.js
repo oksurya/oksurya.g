@@ -27,12 +27,7 @@ module.exports = {
         siteUrl: `https://www.oksurya.in`,
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `${__dirname}/src/utils/typography`,
-      },
-    },
+    
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
