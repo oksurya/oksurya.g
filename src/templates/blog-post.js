@@ -39,7 +39,6 @@ const author = site.siteMetadata.author.name
                 </div>
             </dl>
             <div class="page-toc border-t border-slate-200 mt-5 mb-5 hidden border-b border-slate-200 pb-5 xl:block">
-            <div dangerouslySetInnerHTML={{ __html: tableOfContents }} />
             </div>
               </div>
         <div>
