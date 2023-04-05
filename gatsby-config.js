@@ -22,13 +22,6 @@ module.exports = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://www.oksurya.in`,
-      },
-    },
-    
-    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.oksurya.in',
