@@ -29,11 +29,6 @@
           "type": "image"
         },
         {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
-        },
-        {
           "title": "Tags",
           "name": "tags",
           "type": "tags"
@@ -42,37 +37,19 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
-        },
-        {
-          "title": "lastmod",
-          "name": "lastmod",
-          "type": "datetime"
         }
       ]
     }
   ],
   "frontMatter.framework.id": "gatsby",
   "frontMatter.content.publicFolder": "static",
-  "frontMatter.taxonomy.tags": [
-    "Blog",
-    "Gatsby",
-    "GatsbyJS",
-    "Markdown"
-  ],
+  "frontMatter.preview.host": "http://localhost:8000",
   "frontMatter.content.pageFolders": [
-    {
-      "title": "blog",
-      "path": "[[workspace]]/content/blog",
-      "originalPath": "[[workspace]]/content/blog"
-    },
     {
       "title": "blog",
       "path": "[[workspace]]/content/blog"
     }
   ],
-  "frontMatter.content.autoUpdateDate": true,
-  "frontMatter.dashboard.openOnStart": true,
-  "frontMatter.framework.startCommand": "gatsby build",
-  "frontMatter.preview.host": "http://localhost:8000/",
-  "frontMatter.taxonomy.categories": []
+  "frontMatter.taxonomy.categories": [],
+  "frontMatter.taxonomy.tags": []
 }

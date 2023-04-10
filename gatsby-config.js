@@ -1,35 +1,31 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
+ */
+
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
-    homepagetitle: 'ITS HOMEPAGE',
-    title: `OKsurya`,
+    title: `Jayasurya Blog`,
     author: {
       name: `Jayasurya Mailsamy`,
-      summary: `who lives and works in Tamil Nadu building useful things.`,
+      summary: `who lives and works in India building useful things.`,
     },
-    description: `Tech tutorial and tricks.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://oksuryain.web.app`,
+    defaultOpenGraphImage: `/default.png`,
     social: {
-      twitter: `https://www.twitter.com/jayasuryatweet`,
+      twitter: `jayasuryatweet`,
     },
   },
   plugins: [
-
-    `gatsby-remark-autolink-headers`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-mdx`,
-    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://www.oksurya.in',
-        sitemap: 'https://www.oksurya.in/sitemap-index.xml',
-        policy: [{userAgent: '*', allow: '/'}]
-      }
-    },
-    
+    `gatsby-plugin-sitemap`,
+   
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -44,6 +40,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -60,21 +64,25 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-autolink-headers`,
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              isIconAfterHeader: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              plugins: [
+                `copy-to-clipboard`,
+              ],
+            },
+          },
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -103,27 +111,23 @@ module.exports = {
                 })
               })
             },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  nodes {
-                    excerpt
-                    html
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      title
-                      date
-                    }
+            query: `{
+              allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+                nodes {
+                  excerpt
+                  html
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                    date
                   }
                 }
               }
-            `,
+            }`,
             output: "/rss.xml",
-            title: "Oksurya Blog RSS Feed",
+            title: "Gatsby Starter Blog RSS Feed",
           },
         ],
       },
@@ -131,7 +135,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Oksurya`,
+        name: `Jayasurya Blog`,
         short_name: `Oksurya`,
         start_url: `/`,
         background_color: `#ffffff`,
@@ -139,13 +143,8 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/oksurya-icon.png`, // This path is relative to the root of the site.
+        icon: `static/logo.png`, // This path is relative to the root of the site.
       },
     },
-   
-    
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

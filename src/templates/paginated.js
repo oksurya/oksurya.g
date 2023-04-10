@@ -19,48 +19,51 @@ const PaginatedTemplate = ({ pageContext }) => {
   return (
     <Layout>
 
-<div class="mx-auto max-w-2xl text-center">
+
+
+
+              <div class="mx-auto max-w-2xl text-center">
       <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{Title}</h1>
-      <p class="mt-2 text-sm font-semibold text-gray-400">{Description}</p>
-      </div>      
-      <div class="mx-auto my-4 max-w-5xl"></div>
-      <div class="grid gap-8 md:grid-cols-3 md:gap-x-12 md:gap-y-12">
-
-
-
-
-        
-        {group.map(post => {
+      <p class="mt-2 text-sm font-semibold trueGray-600">{Description}</p>
+      </div>
+            
+           
+   <div className="mt-10 mb-5">
+            {group.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <div className="border-t pt-8" key={post.fields.slug}>
-            <div className="flex space-x-1 text-xs text-gray-500"><time>{post.frontmatter.date}</time></div>
-      
-            <Link className="mt-2 block" to={post.fields.slug} itemProp="url">
-              <p className="text-base font-semibold leading-tight tracking-tight text-gray-700 hover:text-gray-900 sm:text-lg md:text-xl">{title}</p>
-      
-              <p className="mt-3 sm:flex text-sm hidden text-gray-500 sm:line-clamp-2" itemProp="description">{post.frontmatter.description}</p>
-      
-             
-      <div class="mt-6 hidden items-center text-xs font-medium sm:flex">
+            <div class="border-t p-3">
+<div class="flex space-x-1 text-xs text-gray-500">
+<time>{post.frontmatter.date}</time></div>
+<Link to={post.fields.slug} itemProp="url" class="mt-2 block">
+<p class="text-base font-semibold leading-tight tracking-tight text-gray-700 hover:text-gray-900 sm:text-lg md:text-xl">{title}</p>
+<p className="mt-3 hidden text-sm text-gray-500 sm:line-clamp-2" dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt, }} itemProp="description" />
+</Link>
+
+<div class="mt-6 hidden items-center text-xs font-medium sm:flex">
       {post.frontmatter.tags && post.frontmatter.tags.slice(0, 3).map((tag, index) => (
                <span class="mr-1.5 rounded-full px-3 py-1 bg-purple-100 text-purple-800">
               <Link to={`/topic/${tag}`} key={tag}>  {tag}</Link>
                 </span>
                 ))}
               </div>
-            </Link>
-          </div>
+
+</div>
           )
         })}
-   </div>
+</div>
 
-
-
-   <nav class="mt-12 flex items-center justify-between border-t border-gray-200 px-4 pt-12 sm:px-6" aria-label="Pagination">
+   <nav aria-label="Pagination">
    
-
+   <ul className="border-t" style={{
+  display: `flex`,
+  flexWrap: `wrap`,
+  justifyContent: `space-between`,
+  listStyle: `none`,
+  padding: 0,
+  paddingTop: `10px`
+}}>
         {!first && (
           <Link to={previousPageUrl} className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -82,6 +85,7 @@ const PaginatedTemplate = ({ pageContext }) => {
       </svg>
           </Link>
         )}
+        </ul>
      </nav>
     </Layout>
   )

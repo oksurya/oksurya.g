@@ -1,0 +1,11 @@
+- name: Home
+  link: /
+  icon: HomeIcon
+
+- name: About
+  link: /
+  icon: HomeIcon
+  
+- name: Contact
+  link: /
+  icon: HomeIcon

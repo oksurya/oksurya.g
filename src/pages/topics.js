@@ -14,6 +14,7 @@ const AllTags = ({ data }) => {
       <p class="mt-2 text-sm font-semibold trueGray-600">Discover posts by topic.</p>
       </div>
 
+
       <div class="flex mt-10 flex-wrap gap-3 justify-center">
         
       {tags.map((tag) => (
