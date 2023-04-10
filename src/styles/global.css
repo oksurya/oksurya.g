@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.no-typography {
+	border: none;
+	margin: 0px;
+  }
 .searchbtn{
 background-color: #581c87;
 }

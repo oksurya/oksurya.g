@@ -22,7 +22,7 @@ const NotFoundPage = ({ data, location }) => {
     
     <input type="hidden" name="_gotcha" />
         
-    <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Send</button>
+    <button type="submit" class="bg-purple-800 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Send</button>
 </form>
        
 </div>

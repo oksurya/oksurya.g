@@ -22,7 +22,7 @@ const Menu = () => {
 <Link
             key={node.link}
             to={node.link}
-            className="focus:text-purple-800 hover:text-purple-800 text-gray-600 hover:bg-gray-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md"
+            className="w-full block  px-4 py-2 border-b text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
             aria-current={node.current ? 'page' : undefined}
           >
           

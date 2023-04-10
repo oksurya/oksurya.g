@@ -6,7 +6,8 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql} from "gatsby"
+import { useLocation } from '@reach/router'
 const Seo = ({ description, title, image, children }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -30,13 +31,13 @@ const Seo = ({ description, title, image, children }) => {
   const defaultTitle = site.siteMetadata?.title
 
     const ogImageUrl = site.siteMetadata.siteUrl + ( image ||  site.siteMetadata.defaultOpenGraphImage )
-
+    const ogUrl = site.siteMetadata.siteUrl + useLocation().pathname;
   return (
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta name="description" content={metaDescription} />
       <meta property="image" content={ogImageUrl} />
-
+      <link rel="canonical" href={ogUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={ogImageUrl} />

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import TopLoadingBar from "react-top-loading-bar"
 
 import LeftPage from './leftsidebar'
-import RightPage from './rightsidebar'
 import { Link } from "gatsby"
 
 
@@ -128,7 +127,7 @@ fill="#800099" stroke="none">
           <LeftPage/>
       
 <main className="lg:col-span-9 xl:col-span-6">
-<form className="my-5 flex max-w-xl items-center px-6" onSubmit={handleSearch}>
+<form className="my-5 mb-10 flex max-w-xl items-center px-6" onSubmit={handleSearch}>
         <input
         className="pl-5 h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Type your search query here.."
           type="text"
@@ -160,7 +159,7 @@ fill="#800099" stroke="none">
 
 {children}
 </main>
-<RightPage/>
+
     </div>
     </div>
 
@@ -169,7 +168,7 @@ fill="#800099" stroke="none">
 <footer class="bg-white text-center lg:text-left">
 <div className="hover:text-puple-700 text-center w-full space-x-4 pt-5">
 
-<Link className="hover:text-puple-700" to="/about">About</Link>
+<Link to="/about">About</Link>
 <Link to="/contact">Contact</Link>
 <Link to="/p/privacy">Privacy</Link>
 <Link to="/p/dmca">DMCA</Link>

@@ -17,7 +17,7 @@ const navigation = [
 const LeftPage = () => {
   return (
 <>
-    <div class="md:invisible fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-2 border-indigo-500">
+    <div class="md:invisible fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-2 border-purple-800">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
       
     {navigation.map((item) => (
@@ -39,7 +39,7 @@ const LeftPage = () => {
 </div>
 
 
-    <div className="rounded-lg shadow hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div className="rounded-lg shadow hidden lg:block lg:col-span-3 xl:col-span-3">
     <nav aria-label="Sidebar" className="sticky top-4 divide-y divide-gray-300">
       <div className="pb-5 pt-5  space-y-1">
       <div>

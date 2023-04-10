@@ -18,22 +18,25 @@ const BlogPostTemplate = ({
 
   const siteTitle = site.siteMetadata?.title || `Title`
   return (
+    
+    
     <Layout location={location} title={siteTitle}>
+      
       <TypographyStyle typography={typography}/>
-
+    
 
       <div class="container mx-auto">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     <article         className=""
         itemScope
         itemType="http://schema.org/Article">
-      <header class="py-8">
-        
-        <h1 class="text-4xl font-bold leading-tight">{post.frontmatter.title}</h1>
-        <div class="text-gray-600 text-sm mt-2">
-          <time datetime="{{ article.date }}">{post.frontmatter.date}</time>
-        </div>
-      </header>
+
+<header class="border-b mx-auto max-w-2xl text-center">
+        <h1 class="no-typography text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{post.frontmatter.title}</h1>
+        <time class="mt-2 text-sm  font-semibold text-gray-400" datetime="{{ article.date }}">{post.frontmatter.date}</time>
+    </header>
+
+    
       <div className="prose-lg">
       <section
           dangerouslySetInnerHTML={{ __html: post.html }}
