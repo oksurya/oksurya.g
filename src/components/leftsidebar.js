@@ -39,13 +39,13 @@ const LeftPage = () => {
 </div>
 
 
-    <div className="hidden lg:block lg:col-span-3 xl:col-span-2">
+    <div className="rounded-lg shadow hidden lg:block lg:col-span-3 xl:col-span-2">
     <nav aria-label="Sidebar" className="sticky top-4 divide-y divide-gray-300">
-      <div className="pb-8 space-y-1">
+      <div className="pb-5 pt-5  space-y-1">
       <div>
         
       <Link aria-label="Oksurya Logo" to="/">
-          <svg version="1.0" class="h-10" xmlns="http://www.w3.org/2000/svg"
+          <svg version="1.0" class="h-10 w-full" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 456.000000 141.000000"
          preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,141.000000) scale(0.100000,-0.100000)"
@@ -87,7 +87,7 @@ const LeftPage = () => {
           </Link>
         ))}
       </div>
-      <div className="pt-10">
+      <div className="pt-5">
         <p
           className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider"
           id="Useful Resources for Your Toolbox"

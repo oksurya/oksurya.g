@@ -1,5 +1,5 @@
 import * as React from "react"
-
+import Bio from "./bio"
 
 const whoToFollow = [
     {
@@ -27,9 +27,7 @@ const RightPage = () => {
                 <section aria-labelledby="who-to-follow-heading">
                   <div className="bg-white rounded-lg shadow">
                     <div className="p-6">
-                      <h2 id="who-to-follow-heading" className="text-base font-medium text-gray-900">
-                        Follow me on Social Media
-                      </h2>
+                    <Bio />
                      
                       {whoToFollow.map((user) => (
                       <div className="mt-2">
@@ -41,7 +39,11 @@ const RightPage = () => {
                         </a>
                       </div>
                       ))}
+
+                      
+
                     </div>
+                    
                   </div>
                 </section>
               </div>

@@ -20,24 +20,52 @@ const BlogPostTemplate = ({
   return (
     <Layout location={location} title={siteTitle}>
       <TypographyStyle typography={typography}/>
-      <article
-        className="blog-post"
+
+
+      <div class="container mx-auto">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <article         className=""
         itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
-        <section
+        itemType="http://schema.org/Article">
+      <header class="py-8">
+        
+        <h1 class="text-4xl font-bold leading-tight">{post.frontmatter.title}</h1>
+        <div class="text-gray-600 text-sm mt-2">
+          <time datetime="{{ article.date }}">{post.frontmatter.date}</time>
+        </div>
+      </header>
+      <div className="prose-lg">
+      <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <hr />
-        <footer>
+      </div>
+    </article>
+    
+    <footer>
           <Bio />
         </footer>
-      </article>
+       
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
       <nav className="blog-post-nav">
         <ul
           style={{

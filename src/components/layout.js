@@ -28,7 +28,7 @@ const Layout = ({children}) => {
     event.preventDefault();
     const API_KEY = 'AIzaSyALQVioHZu6i7xeo_LKOG5nN7jFcQF_5d8';
     const cx = '222e3e47a9bfb4a40';
-    const searchUrl = `https://www.googleapis.com/customsearch/v1?q=${searchQuery}%20site:techviral.net&cx=${cx}&key=${API_KEY}`;
+    const searchUrl = `https://www.googleapis.com/customsearch/v1?q=${searchQuery}%20site:oksurya.in&cx=${cx}&key=${API_KEY}`;
 
     fetch(searchUrl)
       .then((response) => {
@@ -167,6 +167,15 @@ fill="#800099" stroke="none">
 
 
 <footer class="bg-white text-center lg:text-left">
+<div className="hover:text-puple-700 text-center w-full space-x-4 pt-5">
+
+<Link className="hover:text-puple-700" to="/about">About</Link>
+<Link to="/contact">Contact</Link>
+<Link to="/p/privacy">Privacy</Link>
+<Link to="/p/dmca">DMCA</Link>
+
+
+</div>
   <div class="p-4 text-center black">© 2023 Copyright - <a class="black" href="https://twitter.com/jayasuryatweet">Designed by Jayasurya Mailsamy</a>
   </div>
   </footer>
