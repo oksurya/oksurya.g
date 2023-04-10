@@ -28,7 +28,7 @@ const Layout = ({children}) => {
     event.preventDefault();
     const API_KEY = 'AIzaSyALQVioHZu6i7xeo_LKOG5nN7jFcQF_5d8';
     const cx = '222e3e47a9bfb4a40';
-    const searchUrl = `https://www.googleapis.com/customsearch/v1?q=${searchQuery}&cx=${cx}&key=${API_KEY}`;
+    const searchUrl = `https://www.googleapis.com/customsearch/v1?q=${searchQuery}%20site:techviral.net&cx=${cx}&key=${API_KEY}`;
 
     fetch(searchUrl)
       .then((response) => {
