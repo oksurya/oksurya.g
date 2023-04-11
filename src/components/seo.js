@@ -39,6 +39,7 @@ const Seo = ({ description, title, image, children }) => {
       <meta property="image" content={ogImageUrl} />
       <link rel="canonical" href={ogUrl} />
       <meta property="og:title" content={title} />
+      <meta property="og:url" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={ogImageUrl} />
       <meta property="og:type" content="website" />

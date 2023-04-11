@@ -27,9 +27,7 @@ const BlogPostTemplate = ({
 
       <div class="container mx-auto">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-    <article         className=""
-        itemScope
-        itemType="http://schema.org/Article">
+    <article>
 
 <header class="border-b mx-auto max-w-2xl text-center">
         <h1 class="no-typography text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{post.frontmatter.title}</h1>
@@ -40,7 +38,6 @@ const BlogPostTemplate = ({
       <div className="prose-lg">
       <section
           dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
         />
         <hr />
       </div>
