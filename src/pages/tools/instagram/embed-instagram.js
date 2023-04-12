@@ -57,7 +57,7 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
             <div>
             <label htmlfor="url" class="font-bold">Instagram Link</label>
             <div class="mt-1">
-<input type="text" value={url} onChange={handleUrlChange} maxlength="15525" required="" class="block w-full border border-gray-300 rounded-md"/>
+<input type="text" value={url} onChange={handleUrlChange} maxlength="15525" required="" class="block w-full p-2 border border-gray-300 rounded-md"/>
 
     </div>
     </div>
@@ -65,7 +65,7 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
     <div>
             <label htmlfor="height" class="font-bold">Embed Height</label>
             <div class="mt-1">
-<input type="number" value={height} onChange={handleHeightChange} maxlength="125" class="block w-full border border-gray-300 rounded-md"/>
+<input type="number" value={height} onChange={handleHeightChange} maxlength="125" class="block w-full p-2 border border-gray-300 rounded-md"/>
 
     </div>
     </div>
