@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import TopLoadingBar from "react-top-loading-bar"
 
 import LeftPage from './leftsidebar'
+import RMenu from './rightsidebar'
+
 import { Link } from "gatsby"
 
 
@@ -159,7 +161,7 @@ fill="#800099" stroke="none">
 
 {children}
 </main>
-
+<RMenu/>
     </div>
     </div>
 

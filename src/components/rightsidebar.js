@@ -1,54 +1,72 @@
-import * as React from "react"
-import Bio from "./bio"
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
-const whoToFollow = [
-    {
-      name: 'Twitter',
-      href: 'https://twitter.com/jayasuryatweet',
-    },
-    {
-      name: 'Facebook',
-      href: 'https://www.facebook.com/oksurya',
-    },
-    {
-      name: 'Instagram',
-      href: 'https://www.instagram.com/jayasurya_ig',
-    },
+const RMenu = () => {
+  const data = useStaticQuery(graphql`
+    query {
+        allSocialmenuYaml {
+        edges {
+          node {
+            name
+            link
+          }
+        }
+      }
+    }
+  `)
 
-    // More people...
-  ]
+
+
+
   
+  const menuLinks = data.allSocialmenuYaml.edges.map(({ node }) => (
 
 
-const RightPage = () => {
+
+
+<Link
+            key={node.link}
+            to={node.link}
+            className="w-full block  px-4 py-2 border-b text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+            aria-current={node.current ? 'page' : undefined}
+          >
+          
+            <span className="focus:text-gray-400  hover:text-purple-800 text-gray-600 truncate">{node.name}</span>
+          </Link>
+
+
+
+
+
+    
+  ))
+
   return (
-    <aside className="hidden xl:block xl:col-span-4">
-              <div className="sticky top-4 space-y-4">
-                <section aria-labelledby="who-to-follow-heading">
-                  <div className="bg-white rounded-lg shadow">
-                    <div className="p-6">
-                    <Bio />
-                     
-                      {whoToFollow.map((user) => (
-                      <div className="mt-2">
-                        <a
-                          href={user.href}
-                          className="w-full block text-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
-                        >
-                          {user.name}
-                        </a>
-                      </div>
-                      ))}
-
-                      
-
-                    </div>
-                    
-                  </div>
-                </section>
-              </div>
-            </aside>
+    
+      <>
+      <div className="rounded-lg shadow hidden lg:block lg:col-span-3 xl:col-span-3">
+      <div className="pt-5">
+        <p
+          className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider"
+          id="Useful Resources for Your Toolbox"
+        >
+          Follow on Social Media
+        </p>
+        <div className="mt-3 space-y-2" aria-labelledby="Valuable Resources for Your Work">
+        {menuLinks}
+        </div>
+      </div>
+      
+      
+      
+      </div>
+      
+      </>
+        
+      
+    
   )
 }
 
-export default RightPage
+export default RMenu

@@ -39,13 +39,13 @@ const Seo = ({ description, title, image, children }) => {
       <meta property="image" content={ogImageUrl} />
       <link rel="canonical" href={ogUrl} />
       <meta property="og:title" content={title} />
-      <meta property="og:url" content={title} />
+      <meta property="og:url" content={ogUrl} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={ogImageUrl} />
       <meta property="og:type" content="website" />
 
       <meta property="twitter:image" content={ogImageUrl} />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:creator"
         content={site.siteMetadata?.social?.twitter || ``}
