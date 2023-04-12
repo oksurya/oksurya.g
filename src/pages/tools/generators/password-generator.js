@@ -72,7 +72,7 @@ Generate strong and secure passwords with our free password generator tool.
                 
  <button type="button" 
  onClick={generatePassword}
- class="w-full justify-center rounded-md border border-transparent bg-purple-800 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm">
+ class="w-full bg-purple-800 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded">
     Generate Password
     </button>
     </div>

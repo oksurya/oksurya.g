@@ -72,7 +72,7 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
 
     
 
-    <button type="submit" className="group relative flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-purple-800 py-2.5 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+    <button type="submit" className="w-full bg-purple-800 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded">
           Generate Embed Code
         </button>
     
@@ -88,7 +88,7 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
   </div>
 )}
 {!code && (
-  <p className="mt-4 text-gray-600">No code to copy yet. Please generate your Instagram embed code.</p>
+  <p className="w-full mt-4 text-gray-600">No code to copy yet. Please generate your Instagram embed code.</p>
 )}
       
     </div>
