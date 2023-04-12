@@ -51,8 +51,8 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
 
 
 
-<div class="flex items-center justify-center py-5 px-4 sm:px-6 lg:px-8">
-    <div class="w-full max-w-md">
+<div class="">
+    <div class="w-full">
         <form onSubmit={handleSubmit} class="mt-8 space-y-8">
             <div>
             <label htmlfor="url" class="font-bold">Instagram Link</label>
