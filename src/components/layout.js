@@ -86,7 +86,7 @@ const Layout = ({children}) => {
         onLoaderFinished={() => setLoadingProgress(0)}
       />
     <div className="min-h-full">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
 
       
         <div className="py-5">
@@ -122,13 +122,13 @@ fill="#800099" stroke="none">
 </svg></Link>
   </div>
 </header>
-          <div className="max-w-3xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-12 lg:gap-8">
+<div className="max-w-3xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-12">
 
 
 
           <LeftPage/>
       
-<main className="lg:col-span-9 xl:col-span-6">
+          <main className="rounded-lg shadow lg:col-span-9 xl:col-span-6">
 <form className="my-5 mb-10 flex max-w-xl items-center px-6" onSubmit={handleSearch}>
         <input
         className="pl-5 h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Type your search query here.."

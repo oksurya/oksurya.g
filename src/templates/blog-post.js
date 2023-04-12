@@ -66,33 +66,33 @@ const BlogPostTemplate = ({
 
 
     
-      <nav className="blog-post-nav">
-        <ul
+<nav className="blog-post-nav">
+        <div
           style={{
             display: `flex`,
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
+            padding: `10px`,
             marginTop: `10px`,
           }}
         >
-          <li>
+          <div>
             {previous && (
               <Link to={previous.fields.slug} rel="prev" className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-5">
                 ←  Previous
               </Link>
             )}
-          </li>
-          <li>
+          </div>
+          <div>
             {next && (
 
 <Link to={next.fields.slug} rel="next" className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">
 Next →
 </Link>
             )}
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
       
             

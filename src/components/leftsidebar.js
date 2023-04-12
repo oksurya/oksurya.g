@@ -39,7 +39,7 @@ const LeftPage = () => {
 </div>
 
 
-    <div className="rounded-lg shadow hidden lg:block lg:col-span-3 xl:col-span-3">
+<div className="rounded-lg  hidden lg:block lg:col-span-3 xl:col-span-3">
     <nav aria-label="Sidebar" className="sticky top-4 divide-y divide-gray-300">
       <div className="pb-5 pt-5  space-y-1">
       <div>

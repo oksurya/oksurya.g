@@ -45,8 +45,8 @@ const RMenu = () => {
   return (
     
       <>
-      <div className="rounded-lg shadow hidden lg:block lg:col-span-3 xl:col-span-3">
-      <div className="pt-5">
+ <div className="  rounded-lg  hidden lg:block lg:col-span-3 xl:col-span-3">
+      <div className="sticky top-4 divide-y pt-5">
         <p
           className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider"
           id="Useful Resources for Your Toolbox"
