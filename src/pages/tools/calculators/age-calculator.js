@@ -34,7 +34,7 @@ Calculate your age with our easy-to-use age calculator tool
     value={birthDate}
     onChange={(e) => setBirthDate(e.target.value)}
   />
-  <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onClick={calculateAge}>Calculate Age</button>
+  <button class="bg-purple-800 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded" onClick={calculateAge}>Calculate Age</button>
   {age !== null && <p class="font-bold">You are {age} years old.</p>}
 </div>
 

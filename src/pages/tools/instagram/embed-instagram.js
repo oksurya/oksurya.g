@@ -55,7 +55,7 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
     <div class="w-full max-w-md">
         <form onSubmit={handleSubmit} class="mt-8 space-y-8">
             <div>
-            <label htmlfor="url" class="block text-sm font-medium text-gray-600">Instagram Link</label>
+            <label htmlfor="url" class="font-bold">Instagram Link</label>
             <div class="mt-1">
 <input type="text" value={url} onChange={handleUrlChange} maxlength="15525" required="" class="block w-full rounded-md border-gray-300 font-medium shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"/>
 
@@ -63,7 +63,7 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
     </div>
 
     <div>
-            <label htmlfor="height" class="block text-sm font-medium text-gray-600">Embed Height</label>
+            <label htmlfor="height" class="font-bold">Embed Height</label>
             <div class="mt-1">
 <input type="number" value={height} onChange={handleHeightChange} maxlength="125" class="block w-full rounded-md border-gray-300 font-medium shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"/>
 
@@ -72,7 +72,7 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
 
     
 
-    <button type="submit" className="group relative flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-indigo-600 py-2.5 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+    <button type="submit" className="group relative flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-purple-800 py-2.5 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           Generate Embed Code
         </button>
     
@@ -80,7 +80,7 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
 
     {code && (
   <div className="mt-3">
-    <label htmlfor="codeem" className="block text-sm font-medium text-gray-600">Embed Code:</label>
+    <label htmlfor="codeem" className="font-bold">Embed Code:</label>
     <textarea ref={textareaRef} value={code} readOnly className="w-full p-2 border border-gray-400 rounded-md" rows="5" />
     <button onClick={handleCopyClick} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
       {copySuccess ? 'Copied!' : 'Copy'}

@@ -31,7 +31,6 @@ const LoveCalculator = () => {
 
 
 
-
       <Transition appear show={isOpen} as={React.Fragment}>
         <Dialog as="div" className="relative z-10" onClose={resetLoveCalculator}>
           <Transition.Child
@@ -152,9 +151,9 @@ Simply enter your name and your partner's name to calculate your love percentage
           />
 
 {showResetButton ? (
-          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onClick={resetLoveCalculator}>Reset</button>
+          <button class="bg-purple-800 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded" onClick={resetLoveCalculator}>Reset</button>
         ) : (
-          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" onClick={calculateLove}>Calculate Love</button>
+          <button class="bg-purple-800 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded" onClick={calculateLove}>Calculate Love</button>
         )}
     </div>
 

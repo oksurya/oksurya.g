@@ -39,14 +39,14 @@ Generate strong and secure passwords with our free password generator tool.
 </div>
 
 <div class="mmax-w-2xl prose mx-auto mt-10 lg:text-lg">
-    <div class="mx-auto max-w-xs lg:col-span-4">
+    <div>
         <div class="grid grid-cols-12 gap-6 text-gray-600">
             <div class="col-span-12">
-              <label id="passlength" htmlFor="Password_Length" class="block tb-5 text-sm font-medium text-gray-700">Password Length:</label>
+              <label id="passlength" htmlFor="Password_Length" class="font-bold">Password Length:</label>
                 <div class="mt-1">
                     
                     
- <input type="number" placeholder="Password Length"  class="block w-full rounded-md border-gray-300 font-medium shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+ <input type="number" placeholder="Password Length"  class="block w-full p-2 border border-gray-300 rounded-md"
                         value={length} onChange={(e) => setLength(e.target.value)}/>
                         
                         </div>
@@ -55,11 +55,11 @@ Generate strong and secure passwords with our free password generator tool.
             <div class="col-span-12">
             
         <input type="checkbox" checked={includeNumbers} onChange={(e) => setIncludeNumbers(e.target.checked)} />
-        <label htmlFor="incnumb" class="block tb-5 text-sm font-medium text-gray-700"> Include Numbers</label>
+        <label htmlFor="incnumb" class="font-lighter"> Include Numbers</label>
      <br></br>
         
         <input type="checkbox" checked={includeSymbols} onChange={(e) => setIncludeSymbols(e.target.checked)} />
-        <label  htmlFor="incsymb" class="block tb-5 text-sm font-medium text-gray-700"> Include Symbols</label>
+        <label  htmlFor="incsymb" class="font-lighter"> Include Symbols</label>
 
 
         </div>
@@ -72,17 +72,18 @@ Generate strong and secure passwords with our free password generator tool.
                 
  <button type="button" 
  onClick={generatePassword}
- class="w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm">
+ class="w-full justify-center rounded-md border border-transparent bg-purple-800 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm">
     Generate Password
     </button>
     </div>
 
     <div class="col-span-12">
-    <label  htmlFor="yourpass" class="block tb-5 text-sm font-medium text-gray-700">Your Password: </label>
-      <input type="text" class="block w-full rounded-md border-gray-300 font-medium shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value={password} readOnly />
+    <label  htmlFor="yourpass" class="font-bold">Your Password: </label>
+      <input type="text" class="block w-full p-2 border border-gray-300 rounded-md" value={password} readOnly />
        
     </div> 
     </div>
+    
     </div>
 
     <div className="prose mx-auto mt-12 max-w-2xl">
