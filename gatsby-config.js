@@ -15,7 +15,7 @@ module.exports = {
       summary: `who lives and works in India building useful things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://oksuryain.web.app`,
+    siteUrl: `https://www.oksurya.in`,
     defaultOpenGraphImage: `/default.png`,
     social: {
       twitter: `jayasuryatweet`,
