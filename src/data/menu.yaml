@@ -1,11 +1,11 @@
-- name: Home
-  link: /
-  icon: HomeIcon
+- name: Age Calculator
+  link: /tools/calculator/age-calculator
 
-- name: About
-  link: /
-  icon: HomeIcon
+- name: Love Calculator
+  link: /tools/calculator/love-calculator
   
-- name: Contact
-  link: /
-  icon: HomeIcon
+- name: Instagram Embed Generator
+  link: /tools/instagram/embed-instagram
+
+- name: Password Generator
+  link: /tools/generator/password-generator
