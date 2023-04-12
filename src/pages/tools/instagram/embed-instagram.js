@@ -52,7 +52,7 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
 
 
 <div class="">
-    <div class="w-full">
+    <div class="w-full relative px-4 sm:px-6 lg:px-8 flex flex-col gap-2">
         <form onSubmit={handleSubmit} class="mt-8 space-y-8">
             <div>
             <label htmlfor="url" class="font-bold">Instagram Link</label>
@@ -94,7 +94,8 @@ Embed your favorite Instagram photos, videos, and reels on your website or blog 
     </div>
     
      </div>
-     <div className="prose mx-auto mt-12 max-w-2xl">
+     <article className="mt-6 prose prose-indigo px-6 lg:px-8 prose-lg text-gray-500 mx-auto">
+
 <p>
     The Instagram Embed tool in React JS is a web application that allows customers to embed Instagram posts into their personal websites or programs. React JS is a famous the front-quit framework used for building consumer interfaces. The Instagram Embed device constructed with React JS makes it easy for builders to embed Instagram posts into their net pages or programs, improving their content material and improving their consumer enjoy.
     </p><p>
@@ -107,7 +108,7 @@ Some other gain of using the Instagram Embed device in React JS is that it may a
 The Instagram Embed device in React JS also gives builders the ability to personalize the arrival of embedded posts to healthy their internet site or application design. Developers can customise the dimensions, layout, and color scheme of the embedded Instagram posts to suit their emblem or layout aesthetic.
 </p><p>
 In conclusion, the Instagram Embed device in React JS is a beneficial and powerful software that lets in developers to effortlessly embed Instagram posts into their web sites or applications. By way of improving the consumer revel in and growing social media engagement, it could help to improve the general fulfillment of web sites and applications. With its consumer-pleasant interface and customization alternatives, the Instagram Embed tool in React JS is a valuable device for developers trying to upload extra visible content material to their internet pages or packages.
-</p></div>
+</p></article>
 
     
 

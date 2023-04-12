@@ -129,7 +129,7 @@ Simply enter your name and your partner's name to calculate your love percentage
     </p>
 </div>
 <div class="max-w-2xl prose mx-auto mt-10 lg:text-lg">
-    <div class="flex flex-col gap-2">
+    <div class="relative px-4 sm:px-6 lg:px-8 flex flex-col gap-2">
 
     <label class="font-bold" htmlFor="name1">Enter your Name:</label>
     <input
@@ -159,9 +159,9 @@ Simply enter your name and your partner's name to calculate your love percentage
 
 
 
-    <div className="prose mx-auto mt-12 max-w-2xl">
+    <article className="mt-6 prose prose-indigo px-6 lg:px-8 prose-lg text-gray-500 mx-auto">
     <p>&nbsp;A love calculator tool is a web program that aims to are expecting the compatibility among two individuals based totally on their names or birthdates. This device has won monstrous popularity over the years, mainly amongst folks that are searching out their soulmates. The idea in the back of this tool is that certain numbers or combinations of letters constitute distinctive aspects of character or character, and therefore, by using calculating the numerical cost of these elements, the device can provide an estimate of the ability for a a hit courting.</p><p>There are exceptional kinds of love calculators to be had on-line, each with its specific method to calculating compatibility. Some calculators simply use the letters in the name of the people, whilst others aspect in the birthdate's and astrological signs and symptoms of the partners. Additionally, a few calculators also don't forget the numerical price of the letters in the name, that is derived from the alphabetical order of the letters. Those calculations are then used to generate a percentage score that represents the level of compatibility among the two individuals.</p><p>While love calculators can be enjoyable and amusing to apply, they should be eager about a grain of salt. The accuracy of those tools is highly arguable, as they're based totally on subjective and unscientific elements. Moreover, there are many factors that determine the achievement of a relationship, such as shared interests, values, and lifestyles goals, which are not accounted for in these calculations.</p><p>In end, a love calculator tool can be a a laugh manner to bypass the time, however it need to not be taken seriously as a predictor of relationship success. The nice manner to discover a like minded companion is thru learning them individually, and building a meaningful connection primarily based on shared studies, values, and hobbies.</p>
-    </div>
+    </article>
 
     </div>
 

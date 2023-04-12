@@ -25,7 +25,7 @@ Calculate your age with our easy-to-use age calculator tool
 </div>
     
 <div class="max-w-2xl prose mx-auto mt-10 lg:text-lg">
-    <div class="flex flex-col gap-2">
+    <div class="relative px-4 sm:px-6 lg:px-8 flex flex-col gap-2">
   <label class="font-bold" htmlFor="birthDate">Enter your birthdate:</label>
   <input
     class="p-2 border border-gray-300 rounded-md"
@@ -38,7 +38,7 @@ Calculate your age with our easy-to-use age calculator tool
   {age !== null && <p class="font-bold">You are {age} years old.</p>}
 </div>
 
-<div className="prose mx-auto mt-12 max-w-2xl">
+<article className="mt-6 prose prose-indigo px-6 lg:px-8 prose-lg text-gray-500 mx-auto">
 
 <p>
 An age calculator device is a simple yet effective online tool that permits users to speedy and without difficulty calculate the age of someone based totally on their date of delivery. This device is broadly used by humans from all walks of existence, including educators, healthcare professionals, HR managers, and individuals looking to song their personal age or that in their cherished ones.
@@ -52,7 +52,7 @@ People also can gain from using an age calculator tool. It can be a fun and exci
 Universal, an age calculator tool is a easy yet crucial on line tool that gives correct and beneficial records to a wide variety of customers. It is straightforward to apply, broadly available, and might save customers effort and time in calculating age manually.
 </p>
 
-</div>
+</article>
     
     
     </div>
