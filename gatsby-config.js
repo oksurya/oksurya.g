@@ -26,15 +26,6 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "G-0KKZ1LJGZV",
-        // this option places the tracking script into the head of the DOM
-        head: true,
-        // other options
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
