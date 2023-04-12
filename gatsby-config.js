@@ -25,7 +25,18 @@ module.exports = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     `gatsby-plugin-sitemap`,
-   
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+        "G-0KKZ1LJGZV", // Google Analytics / GA
+        ],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
