@@ -26,15 +26,12 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingIds: [
-        "G-0KKZ1LJGZV", // Google Analytics / GA
-        ],
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true
-        },
+        trackingId: "G-0KKZ1LJGZV",
+        // this option places the tracking script into the head of the DOM
+        head: true,
+        // other options
       },
     },
     {
