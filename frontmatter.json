@@ -29,6 +29,11 @@
           "type": "image"
         },
         {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
           "title": "Tags",
           "name": "tags",
           "type": "tags"
@@ -50,6 +55,11 @@
       "path": "[[workspace]]/content/blog"
     }
   ],
-  "frontMatter.taxonomy.categories": [],
-  "frontMatter.taxonomy.tags": []
+  "frontMatter.taxonomy.tags": [
+    "Default",
+    "GatsbyJS",
+    "Markdown",
+    "testtag"
+  ],
+  "frontMatter.taxonomy.categories": []
 }
