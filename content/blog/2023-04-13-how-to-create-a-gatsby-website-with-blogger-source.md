@@ -28,12 +28,15 @@ The easiest way to start a brand-new Gatsby website online is to use the gatsby-
 
 The perfect way to start a new Gatsby site is to apply the gatsby-cli tool. You could deploy it globally the use of npm:
 
-```npm install -g gatsby-cli```
+```
+npm install -g gatsby-cli
+```
 
 Then, you could use the gatsby new command to create a brand new web page based totally on a starter template. In this case, we can use the gatsby-starter-blog-theme template, which already consists of the gatsby-subject-blog plugin for developing a blog site with minimum configuration.
 
 ```
 gatsby new my-gatsby-site https://github.com/gatsbyjs/gatsby-starter-blog-theme
+
 ```
 
 This may create a new folder known as my-gatsby-site with all the files and dependencies wanted to your site. You may change into that folder and run gatsby develop to start a local development server:
@@ -50,7 +53,9 @@ To drag records from Blogger into your Gatsby website, you'll need to install an
 
 To install the plugin, run the following command in your terminal:
 
-`npm install --save gatsby-source-blogger`
+```
+npm install --save gatsby-source-blogger
+```
 
 Then, you'll want to feature a few alternatives to the plugin for your **gatsby-config.js** report. You could locate this file within the root of your project folder. Open it along with your textual content editor and look for the plugins array. Upload a brand new object with the subsequent properties:
 
