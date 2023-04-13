@@ -32,7 +32,9 @@ The perfect way to start a new Gatsby site is to apply the gatsby-cli tool. You 
 
 Then, you could use the gatsby new command to create a brand new web page based totally on a starter template. In this case, we can use the gatsby-starter-blog-theme template, which already consists of the gatsby-subject-blog plugin for developing a blog site with minimum configuration.
 
-`gatsby new my-gatsby-site https://github.com/gatsbyjs/gatsby-starter-blog-theme`
+```
+gatsby new my-gatsby-site https://github.com/gatsbyjs/gatsby-starter-blog-theme
+```
 
 This may create a new folder known as my-gatsby-site with all the files and dependencies wanted to your site. You may change into that folder and run gatsby develop to start a local development server:
 
