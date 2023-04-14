@@ -1,4 +1,7 @@
 - name: Age Calculator
+  link: /tools/encoder/base-64-encoder
+
+- name: Age Calculator
   link: /tools/calculator/age-calculator
 
 - name: Love Calculator
