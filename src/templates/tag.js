@@ -54,7 +54,7 @@ const TagTemplate = ({ data, location, pageContext }) => {
 export const Head = ({ pageContext }) => {
   const { tag } = pageContext
 
-  return <Seo title={`Discover ${tag}: Tech Guides and Tutorials`} />
+  return <Seo title={`Discover ${tag}: Tech Guides and Tutorials`} description={`Explore ${tag} with our tech guides and tutorials. Learn how to build fast, dynamic websites with ${tag}. Discover everything you need to know to get started today.`} />
 }
 
 export default TagTemplate

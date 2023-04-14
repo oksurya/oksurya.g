@@ -90,6 +90,6 @@ const PaginatedTemplate = ({ pageContext }) => {
     </Layout>
   )
 }
-export const Head = () => <Seo title="Blog" />
+export const Head = () => <Seo title="Blog" description="Read our latest blog posts and stay up-to-date with the latest trends in technology, business, and lifestyle. Our blog covers a wide range of topics and provides insightful analysis, helpful tips, and inspiring stories. Join our community and start exploring today."/>
 
 export default PaginatedTemplate
