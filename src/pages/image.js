@@ -24,9 +24,23 @@ const TextToImage = ({ text }) => {
 
     // Draw text
     ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+
+    // Convert canvas to blob
+    canvas.toBlob((blob) => {
+      // Create download link
+      const link = document.createElement('a');
+      link.download = `${text}.png`;
+      link.href = URL.createObjectURL(blob);
+
+      // Click the download link
+      link.click();
+
+      // Clean up
+      URL.revokeObjectURL(link.href);
+    });
   }, [text]);
 
-  return <canvas ref={canvasRef} />;
+  return <canvas ref={canvasRef} style={{ display: 'none' }} />;
 };
 
 const ImagePage = () => {
