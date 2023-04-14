@@ -16,39 +16,13 @@ const Layout = ({children}) => {
 
 
 
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [results, setResults] = useState([]);
-  const [error, setError] = useState('');
-
-  const handleInputChange = (event) => {
-    setSearchQuery(event.target.value);
-  };
-
-  const handleSearch = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    const API_KEY = 'AIzaSyALQVioHZu6i7xeo_LKOG5nN7jFcQF_5d8';
-    const cx = '222e3e47a9bfb4a40';
-    const searchUrl = `https://www.googleapis.com/customsearch/v1?q=${searchQuery}%20site:oksurya.in&cx=${cx}&key=${API_KEY}`;
-
-    fetch(searchUrl)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        if (data.error) {
-          setError(data.error.message);
-        } else {
-          setResults(data.items);
-        }
-      })
-      .catch((error) => {
-        console.error('Error fetching search results:', error);
-        setError('Error fetching search results');
-      });
+    if (searchTerm.trim()) {
+      window.location.href = `https://cse.google.com/cse?cx=222e3e47a9bfb4a40#gsc.tab=0&gsc.q=${searchTerm}&gsc.sort=`;
+    }
   };
 
 
@@ -129,34 +103,16 @@ fill="#800099" stroke="none">
           <LeftPage/>
       
           <main className="lg:pb-5 rounded-lg shadow lg:col-span-9 xl:col-span-6">
-<form className="my-5 mb-10 flex max-w-xl items-center px-6" onSubmit={handleSearch}>
+          <form className="my-5 mb-10 flex max-w-xl items-center px-6" onSubmit={handleSubmit}>
         <input
         className="pl-5 h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Type your search query here.."
           type="text"
           id="search-input"
-          value={searchQuery}
-          onChange={handleInputChange}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
     <button type="submit" class="mt-0 ml-3 inline-flex w-auto items-center justify-center rounded-md border border-transparent searchbtn px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-0">Search</button>
       </form>
-
-{error && <p>{error}</p>}
-
-
-      {results.map((result) => (
-          <div key={result.link}>
-          <div class="border-b group relative flex items-center px-6 py-4">
-          <a rel="nofollow" href={result.link}>                <div class="absolute inset-0 group-hover:bg-gray-50" aria-hidden="true"></div>
-                  <div class="relative flex min-w-0 flex-1 items-center">
-                      <div class="truncat">
-                          <p class="truncatex text-sm font-medium text-gray-800">{result.title}</p>
-                          <p class="truncatex text-sm text-gray-500">{result.snippet}</p>
-                      </div>
-                  </div>
-              </a>
-          </div>
-      </div>
-      ))}
 
 
 {children}
