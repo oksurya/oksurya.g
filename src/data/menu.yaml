@@ -1,5 +1,8 @@
-- name: Age Calculator
+- name: Base 64 Encoder
   link: /tools/encoder/base-64-encoder
+
+- name: Base 64 Decoder
+  link: /tools/decoder/base-64-decoder
 
 - name: Age Calculator
   link: /tools/calculator/age-calculator
