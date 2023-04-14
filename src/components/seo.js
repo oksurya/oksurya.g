@@ -31,8 +31,7 @@ const Seo = ({ description, title, image, children }) => {
   const defaultTitle = site.siteMetadata?.title
 
     const ogImageUrl = site.siteMetadata.siteUrl + ( image ||  site.siteMetadata.defaultOpenGraphImage )
-    const ogUrl = "https://" + site.siteMetadata.siteUrl + useLocation().pathname;
-
+    const ogUrl = site.siteMetadata.siteUrl + useLocation().pathname;
   return (
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
