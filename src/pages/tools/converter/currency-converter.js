@@ -226,16 +226,27 @@ function CurrencyConverter() {
           Convert
         </button>
       </form>
-        {convertedAmount && (
-        <div className="p-4">
-        <span className="text-xl font-medium">Converted amount:</span>
-        <span className="ml-2 text-xl font-bold">{convertedAmount}</span>
-      </div>
-    )}
+      
         </div>
         </div>
         <article className="mt-6 prose prose-indigo px-6 lg:px-8 prose-lg text-gray-500 mx-auto">
-    <p></p></article>
+    <p>
+
+    The currency converter tool is a simple and powerful tool that allows users to convert any currency into another currency quickly and easily. It's especially useful for people who travel or shop online and need to know the value of different currencies.
+    </p><p>
+The tool uses up-to-date exchange rates to perform the currency conversion, ensuring that users get the most accurate results possible. Users simply select the currency they want to convert from, the currency they want to convert to, and enter the amount they wish to convert. The tool then calculates the conversion and displays the result.
+</p><p>
+Our currency converter tool is designed with user experience in mind. It's easy to use, fast, and accurate. It also has a responsive design, which means it works on any device, whether it's a desktop computer, a tablet, or a smartphone.
+</p><p>
+In terms of SEO, the currency converter tool can be optimized with relevant keywords such as "currency converter", "convert currency online", and "exchange rates". Additionally, including the tool on a website can improve its search engine rankings by increasing user engagement and time spent on the site.
+</p><p>
+Overall, the currency converter tool is a valuable resource for anyone who needs to convert currencies quickly and easily. With its user-friendly design and accurate exchange rates, it's a must-have tool for travelers, online shoppers, and anyone else who needs to deal with multiple currencies.
+
+    </p>
+    
+    
+    
+    </article>
   </Layout>
 );
 }
