@@ -1,9 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { NextSeo } from 'next-seo';
 
 const AboutPage = () => {
   return (
+    <>
+    <NextSeo
+      title="Simple Usage Example"
+      description="A short description goes here."
+    />
     <Layout>
     
     
@@ -90,8 +96,8 @@ const AboutPage = () => {
     </div>
     
     </Layout>
+    </>
   )
 }
-export const Head = () => <Seo title="About Us" />
 
 export default AboutPage
