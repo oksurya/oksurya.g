@@ -221,7 +221,7 @@ function CurrencyConverter() {
         <button
         onClick={convertCurrency}
           type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+          className="w-full bg-purple-800 text-white py-2 px-4 rounded-lg hover:bg-purple-700 focus:outline-none focus:bg-purple-800"
         >
           Convert
         </button>
