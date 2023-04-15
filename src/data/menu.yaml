@@ -1,7 +1,11 @@
-- name: Base 64 Encoder
+
+- name: Speed Converter
+  link: /tools/converter/speed-converter
+
+- name: Base64 Encoder
   link: /tools/encoder/base-64-encoder
 
-- name: Base 64 Decoder
+- name: Base64 Decoder
   link: /tools/decoder/base-64-decoder
 
 - name: Age Calculator
