@@ -46,7 +46,7 @@ This may create a new folder known as my-gatsby-site with all the files and depe
 cd my-gatsby-site
 gatsby develop
 ```
-You can now open http://localhost:8000 for your browser and notice your web page. It have to look some thing like this:
+You can now open `http://localhost:8000` for your browser and notice your web page. It have to look some thing like this:
 
 ### Step 2: Install and Configure the gatsby-source-blogger Plugin
 
@@ -91,7 +91,7 @@ Keep the file and restart your development server. You need to now be capable of
 
 
 ### Step 3: Query for Data from Blogger using GraphQL
-Gatsby uses GraphQL as its information layer, which lets in you to query for any information you want in your additives the use of a declarative syntax. To discover the information to be had from Blogger, you may use the GraphQL tool that includes Gatsby. You can get right of entry to it by using beginning http://localhost:8000/___graphql on your browser.
+Gatsby uses GraphQL as its information layer, which lets in you to query for any information you want in your additives the use of a declarative syntax. To discover the information to be had from Blogger, you may use the GraphQL tool that includes Gatsby. You can get right of entry to it by using beginning `http://localhost:8000/___graphql` on your browser.
 
 You should see something like this:
 
@@ -330,9 +330,9 @@ To deploy your website to GitHub Pages the usage of Gatsby Cloud, you may want t
 - Configure your site settings through deciding on a domain name and a department
 - Join your web page to GitHub Pages by adding a custom domain and allowing HTTPS
 - Look ahead to your web site to build and set up
-- You could comply with this guide for more information on how to install your website to GitHub Pages the usage of Gatsby Cloud:  https://support.gatsbyjs.com/hc/en-us/articles/360052503654-Deploying-to-GitHub-Pages
+- You could comply with this guide for more information on how to install your website to GitHub Pages the usage of Gatsby Cloud
 
-Once your website is deployed, you could get entry to it with the aid of travelling https://your-github-username.github.io/your-repository-name/. You must see something like this:
+Once your website is deployed, you could get entry to it with the aid of travelling` https://your-github-username.github.io/your-repository-name/`. You must see something like this:
 
 ### Conclusion
 
