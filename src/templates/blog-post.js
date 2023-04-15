@@ -15,6 +15,7 @@ const BlogPostTemplate = ({
 }) => {
 
 
+  const schemaimage = site.siteMetadata.siteUrl + ( post.frontmatter.preview ||  site.siteMetadata.defaultOpenGraphImage )
 
   const siteTitle = site.siteMetadata?.title || `Title`
   return (
@@ -33,6 +34,7 @@ const BlogPostTemplate = ({
         <h1 itemprop="headline" class="no-typography text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{post.frontmatter.title}</h1>
         <time itemprop="datePublished" class="mt-2 text-sm  font-semibold text-gray-400" datetime={post.frontmatter.date}>{post.frontmatter.date}</time>
     </header>
+    <meta itemprop="image" content={schemaimage} />
 
     
       <div className="prose-lg">
