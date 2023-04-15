@@ -42,6 +42,11 @@ const BlogPostTemplate = ({
       itemprop="articleBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
+        {post.frontmatter.tags && post.frontmatter.tags.slice(0, 3).map((tag, index) => (
+               <span class="mr-1.5 rounded-full px-3 py-1 bg-purple-800 ">
+              <Link to={`/topic/${tag}`} key={tag} className="text-white">  {tag}</Link>
+                </span>
+                ))}
         <hr />
       </div>
       <footer>
@@ -138,6 +143,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         preview
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
