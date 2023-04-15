@@ -24,28 +24,30 @@ const BlogPostTemplate = ({
       
       <TypographyStyle typography={typography}/>
     
-
+      	
       <div class="container mx-auto">
   <div class="max-w-3xl mx-auto px-4 sm:px-6">
-    <article>
+    <article itemscope itemtype="https://schema.org/Article">
 
 <header class="border-b mx-auto max-w-2xl text-center">
-        <h1 class="no-typography text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{post.frontmatter.title}</h1>
-        <time class="mt-2 text-sm  font-semibold text-gray-400" datetime="{{ article.date }}">{post.frontmatter.date}</time>
+        <h1 itemprop="headline" class="no-typography text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{post.frontmatter.title}</h1>
+        <time itemprop="datePublished" class="mt-2 text-sm  font-semibold text-gray-400" datetime={post.frontmatter.date}>{post.frontmatter.date}</time>
     </header>
 
     
       <div className="prose-lg">
       <section
+      itemprop="articleBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <hr />
       </div>
-    </article>
-    
-    <footer>
+      <footer>
           <Bio />
         </footer>
+    </article>
+    
+    
        
   </div>
   
