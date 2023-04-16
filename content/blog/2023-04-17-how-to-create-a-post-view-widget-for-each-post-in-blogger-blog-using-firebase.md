@@ -1,10 +1,13 @@
 ---
 title: How to Create a Post View Widget for Each Post in Blogger Blog using Firebase
 description: Learn how to track post views on your Blogger blog by creating a post view widget for each post using Firebase. This step-by-step guide will show you how to set up Firebase, create a Firebase database, and deploy a Firebase function to track post views on your blog.
-date: 2023-04-16T22:40:24.864Z
+date: 2023-04-16T22:49:29.604Z
 preview: ""
 draft: false
-tags: []
+tags:
+  - Blogger
+  - Firebase
+  - Blogger Tutorials
 categories: []
 ---
 
