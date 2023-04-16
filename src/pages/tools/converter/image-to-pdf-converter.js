@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import html2pdf from 'html2pdf.js';
 import Layout from "../../../components/layout"
 import Seo from "../../../components/seo"
-
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 function ImageToPDFConverter() {
   const [selectedImage, setSelectedImage] = useState(null);
 
