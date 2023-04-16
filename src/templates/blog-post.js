@@ -22,6 +22,7 @@ const BlogPostTemplate = ({
     
     <Layout location={location} title={siteTitle}>
       
+      <TypographyStyle typography={typography}/>
     
       	
       <div class="container mx-auto">
@@ -35,16 +36,19 @@ const BlogPostTemplate = ({
     <meta itemprop="image" content={schemaimage} />
 
     
-      <div className="prose-lg">
+      <div className="">
       <section
       itemprop="articleBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
+        <div className="pb-5">
         {post.frontmatter.tags && post.frontmatter.tags.slice(0, 3).map((tag, index) => (
                <span class="mr-1.5 rounded-full px-3 py-1 bg-purple-800 ">
               <Link to={`/topic/${tag}`} key={tag} className="text-white">  {tag}</Link>
                 </span>
+
                 ))}
+                </div>
         <hr />
       </div>
       <footer>
