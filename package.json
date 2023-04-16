@@ -19,7 +19,6 @@
     "gatsby-plugin-feed": "^5.8.0",
     "gatsby-plugin-image": "^3.8.0",
     "gatsby-plugin-manifest": "^5.8.0",
-    "gatsby-plugin-sharp": "^5.8.1",
     "gatsby-plugin-sitemap": "^6.8.0",
     "gatsby-plugin-typography": "^5.8.0",
     "gatsby-remark-autolink-headers": "^6.8.0",
@@ -42,7 +41,6 @@
     "react-prismjs": "^1.0.3",
     "react-top-loading-bar": "^2.3.1",
     "searchjs": "^1.1.0",
-    "sharp": "^0.32.0",
     "typography": "^0.16.21",
     "typography-theme-github": "^0.16.19",
     "typography-theme-Wikipedia": "^0.15.10"
