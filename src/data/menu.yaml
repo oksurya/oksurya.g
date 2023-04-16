@@ -1,10 +1,11 @@
+- name: Image to PDF Converter
+  link: /tools/converter/image-to-pdf-converter
 
 - name: Speed Converter
   link: /tools/converter/speed-converter
 
 - name: Currency Converter
   link: /tools/converter/currency-converter
-
 
 - name: Base64 Encoder
   link: /tools/encoder/base-64-encoder
