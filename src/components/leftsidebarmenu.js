@@ -39,6 +39,7 @@ const Menu = () => {
     const node = data.allDataYaml.edges[0].node
 
     return (
+      
       <div>
         {Object.keys(node).map(key => {
           if (key !== "id") {

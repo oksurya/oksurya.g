@@ -19,16 +19,19 @@ const LeftPage = () => {
 <>
     <div class="md:invisible fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-2 border-purple-800">
     <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
-      
+    <button class="focus:outline-none hover:text-blue flex items-center py-2 px-4 hover:bg-lightblue rounded-full mr-auto mb-3 text-blue">
+            <i class="fas fa-home text-2xl mr-4 text-left"></i>
+            <p class="text-lg font-semibold hidden text-left lg:block"> Notifications </p>
+          </button>
     {navigation.map((item) => (
           <Link
             key={item.name}
             to={item.href}
             aria-label={item.name}
-            className="focus:text-indigo-700 hover:text-indigo-700 inline-flex flex-col items-center justify-center px-5 group"
+            className="focus:outline-none hover:text-blue flex items-center py-2 px-4 hover:bg-lightblue rounded-full mr-auto mb-3 text-blue"
           >
             <item.icon
-              className="w-7 h-7 mb-1 text-gray-400 dark:text-gray-400 group-hover:text-indigo-700 "
+              className="text-2xl mr-4 text-left"
               aria-hidden="true"
             />
             <span className="hidden focus:text-gray-400  hover:text-purple-800 text-gray-600 truncate">{item.name}</span>
@@ -72,6 +75,9 @@ const LeftPage = () => {
         </svg></Link>
 
                 </div>
+
+
+
         {navigation.map((item) => (
           <Link
             key={item.name}
