@@ -7,7 +7,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { TypographyStyle } from 'react-typography'
 import typography from '../utils/typography'
-import 'prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard';
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -23,7 +22,6 @@ const BlogPostTemplate = ({
     
     <Layout location={location} title={siteTitle}>
       
-      <TypographyStyle typography={typography}/>
     
       	
       <div class="container mx-auto">
