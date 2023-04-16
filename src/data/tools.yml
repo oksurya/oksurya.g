@@ -1,0 +1,23 @@
+Converter:
+  - name: Image to PDF Converter
+    link: /tools/converter/image-to-pdf-converter
+  - name: Speed Converter
+    link: /tools/converter/speed-converter
+  - name: Currency Converter
+    link: /tools/converter/currency-converter
+Encoder:
+  - name: Base64 Encoder
+    link: /tools/encoder/base-64-encoder
+Decoder:
+  - name: Base64 Decoder
+    link: /tools/decoder/base-64-decoder
+Calculator:
+  - name: Age Calculator
+    link: /tools/calculator/age-calculator
+  - name: Love Calculator
+    link: /tools/calculator/love-calculator
+Generator:
+  - name: Instagram Embed Generator
+    link: /tools/instagram/embed-instagram
+  - name: Password Generator
+    link: /tools/generator/password-generator

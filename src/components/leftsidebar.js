@@ -87,13 +87,8 @@ const LeftPage = () => {
           </Link>
         ))}
       </div>
-      <div className="pt-5">
-        <p
-          className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider"
-          id="Useful Resources for Your Toolbox"
-        >
-          Tools That Are Helpful
-        </p>
+      <div className="">
+        
         <div className="mt-3 space-y-2" aria-labelledby="Valuable Resources for Your Work">
         <Menu />
         </div>
