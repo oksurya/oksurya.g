@@ -15,11 +15,11 @@ In case you're a blogger, you would possibly want to understand how frequently y
 ### Step 1: Create a Firebase account
 First, create a Firebase account if you haven't already. Firebase is a backend platform that provides offerings like authentication, database, and website hosting.
 ### Step 2: Create a Firebase project
-Create a new Firebase project and give it a name. Once your venture is created, click on "add Firebase in your internet app" and replica the configuration code.
+Create a new Firebase project and give it a name. Once your venture is created, click on "add Firebase in your web app" and replica the configuration code.
 ### Step 3: upload Firebase to your Blogger weblog
-To your Blogger dashboard, go to "subject matter" and click on "Edit HTML". Locate the top phase and paste the Firebase configuration code inner it.
+To your Blogger dashboard, go to "subject matter" and click on "**Edit HTML**". Locate the top phase and paste the Firebase configuration code inner it.
 ### Step 4: Create a new Firebase database
-On your Firebase console, click on "Database" after which "Create Database". Pick out "start in check mode" and pick out a region. Click on "allow" to create your new database.
+On your Firebase console, click on "Database" after which "**Create Database**". Pick out "**start in check mode**" and pick out a region. Click on "allow" to create your new database.
 ### Step 5: set up Firebase Realtime Database rules
 Click on "guidelines" for your Firebase console and set your database regulations to allow examine and write get admission to to authenticated customers. Save your policies.
 ### Step 6: Create a new function in Firebase functions
@@ -54,7 +54,7 @@ This feature will boom the view count number of a submit in your Firebase databa
 ### Step 7: deploy your Firebase function
 Click on "deploy" to install your Firebase characteristic.
 ### Step 8: upload the publish view widget in your Blogger weblog
-On your Blogger dashboard, visit "format" and click on "upload a gadget". Choose "HTML/JavaScript" and paste the subsequent code:
+On your Blogger dashboard, visit "format" and click on "upload a gadget". Choose "**HTML/JavaScript**" and paste the subsequent code:
 ```
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
