@@ -27,7 +27,7 @@ function ImageToPDFConverter() {
   <Layout>
    <header class="mx-auto max-w-2xl text-center">
         <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Image to PDF Converter</h1>
-        <p class="mt-2 text-sm font-semibold text-gray-400">Turn your images into PDFs effortlessly</p>
+        <p class="mt-2 text-sm font-semibold text-gray-400">Convert Your Images to PDF in Seconds!</p>
     </header>
 
     
@@ -87,5 +87,6 @@ In phrases of Seo, the image to PDF Converter is a splendid tool for optimizing 
     </Layout>
   );
 }
+export const Head = () => <Seo title="Convert Images to PDF Online | Free Image to PDF Converter"  description="Use our free online image to PDF converter tool to quickly and easily convert your images to PDF format. No registration or installation required." />
 
 export default ImageToPDFConverter;
