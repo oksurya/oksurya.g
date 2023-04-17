@@ -61,9 +61,8 @@ const PaginatedTemplate = ({ pageContext }) => {
   flexWrap: `wrap`,
   justifyContent: `space-between`,
   listStyle: `none`,
-  padding: 0,
-  paddingTop: `10px`
-}}>
+  padding: `10px`
+  }}>
         {!first && (
           <Link to={previousPageUrl} className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">

@@ -13,7 +13,6 @@ import { Link } from "gatsby"
 
 
 
-
 const Layout = ({children}) => {
 
 
@@ -65,8 +64,12 @@ const Layout = ({children}) => {
     <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
 
       
-        <div className="py-3">
-        <header class="lg:hidden flex items-center justify-center h-16 border-purple-800 border-b-2 bg-white-200 text-white">
+        <div className="">
+
+
+          
+        <header class=" backdrop-filter backdrop-blur-lg bg-opacity-30 sticky top-0 divide-y z-50 flex bg-white items-center justify-center h-16 border-purple-800 border-b-2 bg-white-200 text-white">
+        
   <div class="flex p-2 items-center">
   <Link aria-label="Oksurya Logo" to="/">
           

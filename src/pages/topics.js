@@ -15,7 +15,7 @@ const AllTags = ({ data }) => {
       </div>
 
 
-      <div class="flex mt-10 flex-wrap gap-3 justify-center">
+      <div class="flex mt-10 grid gap-3 justify-center">
         
       {tags.map((tag) => (
         <Link className="mr-1.5 rounded-full px-3 py-1 bg-purple-100 text-purple-800" to={`/topic/${tag.fieldValue}`}>
