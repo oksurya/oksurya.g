@@ -5,7 +5,8 @@ Converter:
     link: /tools/converter/speed-converter
   - name: Currency Converter
     link: /tools/converter/currency-converter
-
+  - name: Image to Webp Converter
+    link: /tools/converter/webp-converter
 
 Encoder:
   - name: Base64 Encoder

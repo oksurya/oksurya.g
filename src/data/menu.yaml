@@ -1,3 +1,6 @@
+- name: Image to Webp Converter
+  link: /tools/converter/webp-converter
+  
 - name: Image to PDF Converter
   link: /tools/converter/image-to-pdf-converter
 
