@@ -71,6 +71,8 @@ const Layout = ({children}) => {
         <header class=" backdrop-filter backdrop-blur-lg bg-opacity-30 sticky top-0 divide-y z-50 flex bg-white items-center justify-center h-16 border-purple-800 border-b-2 bg-white-200 text-white">
         
   <div class="flex p-2 items-center">
+
+ 
   <Link aria-label="Oksurya Logo" to="/">
           
           

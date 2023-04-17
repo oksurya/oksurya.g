@@ -18,7 +18,7 @@ const LeftPage = () => {
   return (
 <>
 
-<div class="backdrop-filter backdrop-blur-lg bg-opacity-30 md:visible fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-2 border-purple-800">
+<div class="backdrop-filter backdrop-blur-lg bg-opacity-30 md:invisible fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-2 border-purple-800">
     <div class="grid h-full max-w-full grid-cols-4 mx-auto font-medium">
 
 
