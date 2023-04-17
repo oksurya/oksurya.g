@@ -17,29 +17,30 @@ const navigation = [
 const LeftPage = () => {
   return (
 <>
-    <div class="md:invisible fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-2 border-purple-800">
-    <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
-    <button class="focus:outline-none hover:text-blue flex items-center py-2 px-4 hover:bg-lightblue rounded-full mr-auto mb-3 text-blue">
-            <i class="fas fa-home text-2xl mr-4 text-left"></i>
-            <p class="text-lg font-semibold hidden text-left lg:block"> Notifications </p>
-          </button>
+
+<div class="md:invisible fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t-2 border-purple-800">
+    <div class="grid h-full max-w-full grid-cols-4 mx-auto font-medium">
     {navigation.map((item) => (
-          <Link
-            key={item.name}
-            to={item.href}
-            aria-label={item.name}
-            className="focus:outline-none hover:text-blue flex items-center py-2 px-4 hover:bg-lightblue rounded-full mr-auto mb-3 text-blue"
-          >
-            <item.icon
-              className="text-2xl mr-4 text-left"
+        <Link 
+        key={item.name}
+        to={item.href}
+        aria-label={item.name}
+        className="inline-flex focus:outline-none focus:text-purple-800 flex-col items-center justify-center px-5 hover:bg-gray-50 ">
+           
+           <item.icon
+              className="w-6 h-6 mb-1 focus:text-purple-800 text-gray-500  hover:text-purple-800 "
               aria-hidden="true"
             />
-            <span className="hidden focus:text-gray-400  hover:text-purple-800 text-gray-600 truncate">{item.name}</span>
-          </Link>
-        ))}
- 
+           
+          
+            <span class="text-sm text-gray-500 focus:text-purple-800 group-hover:text-blue-600 ">{item.name}</span>
+        </Link>
+
+))}
+        
     </div>
 </div>
+
 
 
 <div className="rounded-lg  hidden lg:block lg:col-span-3 xl:col-span-3">
