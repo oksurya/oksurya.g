@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /redirect/
+Allow: /
+Sitemap: https://www.oksurya.in/sitemap-0.xml
