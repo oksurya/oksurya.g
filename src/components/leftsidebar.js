@@ -52,7 +52,7 @@ const LeftPage = () => {
 <div className="rounded-lg  hidden lg:block lg:col-span-3 xl:col-span-3">
 
 
-    <nav aria-label="Sidebar" className="sticky top- divide-y divide-gray-300">
+    <nav aria-label="Sidebar" className="sticky top-0 divide-y divide-gray-300">
 
 
       
