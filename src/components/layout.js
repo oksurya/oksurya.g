@@ -109,8 +109,8 @@ fill="#800099" stroke="none">
 
           <LeftPage/>
       
-          <main className="lg:pb-5 rounded-lg shadow lg:col-span-9 xl:col-span-6">
-          <form className="my-5 mb-10 flex max-w-xl items-center px-6" onSubmit={handleSubmit}>
+          <main className=" rounded-lg shadow lg:col-span-9 xl:col-span-6">
+          <form className="my-5  flex max-w-xl items-center px-6" onSubmit={handleSubmit}>
         <input
         className="pl-5 h-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Type your search query here.."
           type="text"

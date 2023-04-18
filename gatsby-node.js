@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     edges: posts,
     createPage,
     pageTemplate: "src/templates/paginated.js",
-    pageLength: 3,
+    pageLength: 10,
     pathPrefix: "/blog",
   })
   // Create blog posts pages
