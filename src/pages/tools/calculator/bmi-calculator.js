@@ -186,6 +186,6 @@ Normal, the BMI calculator with age and gender is a simple but powerful tool whi
     </Layout>
   );
 }
-export const Head = () => <Seo title="BMI Calculator with Age and Gender | Calculate Your BMI in KG/M2 and Percentage" description=" BMI Calculator with Age and Gender | Calculate Your BMI in KG/M2 and Percentage"/>
+export const Head = () => <Seo title="BMI Calculator with Age and Gender | Calculate Your BMI in KG/M2 and Percentage" description="Use our BMI calculator with age and gender to determine your Body Mass Index in KG/M2 and percentage. Get personalized and accurate results based on your age and gender."/>
 
 export default BMI;

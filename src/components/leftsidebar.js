@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Menu from "./leftsidebarmenu"
+import { MdOutlineSettingsEthernet } from "react-icons/md";
 
 import { HiOutlineNewspaper, HiOutlineHashtag, HiOutlineHome ,HiTrendingUp } from "react-icons/hi";
 
@@ -10,7 +11,7 @@ const navigation = [
     { name: 'Home', href: '/', icon: HiOutlineHome, current: true },
     { name: 'Blog', href: '/blog', icon: HiOutlineNewspaper, current: false },
     { name: 'Topics', href: '/topics', icon: HiOutlineHashtag, current: false },
-    { name: 'Trending', href: '#', icon: HiTrendingUp, current: false },
+    { name: 'Tools', href: '/tools', icon: MdOutlineSettingsEthernet, current: false },
   ]
   
 

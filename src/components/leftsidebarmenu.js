@@ -50,7 +50,7 @@ const Menu = () => {
                 {tools.map(tool => (
                   <Link
                     key={tool.link}
-                    to={tool.link}
+                    to={`/tools/${tool.link}`}
                     className="w-full block  px-4 py-2 border-b text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
                     aria-current={tool.current ? 'page' : undefined}
                   >
