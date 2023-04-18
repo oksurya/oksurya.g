@@ -1,34 +1,34 @@
 Converter:
   - name: Image to PDF Converter
-    link: /converter/image-to-pdf-converter
+    link: /tools/converter/image-to-pdf-converter
   - name: Speed Converter
-    link: /converter/speed-converter
+    link: /tools/converter/speed-converter
   - name: Currency Converter
-    link: /converter/currency-converter
+    link: /tools/converter/currency-converter
   - name: Image to Webp Converter
-    link: /converter/webp-converter
+    link: /tools/converter/webp-converter
 
 Encoder:
   - name: Base64 Encoder
-    link: /encoder/base-64-encoder
+    link: /tools/encoder/base-64-encoder
 
 
     
 Decoder:
   - name: Base64 Decoder
-    link: /decoder/base-64-decoder
+    link: /tools/decoder/base-64-decoder
 
 
 Calculator:
   - name: Age Calculator
-    link: /calculator/age-calculator
+    link: /tools/calculator/age-calculator
   - name: Love Calculator
-    link: /calculator/love-calculator
+    link: /tools/calculator/love-calculator
   - name: BMI Calculator
-    link: /calculator/bmi-calculator
+    link: /tools/calculator/bmi-calculator
 
 Generator:
   - name: Instagram Embed Generator
-    link: /instagram/embed-instagram
+    link: /tools/instagram/embed-instagram
   - name: Password Generator
-    link: /generator/password-generator
+    link: /tools/generator/password-generator
