@@ -57,16 +57,12 @@ const LoveCalculator = () => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                
-
-
-
-                  <div className="mt-2">
+      <div className="mt-2">
 
 <div class=" font-sans w-full flex flex-row justify-center items-center">
 <div class="">
 <div class="text-center mt-2 text-3xl font-medium">{lovePercentage}%</div>
-<div class="text-center mt-2 font-light text-sm">
+<div class="text-center mt-2 font-light text-base">
 {lovePercentage > 0 && (
 
 <div>

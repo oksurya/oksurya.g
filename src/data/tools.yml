@@ -24,7 +24,8 @@ Calculator:
     link: /tools/calculator/age-calculator
   - name: Love Calculator
     link: /tools/calculator/love-calculator
-
+  - name: BMI Calculator
+    link: /tools/calculator/bmi-calculator
 
 Generator:
   - name: Instagram Embed Generator
