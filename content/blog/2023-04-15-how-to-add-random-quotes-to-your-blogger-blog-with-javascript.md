@@ -1,14 +1,15 @@
 ---
 title: How to Add Random Quotes to Your Blogger Blog with JavaScript
 description: ""
-date: 2023-04-14T22:39:05.507Z
-preview: ""
+date: 2023-04-19T21:30:00.198Z
+preview: /posts/quote-widget-blogger.png
 draft: false
 tags:
   - Blogger
   - Blogger Plugins
 categories: []
 ---
+![quote widget blogger](/posts/quote-widget-blogger.png)
 Are you looking for a manner to feature a few extra pizzazz in your Blogger blog? Keep in mind incorporating dynamic random prices with JavaScript short codes. This simple script can automatically generate and display random costs on every occasion a reader masses your weblog submits.
 ## Step 1: Create a New HTML/Javascript Gadget
 To get started out, you may need to create a new HTML/Javascript gadget in your Blogger Layout. Here's how:
