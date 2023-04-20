@@ -70,12 +70,13 @@ const formattedDate = new Date(postdate).toLocaleDateString('en-US', {
     <article>
 
 <header class="border-b mx-auto max-w-2xl text-center">
-        <h1 itemprop="headline" class="no-typography text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{post.frontmatter.title}</h1>
-        <time itemprop="datePublished" class="mt-2 text-sm  font-semibold text-gray-400" datetime={isoDate}>Posted {formattedDate}</time>
+        <h1 itemprop="headline" class="font-bold">{post.frontmatter.title}</h1>
+        <p itemprop="datePublished" class="mt-2 text-sm  font-semibold text-gray-400">Last updated: {formattedDate}</p>
+        
     </header>
 
     
-      <div className="">
+      <div className="pt-5">
       <section
       itemprop="articleBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -169,7 +170,9 @@ export const pageQuery = graphql`
           url
           name
           summary
+          twitter
         }
+        
       }
     }
     markdownRemark(id: { eq: $id }) {

@@ -13,6 +13,7 @@ module.exports = {
     author: {
       url: `https://twitter.com/jayasuryatweet`,
       name: `Jayasurya Mailsamy`,
+      twitter: `jayasuryatweet`,
       summary: `who lives and works in India building useful things.`,
     },
     description: `Get the latest tech news and insights at oksurya. Our experts cover AI, cybersecurity, mobile devices, and more. Join the conversation on the future of technology.`,

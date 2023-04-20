@@ -50,6 +50,10 @@ function SEO({ description, lang, meta, image, title, schemaMarkup }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          name: `google`,
+          content: 'nositelinkssearchbox',
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
@@ -87,7 +91,7 @@ function SEO({ description, lang, meta, image, title, schemaMarkup }) {
         },
       ].concat(meta)}
 
-      
+
     >
       {schemaMarkup &&
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
