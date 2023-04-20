@@ -67,13 +67,12 @@ const formattedDate = new Date(postdate).toLocaleDateString('en-US', {
       	
       <div class="container mx-auto">
   <div class="max-w-3xl mx-auto px-4 sm:px-6">
-    <article itemscope itemtype="https://schema.org/Article">
+    <article>
 
 <header class="border-b mx-auto max-w-2xl text-center">
         <h1 itemprop="headline" class="no-typography text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{post.frontmatter.title}</h1>
-        <time itemprop="datePublished" class="mt-2 text-sm  font-semibold text-gray-400" datetime={isoDate}>{formattedDate}</time>
+        <time itemprop="datePublished" class="mt-2 text-sm  font-semibold text-gray-400" datetime={isoDate}>Posted {formattedDate}</time>
     </header>
-    <meta itemprop="image" content={schemaimage} />
 
     
       <div className="">
