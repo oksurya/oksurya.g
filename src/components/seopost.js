@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useLocation } from '@reach/router'
 
-function SEO({ description, lang, meta, link, image, title, schemaMarkup }) {
+function SEO({ description, lang, meta, image, title, schemaMarkup }) {
   const { site } = useStaticQuery(
     graphql`
     query {
@@ -20,6 +20,11 @@ function SEO({ description, lang, meta, link, image, title, schemaMarkup }) {
             title
             description
             siteUrl
+            author{
+                url
+                name
+                summary
+              }
             defaultOpenGraphImage
             social {
               twitter
@@ -66,11 +71,11 @@ function SEO({ description, lang, meta, link, image, title, schemaMarkup }) {
           },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.author.url,
         },
         {
           name: `twitter:title`,
