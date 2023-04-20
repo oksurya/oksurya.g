@@ -9,7 +9,7 @@ import * as React from "react"
 import { useStaticQuery, graphql} from "gatsby"
 import { useLocation } from '@reach/router'
 
-const Seo = ({ description, title, image, children }) => {
+const Seo = ({ description, title, image, children, schemaMarkup }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -53,6 +53,9 @@ const Seo = ({ description, title, image, children }) => {
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+      {schemaMarkup &&
+        <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
+      }
       {children}
     </>
   )

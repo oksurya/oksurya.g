@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import Postseo from "../components/seopost"
+import Postseo from "../components/seo"
 
 import { TypographyStyle } from 'react-typography'
 import typography from '../utils/typography'
@@ -15,9 +15,6 @@ const BlogPostTemplate = ({
   location,
 }) => {
 
-
-  const schemaimage = site.siteMetadata.siteUrl + ( post.frontmatter.preview ||  site.siteMetadata.defaultOpenGraphImage )
-
   const siteTitle = site.siteMetadata?.title || `Title`
 
   const postdate = post.frontmatter.date
@@ -27,24 +24,8 @@ const formattedDate = new Date(postdate).toLocaleDateString('en-US', {
   day: 'numeric'
 });
 
-  const isoDate = new Date(postdate).toISOString();
-  console.log(isoDate);
 
-  const schema = {
-    
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": post.frontmatter.title,
-      "image": schemaimage,
-      "datePublished": isoDate,
-      "dateModified": isoDate,
-      "author": [{
-          "@type": "Person",
-          "name": site.siteMetadata.author.name,
-          "url": site.siteMetadata.author.url
-        }]
-    
-  }
+
  
   return (
     
@@ -53,14 +34,7 @@ const formattedDate = new Date(postdate).toLocaleDateString('en-US', {
     
     <Layout location={location} title={siteTitle}>
 
-            <Postseo 
-                 title={post.frontmatter.title}
-                 description={post.frontmatter.description || post.excerpt}
-                 image={post.frontmatter.preview}
-            schemaMarkup={schema} 
-            
-            
-            />
+           
 
       <TypographyStyle typography={typography}/>
     
@@ -141,6 +115,37 @@ Next →
 
 
 export default BlogPostTemplate
+export 
+
+const Head = ({ data: { site, markdownRemark: post } }) => {
+  
+  const schemaimage = site.siteMetadata.siteUrl + ( post.frontmatter.preview ||  site.siteMetadata.defaultOpenGraphImage )
+  const postdate = post.frontmatter.date
+  const isoDate = new Date(postdate).toISOString();
+  const schema = {
+    
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.frontmatter.title,
+    "image": schemaimage,
+    "datePublished": isoDate,
+    "dateModified": isoDate,
+    "author": [{
+        "@type": "Person",
+        "name": site.siteMetadata.author.name,
+        "url": site.siteMetadata.author.url
+      }]
+  
+}
+  return (
+    <Postseo 
+  title={post.frontmatter.title}
+  description={post.frontmatter.description || post.excerpt}
+  image={post.frontmatter.preview}
+schemaMarkup={schema} 
+/>
+  )
+}
 
 export const pageQuery = graphql`
   query BlogPostBySlug(

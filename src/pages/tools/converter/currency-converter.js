@@ -3,6 +3,8 @@ import Layout from "../../../components/layout"
 import Seo from "../../../components/seo"
 import axios from "axios";
 import { Dialog, Transition } from '@headlessui/react'
+import { TypographyStyle } from 'react-typography'
+import typography from '../../../utils/typography'
 
 function CurrencyConverter() {
   const [amount, setAmount] = useState("");
@@ -157,14 +159,25 @@ function CurrencyConverter() {
           </div>
         </Dialog>
       </Transition>
-<header class="mx-auto max-w-2xl text-center">
-        <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Currency Converter Tool</h1>
-        <p class="mt-2 text-sm font-semibold text-gray-400">Easily convert any currency with our free online tool.</p>
-      </header>
 
-      <div class="mmax-w-2xl prose mx-auto mt-10 lg:text-lg">
-        <div class="relative px-4 sm:px-6 lg:px-3 flex flex-col gap-2">
-        <form onSubmit={handleSubmit} className="bg-white">
+      <TypographyStyle typography={typography}/>
+
+
+
+      <div class="pb-10 container mx-auto">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <article className=" prose prose-indigo text-gray-500 mx-auto">
+
+<header class="border-b mx-auto max-w-2xl text-center">
+        <h1 itemprop="headline" class="no-typography font-bold">Currency Converter</h1>
+        <p class="mt-2 text-sm  font-semibold text-gray-500">Easily convert any currency with our free online tool</p>
+        
+    </header>
+
+    
+      <div className="pt-5">  
+      <div class="relative flex flex-col gap-2">
+      <form onSubmit={handleSubmit} className="bg-white">
         <div className="flex flex-col mb-4">
           <label htmlFor="amount" className="text-lg font-medium mb-2">
             Amount
@@ -226,12 +239,11 @@ function CurrencyConverter() {
           Convert
         </button>
       </form>
-      
-        </div>
-        </div>
-        <article className="mt-6 prose prose-indigo px-6 lg:px-8 prose-lg text-gray-500 mx-auto">
+</div>
+</div>
 
-        <p>
+
+<p>
         The currency converter tool is a simple and effective tool that lets in customers to transform any forex into another foreign money quick and effortlessly. It is mainly beneficial for those who journey or store online and need to realize the value of various currencies.
         </p><p>
 The device uses updated exchange rates to carry out the foreign money conversion, ensuring that users get the most accurate results possible. Users without a doubt pick the foreign money they want to transform from, the currency they want to convert to, and enter the quantity they want to convert. The tool then calculates the conversion and shows the end result.
@@ -242,10 +254,22 @@ In phrases of search engine optimization, the foreign money converter device may
 </p><p>
 Common, the currency converter device is a treasured resource for everybody who needs to convert currencies fast and effortlessly. With its person-friendly layout and correct alternate charges, it is a have to-have device for tourists, on-line consumers, and everybody else who desires to address a couple of currencies.
 </p>
+
+</article>
     
+    </div>
     
-    
-    </article>
+  </div>
+
+
+
+
+
+
+
+
+
+
   </Layout>
 );
 }
