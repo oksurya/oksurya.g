@@ -11,6 +11,7 @@ module.exports = {
   siteMetadata: {
     title: `Oksurya`,
     author: {
+      url: `https://twitter.com/jayasuryatweet`,
       name: `Jayasurya Mailsamy`,
       summary: `who lives and works in India building useful things.`,
     },

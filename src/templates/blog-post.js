@@ -4,7 +4,8 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Postseo from "../components/seopost"
+
 import { TypographyStyle } from 'react-typography'
 import typography from '../utils/typography'
 
@@ -18,12 +19,49 @@ const BlogPostTemplate = ({
   const schemaimage = site.siteMetadata.siteUrl + ( post.frontmatter.preview ||  site.siteMetadata.defaultOpenGraphImage )
 
   const siteTitle = site.siteMetadata?.title || `Title`
+
+  const postdate = post.frontmatter.date
+const formattedDate = new Date(postdate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+  const isoDate = new Date(postdate).toISOString();
+  console.log(isoDate);
+
+  const schema = {
+    
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": post.frontmatter.title,
+      "image": schemaimage,
+      "datePublished": isoDate,
+      "dateModified": isoDate,
+      "author": [{
+          "@type": "Person",
+          "name": site.siteMetadata.author.name,
+          "url": site.siteMetadata.author.url
+        }]
+    
+  }
+ 
   return (
     
-    
+   
+   
     
     <Layout location={location} title={siteTitle}>
-      
+
+            <Postseo 
+                 title={post.frontmatter.title}
+                 description={post.frontmatter.description || post.excerpt}
+                 image={post.frontmatter.preview}
+            schemaMarkup={schema} 
+            
+            
+            />
+
       <TypographyStyle typography={typography}/>
     
       	
@@ -33,7 +71,7 @@ const BlogPostTemplate = ({
 
 <header class="border-b mx-auto max-w-2xl text-center">
         <h1 itemprop="headline" class="no-typography text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{post.frontmatter.title}</h1>
-        <time itemprop="datePublished" class="mt-2 text-sm  font-semibold text-gray-400" datetime={post.frontmatter.date}>{post.frontmatter.date}</time>
+        <time itemprop="datePublished" class="mt-2 text-sm  font-semibold text-gray-400" datetime={isoDate}>{formattedDate}</time>
     </header>
     <meta itemprop="image" content={schemaimage} />
 
@@ -114,15 +152,6 @@ Next →
   )
 }
 
-export const Head = ({ data: { markdownRemark: post } }) => {
-  return (
-    <Seo
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
-      image={post.frontmatter.preview}
-    />
-  )
-}
 
 export default BlogPostTemplate
 
@@ -135,6 +164,13 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
+        defaultOpenGraphImage
+        author{
+          url
+          name
+          summary
+        }
       }
     }
     markdownRemark(id: { eq: $id }) {
@@ -144,7 +180,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
         description
         preview
         tags

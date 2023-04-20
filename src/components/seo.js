@@ -8,6 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql} from "gatsby"
 import { useLocation } from '@reach/router'
+
 const Seo = ({ description, title, image, children }) => {
   const { site } = useStaticQuery(
     graphql`
