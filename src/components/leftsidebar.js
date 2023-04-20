@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Menu from "./leftsidebarmenu"
 import { MdOutlineSettingsEthernet } from "react-icons/md";
+import Taglist from "./taglist"
 
 import { HiOutlineNewspaper, HiOutlineHashtag, HiOutlineHome ,HiTrendingUp } from "react-icons/hi";
 
@@ -77,7 +77,7 @@ const LeftPage = () => {
       <div className="">
         
         <div className="mt-3 space-y-2" aria-labelledby="Valuable Resources for Your Work">
-        <Menu />
+        <Taglist />
         </div>
       </div>
     </nav>

@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
+import Menu from "./leftsidebarmenu"
 
 const RMenu = () => {
   const data = useStaticQuery(graphql`
@@ -56,6 +57,12 @@ const RMenu = () => {
         <div className="mt-3 space-y-2" aria-labelledby="Valuable Resources for Your Work">
         {menuLinks}
         </div>
+
+
+
+
+        <Menu />
+        
       </div>
       
       
