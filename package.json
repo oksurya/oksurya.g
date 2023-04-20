@@ -39,7 +39,6 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.1.0",
     "react-dropzone": "^14.2.3",
-    "react-helmet": "^6.1.0",
     "react-icons": "^4.8.0",
     "react-prismjs": "^1.0.3",
     "react-top-loading-bar": "^2.3.1",
