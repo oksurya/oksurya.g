@@ -8,6 +8,7 @@ import Seo from "../components/seo"
 import { TypographyStyle } from 'react-typography'
 import typography from '../utils/typography'
 
+
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
@@ -18,6 +19,7 @@ const BlogPostTemplate = ({
 
   const siteTitle = site.siteMetadata?.title || `Title`
   return (
+    
     
     
     <Layout location={location} title={siteTitle}>
