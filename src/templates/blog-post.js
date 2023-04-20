@@ -70,8 +70,8 @@ const formattedDate = new Date(postdate).toLocaleDateString('en-US', {
     <article>
 
 <header class="border-b mx-auto max-w-2xl text-center">
-        <h1 itemprop="headline" class="font-bold">{post.frontmatter.title}</h1>
-        <p itemprop="datePublished" class="mt-2 text-sm  font-semibold text-gray-400">Last updated: {formattedDate}</p>
+        <h1 itemprop="headline" class="no-typography font-bold">{post.frontmatter.title}</h1>
+        <p itemprop="datePublished" class="mt-2 text-sm  font-semibold text-gray-500">Last updated: {formattedDate}</p>
         
     </header>
 
@@ -79,9 +79,10 @@ const formattedDate = new Date(postdate).toLocaleDateString('en-US', {
       <div className="pt-5">
       <section
       itemprop="articleBody"
+      className="text-gray-500"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <div className="pb-5">
+        <div className="pb-5 ">
         {post.frontmatter.tags && post.frontmatter.tags.slice(0, 3).map((tag, index) => (
                <span class="mr-1.5 rounded-full px-3 py-1 bg-purple-800 ">
               <Link to={`/topic/${tag}`} key={tag} className="text-white">  {tag}</Link>
@@ -101,20 +102,6 @@ const formattedDate = new Date(postdate).toLocaleDateString('en-US', {
   </div>
   
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     
 <nav className="blog-post-nav">
