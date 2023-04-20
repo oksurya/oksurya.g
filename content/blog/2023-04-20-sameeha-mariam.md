@@ -1,6 +1,6 @@
 ---
 title: "Sameeha Mariam: The Viral Dance Sensation of Kadhal Kappal"
-description: "Sameeha Mariam's energetic dance video to "Kadhal Kappal" by Santhosh Narayanan has gone viral, capturing the attention of many people on social media platforms. Her talent has even caught the eye of popular Indian actor SJ Suriyah, who expressed his admiration for her skills. Discover how Sameeha's passion for dancing has made her an inspiration for many and highlighted the importance of supporting young talent."
+description: Discover how Sameeha's passion for dancing has made her an inspiration for many and highlighted the importance of supporting young talent.
 date: 2023-04-20T00:19:04.740Z
 preview: ""
 draft: false
@@ -8,6 +8,7 @@ tags:
   - News
   - Social Media
 categories: []
+slug: sameeha-mariam-viral-dance-sensation-kadhal-kappal
 ---
 Hey there! So, have you heard of [Sameeha Mariam](https://www.instagram.com/thatpotatoface5/)? She's a young girl who became famous on social media for her amazing dance skills. Her dance video to the Tamil song "[Kadhal Kappal](https://www.youtube.com/watch?v=0bx_R4smkV4)" by [Santhosh Narayanan](https://en.wikipedia.org/wiki/Santhosh_Narayanan) went viral and captured the attention of many people. Sameeha's energetic dance moves and joyful expression in the video have made her an inspiration for many people who enjoy dancing or are fans of Tamil music.
 
