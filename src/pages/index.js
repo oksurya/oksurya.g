@@ -12,6 +12,7 @@ const BlogIndex = ({ data, location }) => {
 
   if (posts.length === 0) {
     return (
+      
       <Layout location={location} title={siteTitle}>
         <Bio />
         <p>
@@ -25,7 +26,6 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      
       
       {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

@@ -32,3 +32,5 @@ Generator:
     link: /tools/instagram/embed-instagram
   - name: Password Generator
     link: /tools/generator/password-generator
+  - name: Video Screenshot Generator
+    link: /tools/generator/video-thumbnail-generator

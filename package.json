@@ -12,6 +12,7 @@
     "@fontsource/montserrat": "^4.5.14",
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^1.0.6",
+    "@rajesh896/video-thumbnails-generator": "^2.3.9",
     "@react-icons/all-files": "^4.1.0",
     "firebase": "^9.20.0",
     "gatsby": "^5.8.1",
