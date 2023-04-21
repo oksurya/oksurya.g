@@ -14,11 +14,7 @@ function App() {
   document.cookie = `name=${decodedToken.name};path=/;max-age=86400`;
   document.cookie = `email=${decodedToken.email};path=/;max-age=86400`;
   }
-  function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-  }
+
   const initializeGSI = () => {
     const cookies = document.cookie.split(';').map(cookie => cookie.trim());
   
@@ -59,19 +55,12 @@ function App() {
     el.onload = () => initializeGSI();
     document.querySelector('body').appendChild(el)
   }, [])
-  const name = getCookie('name');
-  const email = getCookie('email');
+ 
   return (
     <div className="App">
       <header className="App-header">
       
-        { name ?
-          <div>
-            {name} ({email})
-            <div className="g_id_signout" onClick={() => signout()}>Sign Out</div>
-          </div> :
-          <div>You are not signed in</div>
-        }
+      
       </header>
     </div>
   );
