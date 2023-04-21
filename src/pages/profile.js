@@ -1,21 +1,22 @@
 import React from 'react';
 
-function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-  }
-function OtherPage() {
-  const name = getCookie('name');
-  const email = getCookie('email');
-  
+function Profile() {
+  const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+  const name = cookies.find(cookie => cookie.startsWith('name='));
+  const email = cookies.find(cookie => cookie.startsWith('email='));
+
   return (
-    <div className="OtherPage">
-      <h1>Welcome to the other page</h1>
-      <p>Username: {name}</p>
-      <p>Email: {email}</p>
+    <div>
+      { name && email ? (
+        <div>
+          <p>Name: {name.substring(5)}</p>
+          <p>Email: {email.substring(6)}</p>
+        </div>
+      ) : (
+        <p>No name or email found in cookies</p>
+      )}
     </div>
   );
 }
 
-export default OtherPage;
+export default Profile;
