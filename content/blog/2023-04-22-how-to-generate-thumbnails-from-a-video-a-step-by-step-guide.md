@@ -3,8 +3,9 @@ title: How to Generate Thumbnails from a Video
 description: Learn how to easily generate thumbnail images from your video with this step-by-step guide.
 date: 2023-04-21T21:15:39.352Z
 preview: /posts/video-screenshot-generator.png
-draft: true
-tags: []
+draft: false
+tags:
+  - Tools
 categories: []
 ---
 ![Generate frame from a video as image](/posts/video-screenshot-generator.png)
