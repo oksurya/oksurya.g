@@ -1,5 +1,3 @@
-/* global google */
-import logo from '../../static/logo.png';
 import React, { useState, useEffect } from 'react';
 import jwt_decode from 'jwt-decode';
 import '../styles/test.css';
@@ -12,15 +10,33 @@ function App() {
     setIsSignedIn(true)
     const decodedToken = jwt_decode(response.credential)
     setUserInfo({...decodedToken})
+     // set the cookies
+  document.cookie = `name=${decodedToken.name};path=/;max-age=86400`;
+  document.cookie = `email=${decodedToken.email};path=/;max-age=86400`;
   }
-
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
   const initializeGSI = () => {
-    google.accounts.id.initialize({
+    const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+  
+    // check if name and email exist in cookies
+    const nameExists = cookies.some(cookie => cookie.startsWith('name='));
+    const emailExists = cookies.some(cookie => cookie.startsWith('email='));
+  
+    if (nameExists && emailExists) {
+      console.log('Name and email exist in cookies');
+      return;
+    }
+  
+    window.google.accounts.id.initialize({
       client_id: '151281518623-cobc3et8p2mgne4punvjnimth3q24eli.apps.googleusercontent.com',
       cancel_on_tap_outside: false,
       callback: onOneTapSignedIn
     });
-    google.accounts.id.prompt((notification) => {
+    window.google.accounts.id.prompt((notification) => {
       if (notification.isNotDisplayed()) {
         console.log(notification.getNotDisplayedReason())
       } else if (notification.isSkippedMoment()) {
@@ -30,9 +46,10 @@ function App() {
       }
     });
   }
-
   const signout = () => {
     // refresh the page
+    document.cookie = 'name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     window.location.reload();
   }
 
@@ -42,17 +59,15 @@ function App() {
     el.onload = () => initializeGSI();
     document.querySelector('body').appendChild(el)
   }, [])
-
+  const name = getCookie('name');
+  const email = getCookie('email');
   return (
     <div className="App">
-        <style>
-            
-        </style>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        { isSignedIn && userInfo ?
+      
+        { name ?
           <div>
-            Hello {userInfo.name} ({userInfo.email})
+            {name} ({email})
             <div className="g_id_signout" onClick={() => signout()}>Sign Out</div>
           </div> :
           <div>You are not signed in</div>
