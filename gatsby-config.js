@@ -30,54 +30,33 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        /**
-         * the query will fetch the following:
-         * the metadata for the site
-         * all the markdown files
-         * all the pages generated
-         */
-        query: `
-        {
+      output: `/sitemap.xml`,
+      query: `
+          {
           site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-          allFile(filter: {extension: {eq: "md"}}) {
-            edges {
-              node {
-                sourceInstanceName
-                modifiedTime
-                relativeDirectory
+              siteMetadata {
+                  siteUrl
               }
-            }
           }
-          allSitePage {
-            edges {
-              node {
-                path
-              }
-            }
-          }
-        }
-        `,
-        serialize: ({ site, allSitePage,allFile }) =>{
-          //iterates over the array inside allSite to generate the the sitemap the markdown items will have lower priority
-          return allSitePage.edges.map(edge=>{
-            const itemPresent= allFile.edges.find(item=>`/${item.node.relativeDirectory}/`===edge.node.path)
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: itemPresent?`weekly`:`daily`, // if any of the markdown (blog/projects) data present set the frequency to weekly otherwise daily
-              lastmod:itemPresent?itemPresent.node.modifiedTime.split('T')[0]:new Date().toISOString().split('T')[0], // adds the lastmod entry with a date either parsed or today
-              priority:itemPresent?0.6:0.9, //sets the priority based on the markdown(blog/projects) 0.6 if they do, 0.9 otherwise
-            }
-          })
-        }
-          
-      }
-    },
-  
 
+          allSitePage {
+              edges {
+                  node {
+                      path
+                  }
+              }
+          }
+      }`,
+      serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => {
+              return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `always`,
+              priority: 0.8,
+              }
+          }),
+      }
+  },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
