@@ -31,7 +31,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/google-news.xml`,
         query: `
           {
             site {
@@ -39,28 +38,31 @@ module.exports = {
                 siteUrl
               }
             }
-            allSitePage(filter: {context: {isPublished: {ne: false}}}) {
-              nodes {
-                path
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
               }
             }
           }
         `,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.nodes.map((node) => ({
-            url: `${site.siteMetadata.siteUrl}${node.path}`,
-            news: {
-              publication: {
-                name: "Your News Source Name",
-                language: "en",
-              },
-              access: "Subscription",
-              genres: "PressRelease, Blog",
-              publication_date: "2023-04-23T12:00:00Z",
-              title: "Article Title",
-              keywords: "keyword1, keyword2",
+        output: "/google-news.xml",
+        exclude: ["/404", "/404.html"],
+        createLinkInHead: true,
+        serialize: ({ path }) => ({
+          url: path,
+          changefreq: "daily",
+          priority: 0.7,
+          news: {
+            publication: {
+              name: "Your News Publication Name",
+              language: "en",
             },
-          })),
+            access: "Subscription",
+            genres: "PressRelease, Blog",
+          },
+        }),
       },
     },
     {
