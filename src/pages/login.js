@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import jwt_decode from 'jwt-decode';
-import '../styles/test.css';
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [userInfo, setUserInfo] = useState(null)
-
+  const [username, setName] = useState('');
+  const [useremail, setEmail] = useState('');
   const onOneTapSignedIn = response => {
     setIsSignedIn(true)
     const decodedToken = jwt_decode(response.credential)
@@ -13,6 +13,9 @@ function App() {
      // set the cookies
   document.cookie = `name=${decodedToken.name};path=/;max-age=86400`;
   document.cookie = `email=${decodedToken.email};path=/;max-age=86400`;
+  document.cookie = `picture=${decodedToken.picture};path=/;max-age=86400`;
+
+  window.location.reload();
   }
 
   const initializeGSI = () => {
@@ -53,14 +56,31 @@ function App() {
     const el = document.createElement('script')
     el.setAttribute('src', 'https://accounts.google.com/gsi/client')
     el.onload = () => initializeGSI();
+    readCookies();
     document.querySelector('body').appendChild(el)
   }, [])
  
+  const readCookies = () => {
+    const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+    const nameCookie = cookies.find(cookie => cookie.startsWith('name='));
+    const emailCookie = cookies.find(cookie => cookie.startsWith('email='));
+    if (nameCookie) {
+      setName(nameCookie.split('=')[1]);
+    }
+    if (emailCookie) {
+      setEmail(emailCookie.split('=')[1]);
+    }
+  };
   return (
     <div className="App">
       <header className="App-header">
-      
-      
+    
+     {useremail && (
+          <div>
+            <p>Welcome, {username} ({useremail})</p>
+            <button onClick={signout}>Sign out</button>
+          </div>
+        )}
       </header>
     </div>
   );
