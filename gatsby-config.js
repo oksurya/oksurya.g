@@ -28,7 +28,41 @@ module.exports = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     `gatsby-plugin-sitemap`,
-   
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/google-news.xml`,
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage(filter: {context: {isPublished: {ne: false}}}) {
+              nodes {
+                path
+              }
+            }
+          }
+        `,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map((node) => ({
+            url: `${site.siteMetadata.siteUrl}${node.path}`,
+            news: {
+              publication: {
+                name: "Your News Source Name",
+                language: "en",
+              },
+              access: "Subscription",
+              genres: "PressRelease, Blog",
+              publication_date: "2023-04-23T12:00:00Z",
+              title: "Article Title",
+              keywords: "keyword1, keyword2",
+            },
+          })),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
