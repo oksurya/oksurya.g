@@ -26,38 +26,56 @@ module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
-
+    
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap.xml`,
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            edges {
+              node {
+                path
               }
             }
-    
-            allSitePage {
-              edges {
-                node {
-                  path
+          }
+          allMarkdownRemark {
+            edges {
+              node {
+                fields {
+                  slug
                 }
               }
             }
           }
-        `,
-        serialize: ({ site, allSitePage }) =>
+        }`,
+        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
+          let pages = []
           allSitePage.edges.map(edge => {
-            return {
+            pages.push({
               url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: `always`,
-              priority: 0.8,
-            }
-          }),
-      },
+              changefreq: `daily`,
+              priority: 0.7,
+            })
+          })
+          allMarkdownRemark.edges.map(edge => {
+            pages.push({
+              url: `${site.siteMetadata.siteUrl}/${
+                edge.node.fields.slug
+              }`,
+              changefreq: `daily`,
+              priority: 0.7,
+            })
+          })
+      return pages
     },
+  },
+},
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
