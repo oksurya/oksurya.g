@@ -30,33 +30,34 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-      output: `/sitemap.xml`,
-      query: `
+        output: `/sitemap.xml`,
+        query: `
           {
-          site {
+            site {
               siteMetadata {
-                  siteUrl
+                siteUrl
               }
-          }
-
-          allSitePage {
+            }
+    
+            allSitePage {
               edges {
-                  node {
-                      path
-                  }
+                node {
+                  path
+                }
               }
+            }
           }
-      }`,
-      serialize: ({ site, allSitePage }) =>
+        `,
+        serialize: ({ site, allSitePage }) =>
           allSitePage.edges.map(edge => {
-              return {
+            return {
               url: site.siteMetadata.siteUrl + edge.node.path,
               changefreq: `always`,
               priority: 0.8,
-              }
+            }
           }),
-      }
-  },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
