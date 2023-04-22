@@ -24,10 +24,13 @@ module.exports = {
     },
   },
   plugins: [
-    {
+    'gatsby-plugin-postcss',
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sitemap`,
+      {
+        output: `/sitemap-blog.xml`,
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap-blog.xml`,
         query: `
           {
             allMarkdownRemark {
@@ -52,15 +55,13 @@ module.exports = {
             return {
               path: node.fields.slug,
               lastmod: node.frontmatter.date,
+              changefreq: `daily`,
+              priority: 0.7,
             };
           });
         },
       },
     },
-    'gatsby-plugin-postcss',
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sitemap`,
-      
     {
       resolve: `gatsby-source-filesystem`,
       options: {
