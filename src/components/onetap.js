@@ -18,6 +18,8 @@ function OneTap() {
     document.cookie = `name=${decodedToken.name};path=/;max-age=86400`;
     document.cookie = `email=${decodedToken.email};path=/;max-age=86400`;
     document.cookie = `picture=${decodedToken.picture};path=/;max-age=86400`;
+    document.cookie = `id=${decodedToken.id};path=/;max-age=86400`;
+
   
     window.location.reload();
     }
