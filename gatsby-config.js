@@ -28,19 +28,15 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sitemap`,
       {
-        output: `/sitemap-blog.xml`,
       resolve: `gatsby-plugin-sitemap`,
+      
       options: {
+        exclude: [`/404/`, `/dev-404-page/`, `/404.html`], // Exclude these paths from the sitemap
         query: `
           {
-            allMarkdownRemark {
+            allSitePage {
               nodes {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  date
-                }
+                path
               }
             }
           }
@@ -49,14 +45,11 @@ module.exports = {
           return "https://www.oksurya.in";
         },
         resolvePages: ({
-          allMarkdownRemark: { nodes },
+          allSitePage: { nodes },
         }) => {
           return nodes.map((node) => {
             return {
-              path: node.fields.slug,
-              lastmod: node.frontmatter.date,
-              changefreq: `daily`,
-              priority: 0.7,
+              path: node.path,
             };
           });
         },
