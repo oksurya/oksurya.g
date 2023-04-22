@@ -24,45 +24,74 @@ module.exports = {
     },
   },
   plugins: [
-
-    'gatsby-plugin-postcss',
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
+        output: `/sitemap-blog.xml`,
         query: `
           {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage {
-              edges {
-                node {
-                  path
+            allMarkdownRemark {
+              nodes {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  date
                 }
               }
             }
           }
         `,
-        output: "/google-news.xml",
-        exclude: ["/404", "/404.html"],
-        createLinkInHead: true,
-        serialize: ({ path }) => ({
-          url: path,
-          changefreq: "daily",
-          priority: 0.7,
-          news: {
-            publication: {
-              name: "Your News Publication Name",
-              language: "en",
-            },
-            access: "Subscription",
-            genres: "PressRelease, Blog",
-          },
-        }),
+        resolveSiteUrl: () => {
+          return "https://www.oksurya.in";
+        },
+        resolvePages: ({
+          allMarkdownRemark: { nodes },
+        }) => {
+          return nodes.map((node) => {
+            return {
+              path: node.fields.slug,
+              lastmod: node.frontmatter.date,
+            };
+          });
+        },
+      },
+    },
+    'gatsby-plugin-postcss',
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sitemap`,
+      {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+          {
+            allMarkdownRemark {
+              nodes {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  date
+                }
+              }
+            }
+          }
+        `,
+        resolveSiteUrl: () => {
+          return "https://example.com";
+        },
+        resolvePages: ({
+          allMarkdownRemark: { nodes },
+        }) => {
+          return nodes.map((node) => {
+            return {
+              path: node.fields.slug,
+              lastmod: node.frontmatter.date,
+              changefreq: `daily`,
+              priority: 0.7,
+            };
+          });
+        },
       },
     },
     {
