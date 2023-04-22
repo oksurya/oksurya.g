@@ -26,34 +26,58 @@ module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
-      {
+
+    {
       resolve: `gatsby-plugin-sitemap`,
-      
       options: {
-        exclude: [`/404/`, `/dev-404-page/`, `/404.html`], // Exclude these paths from the sitemap
+        /**
+         * the query will fetch the following:
+         * the metadata for the site
+         * all the markdown files
+         * all the pages generated
+         */
         query: `
-          {
-            allSitePage {
-              nodes {
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allFile(filter: {extension: {eq: "md"}}) {
+            edges {
+              node {
+                sourceInstanceName
+                modifiedTime
+                relativeDirectory
+              }
+            }
+          }
+          allSitePage {
+            edges {
+              node {
                 path
               }
             }
           }
+        }
         `,
-        resolveSiteUrl: () => {
-          return "https://www.oksurya.in";
-        },
-        resolvePages: ({
-          allSitePage: { nodes },
-        }) => {
-          return nodes.map((node) => {
+        serialize: ({ site, allSitePage,allFile }) =>{
+          //iterates over the array inside allSite to generate the the sitemap the markdown items will have lower priority
+          return allSitePage.edges.map(edge=>{
+            const itemPresent= allFile.edges.find(item=>`/${item.node.relativeDirectory}/`===edge.node.path)
             return {
-              path: node.path,
-            };
-          });
-        },
-      },
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: itemPresent?`weekly`:`daily`, // if any of the markdown (blog/projects) data present set the frequency to weekly otherwise daily
+              lastmod:itemPresent?itemPresent.node.modifiedTime.split('T')[0]:new Date().toISOString().split('T')[0], // adds the lastmod entry with a date either parsed or today
+              priority:itemPresent?0.6:0.9, //sets the priority based on the markdown(blog/projects) 0.6 if they do, 0.9 otherwise
+            }
+          })
+        }
+          
+      }
     },
+  
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
