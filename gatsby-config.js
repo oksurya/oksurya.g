@@ -26,44 +26,37 @@ module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
-    
-    {
+    `gatsby-plugin-sitemap`,
+      {
       resolve: `gatsby-plugin-sitemap`,
+      
       options: {
-        query: `{
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-
-          allMarkdownRemark {
-            edges {
-              node {
-                fields {
-                  slug
-                }
+        exclude: [`/404/`, `/dev-404-page/`, `/404.html`], // Exclude these paths from the sitemap
+        query: `
+          {
+            allSitePage {
+              nodes {
+                path
               }
             }
           }
-        }`,
-        serialize: ({ site, allMarkdownRemark }) => {
-          let pages = []
-
-          allMarkdownRemark.edges.map(edge => {
-            pages.push({
-              url: `${site.siteMetadata.siteUrl}/${
-                edge.node.fields.slug
-              }`,
-              changefreq: `daily`,
-              priority: 0.7,
-            })
-          })
-      return pages
+        `,
+        resolveSiteUrl: () => {
+          return "https://www.oksurya.com";
+        },
+        resolvePages: ({
+          allSitePage: { nodes },
+        }) => {
+          return nodes.map((node) => {
+            return {
+              path: node.path,
+              changefreq: `always`,
+              priority: 0.8,
+            };
+          });
+        },
+      },
     },
-  },
-},
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {
