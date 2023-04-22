@@ -60,40 +60,7 @@ module.exports = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     `gatsby-plugin-sitemap`,
-      {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `
-          {
-            allMarkdownRemark {
-              nodes {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  date
-                }
-              }
-            }
-          }
-        `,
-        resolveSiteUrl: () => {
-          return "https://example.com";
-        },
-        resolvePages: ({
-          allMarkdownRemark: { nodes },
-        }) => {
-          return nodes.map((node) => {
-            return {
-              path: node.fields.slug,
-              lastmod: node.frontmatter.date,
-              changefreq: `daily`,
-              priority: 0.7,
-            };
-          });
-        },
-      },
-    },
+      
     {
       resolve: `gatsby-source-filesystem`,
       options: {
