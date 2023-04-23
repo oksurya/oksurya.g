@@ -26,7 +26,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
-    `gatsby-plugin-sitemap`,
       {
       resolve: `gatsby-plugin-sitemap`,
       
@@ -42,7 +41,7 @@ module.exports = {
           }
         `,
         resolveSiteUrl: () => {
-          return "https://www.oksurya.com";
+          return "https://www.oksurya.in";
         },
         resolvePages: ({
           allSitePage: { nodes },
