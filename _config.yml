@@ -5,6 +5,7 @@ collections:
   content-blog:
     title: Posts
     output: true
+    permalink: "/content/blog/"
   posts:
     title: Posts
     output: true
