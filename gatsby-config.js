@@ -36,6 +36,16 @@ module.exports = {
               siteUrl
             }
           }
+          allMarkdownRemark {
+            nodes {
+              fields {
+                slug
+              }
+              frontmatter {
+                date
+              }
+            }
+          }
           allSitePage {
             nodes {
               path
@@ -47,7 +57,9 @@ module.exports = {
         serialize: ({ path, pageContext }) => {
           return {
             url: path,
-            lastmod: pageContext?.lastMod,
+            changefreq: "always",
+            priority: 0.7,
+            lastmod: node.frontmatter.date,
           }
         },
       },
