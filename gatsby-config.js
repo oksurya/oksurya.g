@@ -59,7 +59,7 @@ module.exports = {
             url: path,
             changefreq: "always",
             priority: 0.7,
-            lastmod: node.frontmatter.date,
+            lastmod: nodes.frontmatter.date,
           }
         },
       },
