@@ -47,6 +47,7 @@ module.exports = {
         serialize: ({ path, pageContext }) => {
           return {
             url: path,
+            lastmod: pageContext?.lastMod,
           }
         },
       },
