@@ -1,13 +1,15 @@
 ---
 title: Create a IFSC Website with Blogger
-description: Learn how to create a professional IFSC website with our easy-to-follow step-by-step guide using the popular platform, Blogger.
-date: 2023-04-23T18:06:12.796Z
-preview: /posts/ifsc-blogger.png
+date: 2023-04-23 18:06:12.796000000 Z
+description: Learn how to create a professional IFSC website with our easy-to-follow
+  step-by-step guide using the popular platform, Blogger.
+preview: "/posts/ifsc-blogger.png"
 draft: true
 tags:
-  - Blogger
+- Blogger
 categories: []
 ---
+
 ![IFSC website using Blogger](/posts/ifsc-blogger.png)
 
 Hello there!
