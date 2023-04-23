@@ -27,41 +27,35 @@ module.exports = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: "gatsby-plugin-sitemap",
       options: {
         query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-          allMarkdownRemark {
-            nodes {
-              fields {
-                slug
-              }
-              frontmatter {
-                date
+          {
+            site {
+              siteMetadata {
+                siteUrl
               }
             }
-          }
-          allSitePage {
-            nodes {
-              path
-              pageContext
+
+            allMarkdownRemark {
+              nodes {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  date
+                }
+              }
             }
           }
-        }
         `,
-        serialize: ({ path, pageContext }) => {
-          return {
-            url: path,
-            changefreq: "always",
+        serialize: ({ site, allMarkdownRemark }) =>
+          allMarkdownRemark.nodes.map((node) => ({
+            url: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
+            changefreq: "daily",
             priority: 0.7,
-            lastmod: nodes.frontmatter.date,
-          }
-        },
+            lastmod: node.frontmatter.date,
+          })),
       },
     },
     `gatsby-plugin-git-lastmod`,
