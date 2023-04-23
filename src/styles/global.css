@@ -20,6 +20,7 @@ article .anchor.before {
 }
 article blockquote {
     border-left: 4px solid hsl(290.2deg 100% 30%);
+	color: #545454;
 }
 
 article table  {
