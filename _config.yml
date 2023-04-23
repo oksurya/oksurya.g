@@ -1,0 +1,14 @@
+---
+title: Oksurya.Github.Io
+timezone: UTC
+collections:
+  content-blog:
+    title: Posts
+    output: true
+    permalink: "/content/blog/"
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true

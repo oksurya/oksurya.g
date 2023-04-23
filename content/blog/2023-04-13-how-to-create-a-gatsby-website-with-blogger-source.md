@@ -1,16 +1,17 @@
 ---
 title: How to Create a Gatsby Website with Blogger Source
-description: ""
-date: 2023-04-19T22:09:31.864Z
-preview: /posts/gatsby-blogger.png
+date: 2023-04-19 22:09:31.864000000 Z
+description: ''
+preview: "/posts/gatsby-blogger.png"
 draft: false
 tags:
-  - Gatsby Tutorials
-  - Blogger
-  - Gatsby
-  - Gatsby Plugins
+- Gatsby Tutorials
+- Blogger
+- Gatsby
+- Gatsby Plugins
 categories: []
 ---
+
 ![create gatsby website with blogger api](/posts/gatsby-blogger.png)
 A way to Create a Gatsby site with Blogger source.
 On this academic, i will show you how to create a Gatsby website that attracts weblog posts and pages from Blogger the use of the gatsby-source-blogger plugin. Gatsby is a contemporary framework for constructing rapid and comfortable websites the usage of React and GraphQL. Blogger is a famous platform for developing and hosting blogs at no cost.
