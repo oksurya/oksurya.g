@@ -24,8 +24,8 @@ Follow along and discover how simple it is to create your own profitable online 
 
 Before you begin, it is essential to set up the necessary requirements. There are,
 
-1. Enable the Blogger API in Google Cloud Console.
-2. Download and install the latest version of Python on your computer, ensuring that you select the "add to path" option during installation.
+1. Enable the Blogger API in [Google Cloud Console](https://console.cloud.google.com/marketplace/product/google/blogger.googleapis.com).
+2. Download and install the [latest version of Python](https://www.python.org/downloads/) on your computer, ensuring that you select the "**add to path**" option during installation.
 3. Follow the code and instructions provided below to automate the process of creating and publishing posts on your Blogger blog using Python and the Blogger API. This will save you time and effort in the long run.
 
 ### Step 1: Creating a Python Code for Converting IFSC to Markdown
@@ -39,39 +39,11 @@ To get the latest IFSC list in CSV format, you can download it from the [Razorpa
 Now, let's create a Python code for converting CSV to Markdown.
 
 #### Code for csvtomd.py
-```
-# CODE BY JAYASURYA MAILSAMY
 
-import csv
-import os
+> The code cannot be displayed in this article due to a policy violation by Google. However, you can download it by following the link provided.
 
-# Create the ifscposts directory if it doesn't already exist
-if not os.path.exists('ifscposts'):
-    os.mkdir('ifscposts')
+To download the csvtomd file, please follow this link: https://tinyurl.com/3b7xfxw8.
 
-# Open the CSV file and loop through the rows
-with open('ifsc.csv') as csvfile:
-    reader = csv.DictReader(csvfile)
-    for row in reader:
-        ifsc = row['IFSC']
-        filename = f"ifscposts/{ifsc}.md"
-        with open(filename, 'w') as mdfile:
-            mdfile.write(f"---\n")
-            for key, value in row.items():
-                mdfile.write(f"{key.lower()}: {value}\n")
-            mdfile.write(f"---\n\n")
-            mdfile.write(f"<table>\n")
-            mdfile.write(f"<tbody>\n")
-            for key, value in row.items():
-                mdfile.write(f"<tr>\n")
-                mdfile.write(f"<td>{key}</td>\n")
-                mdfile.write(f"<td>{value}</td>\n")
-                mdfile.write(f"</tr>\n")
-            mdfile.write(f"</tbody>\n")
-            mdfile.write(f"</table>\n")
-
-print('Markdown files created successfully')
-```
 The code above saves the converted MD files in a folder named `ifscposts`.
 
 ### Step 2: Creating a Python code to automate posting to Blogger
@@ -82,68 +54,8 @@ let's create a Python code for Markdown to Blogger.
 
 #### Code for mdtoblogger.py
 
-```
-# CODE BY JAYASURYA MAILSAMY
+To download the mdtoblogger file, please follow this link: https://tinyurl.com/5n6kr882.
 
-import os
-import requests
-
-# Set up the API endpoint and headers
-blog_id = 'BLOG_ID'
-api_url = 'https://www.googleapis.com/blogger/v3/blogs/' + blog_id + '/posts/'
-api_key = 'ACCESS_TOKEN'
-headers = {
-    'Authorization': 'Bearer ' + api_key,
-    'Content-Type': 'application/json'
-}
-
-# Set up the path to the folder containing the Markdown posts
-folder_path = 'ifscposts'
-
-# Loop through each file in the folder
-for filename in os.listdir(folder_path):
-    if filename.endswith('.md'):
-        # Open the Markdown file and read its contents
-        with open(os.path.join(folder_path, filename), 'r', encoding='utf-8') as file:
-            post_content = file.read()
-
-        # Split the frontmatter from the Markdown content
-        frontmatter, content = post_content.split('---\n', 2)[1:]
-
-        # Parse the frontmatter into a dictionary
-        frontmatter_dict = {}
-        for line in frontmatter.split('\n'):
-            if ':' in line:
-                key, value = line.split(':', 1)
-                frontmatter_dict[key.strip()] = value.strip()
-
-        # Create the Blogger post payload
-        payload = {
-            'kind': 'blogger#post',
-            'blog': {
-                'id': blog_id
-            },
-            'title': f'{frontmatter_dict["branch"]} - {frontmatter_dict["ifsc"]} IFSC Code Details',
-            'content': content,
-            'labels': frontmatter_dict['branch'].split(','),
-            'labels': frontmatter_dict['state'].split(','),
-            'labels': frontmatter_dict['district'].split(','),
-            'labels': frontmatter_dict['city'].split(','),
-            'labels': frontmatter_dict['bank'].split(','),
-            
-        }
-
-        # Make the API request to create the Blogger post
-        response = requests.post(api_url, headers=headers, json=payload)
-
-        # Check the response status code for errors
-        if response.status_code != 200:
-            print(f'Error creating post: {response.text}')
-        else:
-            print('Post created successfully.')
-            os.remove(os.path.join(folder_path, filename))
-
-```
 Replace "**BLOG_ID**" with your blog ID, which you can find in the Blogger dashboard URL like this: `https://draft.blogger.com/blog/posts/BLOG_ID`.
 
 Replace "**ACCESS_TOKEN**" with your authorization token, which you can obtain from https://developers.google.com/oauthplayground/.
