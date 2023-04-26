@@ -9,7 +9,7 @@ tags:
 categories: []
 ---
 
-![Blogger Template Codes]("/posts/blogger-conditional-tags.jpg")
+![Blogger Template Codes](/posts/blogger-conditional-tags.jpg)
 In this conversation, we've covered 10 conditional tags that you may find useful in customizing your Blogspot template.
 
 We've also included an example code for each tag and a brief description of its purpose.
