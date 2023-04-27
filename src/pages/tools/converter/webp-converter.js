@@ -72,9 +72,7 @@ const ImageUploader = () => {
 
       <div class="mmax-w-2xl prose mx-auto mt-10 lg:text-lg">
         <div class="relative px-4 sm:px-6 lg:px-3 flex flex-col gap-2">
-</div>
-</div>
-
+          
 <div onDragOver={handleDragOver} onDrop={handleDrop}>
     <label
         class="lg:h-64 flex justify-center w-full h-32 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
@@ -113,6 +111,9 @@ const ImageUploader = () => {
 
      
     </div>
+</div>
+</div>
+
     <article className="mt-6 prose prose-indigo px-6 lg:px-8 prose-lg text-gray-500 mx-auto">
 
 <p>
