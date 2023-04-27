@@ -27,6 +27,16 @@ module.exports = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     {
+      resolve: `gatsby-plugin-umami`,
+      options: {
+        websiteId: '9cbea835-0f7f-4977-9b19-3ccb3dc7f0ab',
+        srcUrl: 'https://analytics.umami.is/script.js',
+        includeInDevelopment: false,
+        autoTrack: true,
+        respectDoNotTrack: true
+      },
+    },
+    {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         query: `
