@@ -21,6 +21,7 @@
     "gatsby-plugin-git-lastmod": "^0.1.2",
     "gatsby-plugin-image": "^3.8.0",
     "gatsby-plugin-manifest": "^5.8.0",
+    "gatsby-plugin-page-creator": "^5.9.0",
     "gatsby-plugin-sitemap": "^6.8.0",
     "gatsby-plugin-typography": "^5.8.0",
     "gatsby-plugin-umami": "^0.1.5",

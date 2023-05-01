@@ -1,7 +1,7 @@
 import React from "react"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import { graphql } from "gatsby"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
+import { Link, graphql } from "gatsby"
 
 export const query = graphql`
   query MyQuery {
@@ -9,7 +9,7 @@ export const query = graphql`
         edges {
           node {
             id
-            SEO {
+            SEO_Tools {
               link
               name
             }
@@ -62,8 +62,8 @@ const ToolsList = ({ data }) => {
           {tools.map((tool) => (
             <li key={tool.name} className="mb-2">
 
-<a class="w-full block  px-4 py-2 border-b text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50" href={tool.link}>
-  <span class="focus:text-gray-400  hover:text-purple-800 text-gray-600 truncate">{tool.name}</span></a>
+<Link class="w-full block  px-4 py-2 border-b text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50" to={tool.link}>
+  <span class="focus:text-gray-400  hover:text-purple-800 text-gray-600 truncate">{tool.name}</span></Link>
 
               
             </li>

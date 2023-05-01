@@ -24,7 +24,8 @@ Calculator:
     link: /tools/calculator/love-calculator
   - name: BMI Calculator
     link: /tools/calculator/bmi-calculator
-
+  - name: Adsense Calculator
+    link: /tools/calculator/adsense
 Generator:
   - name: Instagram Embed Generator
     link: /tools/instagram/embed-instagram
@@ -32,6 +33,6 @@ Generator:
     link: /tools/generator/password-generator
   - name: Video Screenshot Generator
     link: /tools/generator/video-thumbnail-generator
-SEO:
+SEO Tools:
   - name: SEO Title Checker
     link: /tools/seo/tag-validator

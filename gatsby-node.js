@@ -8,6 +8,9 @@ const createPaginatedPages = require("gatsby-paginate")
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
+
+
+
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const tagTemplate = path.resolve(`./src/templates/tag.js`)
