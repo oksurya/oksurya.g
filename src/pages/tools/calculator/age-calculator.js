@@ -25,6 +25,7 @@ function AgeCalculator() {
 
 <div class="pb-10 container mx-auto">
   <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    
     <article className=" prose prose-indigo text-gray-500 mx-auto">
 
 <header class="border-b mx-auto max-w-2xl text-center">
@@ -71,6 +72,7 @@ Universal, an age calculator tool is a easy yet crucial on line tool that gives 
   </div>
   
 </div>
+
     </Layout>
   );
 }
