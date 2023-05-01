@@ -55,9 +55,11 @@ const ToolsList = ({ data }) => {
     {Object.keys(node).map((key) => {
   if (key !== "id") {
     const tools = node[key];
+    const formattedKey = key.replace("_", " ");
+
     return (
       <div key={key} className="mb-6">
-        <h2 className="px-3 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">{key}</h2>
+        <h2 className="px-3 py-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">{formattedKey}</h2>
         <ul>
           {tools.map((tool) => (
             <li key={tool.name} className="mb-2">
