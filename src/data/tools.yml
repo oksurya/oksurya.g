@@ -11,8 +11,6 @@ Converter:
 Encoder:
   - name: Base64 Encoder
     link: /tools/encoder/base-64-encoder
-
-
     
 Decoder:
   - name: Base64 Decoder
@@ -34,3 +32,6 @@ Generator:
     link: /tools/generator/password-generator
   - name: Video Screenshot Generator
     link: /tools/generator/video-thumbnail-generator
+SEO:
+  - name: SEO Title Checker
+    link: /tools/seo/tag-validator

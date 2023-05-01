@@ -8,6 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  trailingSlash: "never",
   siteMetadata: {
     title: `Oksurya`,
     author: {
@@ -26,6 +27,8 @@ module.exports = {
   plugins: [
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
+    
+
     {
       resolve: `gatsby-plugin-umami`,
       options: {

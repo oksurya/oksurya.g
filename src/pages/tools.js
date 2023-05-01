@@ -9,6 +9,10 @@ export const query = graphql`
         edges {
           node {
             id
+            SEO {
+              link
+              name
+            }
             Generator {
               link
               name
