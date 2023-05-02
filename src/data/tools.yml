@@ -25,7 +25,7 @@ Calculator:
   - name: BMI Calculator
     link: /tools/calculator/bmi-calculator
   - name: Adsense Calculator
-    link: /tools/calculator/adsense
+    link: /tools/calculator/adsense-calculator
 Generator:
   - name: Instagram Embed Generator
     link: /tools/instagram/embed-instagram

@@ -14,6 +14,7 @@
     "@heroicons/react": "^1.0.6",
     "@rajesh896/video-thumbnails-generator": "^2.3.9",
     "@react-icons/all-files": "^4.1.0",
+    "axios": "^1.4.0",
     "firebase": "^9.20.0",
     "gatsby": "^5.8.1",
     "gatsby-paginate": "^1.1.1",
