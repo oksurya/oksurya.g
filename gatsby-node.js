@@ -1,22 +1,13 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const createPaginatedPages = require("gatsby-paginate")
-const redirects = require('./redirects.json');
 
 
 
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-const redirects = require('./redirects.json');
-const { createRedirect } = actions;
 
-  redirects.forEach(redirect => {
-    createRedirect({
-      fromPath: redirect.from,
-      toPath: redirect.to,
-    });
-  });
 
 
 
