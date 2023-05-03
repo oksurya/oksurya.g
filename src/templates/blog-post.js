@@ -5,6 +5,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Postseo from "../components/seo"
+import slugify from 'slugify'
 
 import { TypographyStyle } from 'react-typography'
 import typography from '../utils/typography'
@@ -59,7 +60,7 @@ const formattedDate = new Date(postdate).toLocaleDateString('en-US', {
         <div className="pb-5 ">
         {post.frontmatter.tags && post.frontmatter.tags.slice(0, 3).map((tag, index) => (
                <span class="mr-1.5 rounded-full px-3 py-1 bg-purple-800 ">
-              <Link to={`/topic/${tag}`} key={tag} className="text-white">  {tag}</Link>
+              <Link to={`/topic/${slugify(tag.toLowerCase())}`} key={tag} className="text-white">  {tag}</Link>
                 </span>
 
                 ))}

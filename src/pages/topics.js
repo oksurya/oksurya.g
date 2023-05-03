@@ -3,6 +3,8 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Seo from '../components/seo'
+import slugify from 'slugify'
+
 const AllTags = ({ data }) => {
   const tags = data.allMarkdownRemark.group
 
@@ -18,7 +20,7 @@ const AllTags = ({ data }) => {
       <div class="flex mt-10 grid gap-3 justify-center">
         
       {tags.map((tag) => (
-        <Link className="mr-1.5 rounded-full px-3 py-1 bg-purple-100 text-purple-800" to={`/topic/${tag.fieldValue}`}>
+        <Link className="mr-1.5 rounded-full px-3 py-1 bg-purple-100 text-purple-800" to={`/topic/${slugify(tag.fieldValue.toLowerCase())}`}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
          ))}

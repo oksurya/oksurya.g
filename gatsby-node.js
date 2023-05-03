@@ -1,14 +1,25 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const createPaginatedPages = require("gatsby-paginate")
-
-
+const toolspages = require('./src/data/tools.json');
+const slugify = require('slugify');
 
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+  const { createRedirect } = actions;
 
+  // Redirect old URL to new URL
 
+  toolspages.forEach((page) => {
+    createPage({
+      path: page.path,
+      component: path.resolve(`./src/tools/${page.component}.js`),
+      context: {
+        // Add any data you want to pass to the component here
+      },
+    });
+  });
 
 
   // Define a template for blog post
@@ -84,7 +95,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     Array.from(tags).forEach(tag => {
       createPage({
-        path: `/topic/${tag}/`,
+        path: `/topic/${slugify(tag, { lower: true })}/`,
         component: tagTemplate,
         context: {
           tag
