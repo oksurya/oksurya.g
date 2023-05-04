@@ -16,7 +16,7 @@
       },
       {
         "source": "/firebase",
-        "destination": "https://firebase.google.com/",
+        "destination": "/tools",
         "type": 302
       }
     ],
