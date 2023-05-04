@@ -11,7 +11,7 @@ categories: []
 ---
 
 ![Generate frame from a video as image](/posts/video-screenshot-generator.png)
-The [Video Thumbnail Generator Tool](/tools/generator/video-thumbnail-generator/) is a free online tool that lets in you to generate custom thumbnails in your videos. Via the use of this device, you could create appealing and tasty thumbnails to be able to help your films stand out and appeal to extra views.
+The [Video Thumbnail Generator Tool](/video-thumbnail-generator/) is a free online tool that lets in you to generate custom thumbnails in your videos. Via the use of this device, you could create appealing and tasty thumbnails to be able to help your films stand out and appeal to extra views.
 
 To use this tool, you would observe these steps:
 

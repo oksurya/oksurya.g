@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { jsPDF } from 'jspdf';
-import Layout from "../../../components/layout"
-import Seo from "../../../components/seo"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 function ImageToPDFConverter() {
   const [image, setImage] = useState(null);

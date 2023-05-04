@@ -1,28 +1,2 @@
 User-agent: *
-Disallow: /redirect/
-
-User-agent: *
-Disallow: /topic/Firebase/
-
-User-agent: *
-Disallow: /topic/Blogger/
-
-User-agent: *
-Disallow: /topic/Tools/
-
-User-agent: *
-Disallow: /topic/Default/
-
-User-agent: *
-Disallow: /topic/Gatsby/
-
-User-agent: *
-Disallow: /topic/News/
-
-User-agent: *
-Disallow: /topic/Gatsby%20Tutorials/
-
-User-agent: *
-Disallow: /topic/Social%20Media/
-
 Sitemap: https://www.oksurya.in/sitemap-index.xml

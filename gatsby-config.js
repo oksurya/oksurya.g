@@ -28,7 +28,12 @@ module.exports = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-image`,
     
-
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/tools`,
+      },
+    },
     {
       resolve: `gatsby-plugin-umami`,
       options: {

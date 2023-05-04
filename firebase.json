@@ -15,9 +15,9 @@
         "type": 301
       },
       {
-        "source": "/firebase",
-        "destination": "/tools",
-        "type": 302
+        "source": "/tools/instagram/embed-instagram",
+        "destination": "/embed-instagram",
+        "type": 301
       }
     ],
     "rewrites": [

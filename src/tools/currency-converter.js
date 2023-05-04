@@ -1,10 +1,10 @@
 import React, { Fragment, useState } from "react";
-import Layout from "../../../components/layout"
-import Seo from "../../../components/seo"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 import axios from "axios";
 import { Dialog, Transition } from '@headlessui/react'
 import { TypographyStyle } from 'react-typography'
-import typography from '../../../utils/typography'
+import typography from '../utils/typography'
 
 function CurrencyConverter() {
   const [amount, setAmount] = useState("");
