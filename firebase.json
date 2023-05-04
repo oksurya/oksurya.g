@@ -10,13 +10,73 @@
     ],
     "redirects": [
       {
-        "source": "/foo{,/**}",
-        "destination": "/bar",
+        "source": "/tools/calculator/adsense-calculator/",
+        "destination": "/adsense-calculator",
+        "type": 301
+      },
+      {
+        "source": "/tools/seo/tag-validator/",
+        "destination": "/tag-validator",
+        "type": 301
+      },
+      {
+        "source": "/tools/generator/password-generator/",
+        "destination": "/password-generator",
+        "type": 301
+      },
+      {
+        "source": "/tools/converter/webp-converter/",
+        "destination": "/webp-converter",
+        "type": 301
+      },
+      {
+        "source": "/tools/calculator/bmi-calculator/",
+        "destination": "/bmi-calculator",
+        "type": 301
+      },
+      {
+        "source": "/tools/calculator/age-calculator/",
+        "destination": "/age-calculator",
+        "type": 301
+      },
+      {
+        "source": "/tools/converter/speed-converter/",
+        "destination": "/speed-converter",
         "type": 301
       },
       {
         "source": "/tools/instagram/embed-instagram",
         "destination": "/embed-instagram",
+        "type": 301
+      },
+      {
+        "source": "/tools/converter/currency-converter/",
+        "destination": "/currency-converter",
+        "type": 301
+      },
+      {
+        "source": "/tools/calculator/love-calculator/",
+        "destination": "/love-calculator",
+        "type": 301
+      },
+      {
+        "source": "/tools/encoder/base-64-encoder/",
+        "destination": "/base-64-encoder",
+        "type": 301
+      },
+      {
+        "source": "/tools/generator/video-thumbnail-generator/",
+        "destination": "/video-thumbnail-generator",
+        "type": 301
+      },
+      {
+        "source": "/tools/decoder/base-64-decoder/",
+        "destination": "/base-64-decoder",
+        "type": 301
+      },
+      {
+        "source": "/tools/converter/image-to-pdf-converter/",
+        "destination": "/image-to-pdf-converter",
         "type": 301
       }
     ],
