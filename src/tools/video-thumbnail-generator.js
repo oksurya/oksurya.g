@@ -70,29 +70,19 @@ function App() {
         
     </header>
     
-<div class="max-w-2xl prose mx-auto mb-10 mt-10 lg:text-lg">
+<div onDragOver={handleDragOver} onDrop={handleDrop} class="max-w-2xl prose mx-auto mb-10 mt-10 lg:text-lg">
     <div class="relative px-4 sm:px-6 lg:px-8 flex flex-col gap-2">
     {!videoUrl && (
 
-    <div onDragOver={handleDragOver} onDrop={handleDrop}>
+    <div >
     <label
         class="lg:h-64 flex justify-center w-full h-32 px-4 transition bg-white border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none">
-        <span class="flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-            </svg>
-            <span class="font-medium text-gray-600">
-                Drop a Video file, or
-                <span class="text-purple-600 underline"> browse</span>
-            </span>
-        </span>
+       
         <input type="file" accept="video/*" onChange={(e) => {
               if (e.target.files?.length > 0) {
                 setVideo(e.target.files[0]);
               }
-            }} class="hidden"/>
+            }} class="bg-purple-800 text-white py-2 px-4 rounded-lg hover:bg-purple-700 focus:outline-none focus:bg-purple-800"/>
     </label>
 </div>
 )}
