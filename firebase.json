@@ -15,7 +15,7 @@
         "type": 301
       },
       {
-        "source": "/firebase/**",
+        "source": "/firebase",
         "destination": "https://firebase.google.com/",
         "type": 302
       }
