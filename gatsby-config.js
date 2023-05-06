@@ -44,32 +44,6 @@ module.exports = {
         respectDoNotTrack: true
       },
     },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-          allSitePage {
-            nodes {
-              path
-              pageContext
-            }
-          }
-        }
-        `,
-        serialize: ({ path, pageContext }) => {
-          return {
-            url: path,
-            lastmod: pageContext?.lastMod,
-          }
-        },
-      },
-    },
     `gatsby-plugin-git-lastmod`,
     {
       resolve: `gatsby-source-filesystem`,
