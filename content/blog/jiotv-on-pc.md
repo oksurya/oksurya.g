@@ -35,6 +35,6 @@ So now we have an alternative solution to use JioTV on our PC by using [Kodi](ht
 
 **Step 4**: Follow the video for further instructions.
 
-[Click here to Watch Full Video on Youtube](https://www.youtube.com/watch?v=WeBT6oauLnU).
+[Click here to Watch Full Video on Youtube](https://www.youtube.com/@jsurya).
 
 I  hope this article is useful to fix the problems between Kodi and Jiotv plugin.

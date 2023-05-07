@@ -66,7 +66,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         tags.add(tag)
       })
       createPage({
-        path: post.fields.slug,
+        path: `/read${post.fields.slug}`,
         component: blogPost,
         context: {
           id: post.id,
