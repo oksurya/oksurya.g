@@ -37,7 +37,7 @@ const BlogIndex = ({ data, location }) => {
 <div class="border-t p-3">
 <div class="flex space-x-1 text-xs text-gray-500">
 <time>{post.frontmatter.date}</time></div>
-<Link to={`/read${post.fields.slug}`} itemProp="url" class="mt-2 block">
+<Link to={post.fields.slug} itemProp="url" class="mt-2 block">
 <p class="text-base font-semibold leading-tight tracking-tight text-gray-700 hover:text-gray-900 sm:text-lg md:text-xl">{title}</p>
 <p className="mt-3 hidden text-sm text-gray-500 sm:line-clamp-2" dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt, }} itemProp="description" />
 </Link>
