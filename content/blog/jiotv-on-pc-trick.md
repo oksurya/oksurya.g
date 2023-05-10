@@ -1,8 +1,8 @@
 ---
 title: How to Use JioTV on Your PC
 description: Learn how to use JioTV on your PC in this easy-to-follow, step-by-step guide. With JioTV, you can watch your favorite TV shows, movies, and live channels on a bigger screen.
-date: 2023-05-04T17:13:19.739Z
-preview: ""
+date: 2023-05-10T02:17:46.505Z
+preview: /posts/watch-jiotv-on-pc-trick.png
 draft: false
 tags:
   - PC Tricks
