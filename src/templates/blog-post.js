@@ -126,7 +126,7 @@ const Head = ({ data: { site, markdownRemark: post } }) => {
   const schema = {
     
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "NewsArticle",
     "headline": post.frontmatter.title,
     "image": schemaimage,
     "datePublished": isoDate,
