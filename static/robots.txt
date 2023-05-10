@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.oksurya.in/sitemap-index.xml
+Sitemap: https://oksurya.in/sitemap-index.xml
