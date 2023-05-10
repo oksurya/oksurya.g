@@ -8,7 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  trailingSlash: "always",
+  trailingSlash: "never",
   siteMetadata: {
     title: `Oksurya`,
     author: {
