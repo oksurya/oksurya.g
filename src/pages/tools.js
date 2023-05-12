@@ -13,6 +13,10 @@ export const query = graphql`
               link
               name
             }
+            Other_Tools {
+              link
+              name
+            }
             Generator {
               link
               name

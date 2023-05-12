@@ -36,3 +36,6 @@ Generator:
 SEO Tools:
   - name: SEO Title Checker
     link: /tag-validator
+Other Tools:
+  - name: IFSC Details Viewer
+  - link: /ifsc
