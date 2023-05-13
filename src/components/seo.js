@@ -44,6 +44,7 @@ const Seo = ({ description, title, image, children, schemaMarkup }) => {
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={ogImageUrl} />
       <meta property="og:type" content="website" />
+      <meta name="google-site-verification" content="YTd6-dnyBV97B1MkEh1ggOFfWArSRbZaOLofjO6Q8jM" />
       <meta name="google-site-verification" content="PmqYy-itIqkvpxnnLvuhaSSF4nYeNLdp91Br-47ERas" />
       <meta property="twitter:image" content={ogImageUrl} />
       <meta name="twitter:card" content="summary_large_image" />
