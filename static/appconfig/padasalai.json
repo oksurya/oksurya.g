@@ -7,9 +7,9 @@
 		"status": "1",
 		"more_apps_url": "https://play.google.com/store/apps/developer?id=Oksurya",
 		"redirect_url": "",
-		"privacy_policy_url": "https://oksurya.in/privacy",
-		"publisher_info_url": "https://oksurya.in/about",
-		"terms_conditions_url": "https://oksurya.in/privacy",
+		"privacy_policy_url": "https://oksuryain.web.app/p/app-privacy",
+		"publisher_info_url": "https://oksuryain.web.app/about",
+		"terms_conditions_url": "https://oksuryain.web.app/p/app-terms",
 		"display_page_menu": "true",
 		"display_view_on_site_menu": "true",
 		"custom_label_list": "false",
@@ -52,7 +52,7 @@
 		"ironsource_app_key": "85460dcd",
 		"ironsource_banner_id": "DefaultBanner",
 		"ironsource_interstitial_id": "DefaultInterstitial",
-		"interstitial_ad_interval": 2,
+		"interstitial_ad_interval": 3,
 		"native_ad_index": 5
 	},
 	"labels": [
