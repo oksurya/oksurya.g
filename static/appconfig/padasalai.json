@@ -1,0 +1,120 @@
+{
+	"blog": {
+		"blogger_id": "4039164633152506177",
+		"api_key": "AIzaSyAIGL2F6pbmhYH18UCXECmfj3jmIzgVKmU"
+	},
+	"app": {
+		"status": "1",
+		"more_apps_url": "https://play.google.com/store/apps/developer?id=Oksurya",
+		"redirect_url": "",
+		"privacy_policy_url": "https://oksurya.in/privacy",
+		"publisher_info_url": "https://oksurya.in/about",
+		"terms_conditions_url": "https://oksurya.in/privacy",
+		"display_page_menu": "true",
+		"display_view_on_site_menu": "true",
+		"custom_label_list": "false",
+		"show_post_header": "true",
+		"show_post_list_short_description": "true",
+		"show_post_date": "true",
+		"show_related_post": "true",
+		"open_link_inside_app": "false"
+	},
+	"notification": {
+		"fcm_notification_topic": "blogger_news_app_topic",
+		"onesignal_app_id": "00000000-0000-0000-0000-000000000000"
+	},
+	"ads": {
+		"ad_status": "1",
+		"ad_type": "admob",
+		"backup_ads": "none",
+		"admob_publisher_id": "pub-3940256099942544",
+		"admob_app_id": "ca-app-pub-3940256099942544~3347511713",
+		"admob_banner_unit_id": "ca-app-pub-3940256099942544/6300978111",
+		"admob_interstitial_unit_id": "ca-app-pub-3940256099942544/1033173712",
+		"admob_native_unit_id": "ca-app-pub-3940256099942544/2247696110",
+		"admob_app_open_ad_unit_id": "ca-app-pub-3940256099942544/3419835294",
+		"ad_manager_banner_unit_id": "/6499/example/banner",
+		"ad_manager_interstitial_unit_id": "/6499/example/interstitial",
+		"ad_manager_native_unit_id": "/6499/example/native",
+		"ad_manager_app_open_ad_unit_id": "/6499/example/app-open",
+		"fan_banner_unit_id": "IMG_16_9_APP_INSTALL#1102290040176998_1102321626840506",
+		"fan_interstitial_unit_id": "IMG_16_9_APP_INSTALL#1102290040176998_1103218190084183",
+		"fan_native_unit_id": "IMG_16_9_APP_INSTALL#1102290040176998_1142394442833224",
+		"startapp_app_id": "0",
+		"unity_game_id": "4089993",
+		"unity_banner_placement_id": "banner",
+		"unity_interstitial_placement_id": "video",
+		"applovin_banner_ad_unit_id": "0",
+		"applovin_interstitial_ad_unit_id": "0",
+		"applovin_native_ad_manual_unit_id": "0",
+		"applovin_banner_zone_id": "0",
+		"applovin_interstitial_zone_id": "0",
+		"ironsource_app_key": "85460dcd",
+		"ironsource_banner_id": "DefaultBanner",
+		"ironsource_interstitial_id": "DefaultInterstitial",
+		"interstitial_ad_interval": 3,
+		"native_ad_index": 5
+	},
+	"labels": [
+		{
+			"term": "Business",
+			"image": "https://i.imgur.com/DqQrnm0.png"
+		},
+		{
+			"term": "Tourism",
+			"image": "https://i.imgur.com/r6Zd7qO.png"
+		},
+		{
+			"term": "Politics",
+			"image": "https://i.imgur.com/28DQxFt.png"
+		},
+		{
+			"term": "Food",
+			"image": "https://i.imgur.com/2ngb45h.png"
+		},
+		{
+			"term": "News",
+			"image": "https://i.imgur.com/nyrbj9W.png"
+		},
+		{
+			"term": "World",
+			"image": "https://i.imgur.com/R0bZ4h4.png"
+		},
+		{
+			"term": "Sports",
+			"image": "https://i.imgur.com/83Bt9Mb.png"
+		},
+		{
+			"term": "Football",
+			"image": "https://i.imgur.com/NqT55yX.png"
+		},
+		{
+			"term": "Technology",
+			"image": "https://i.imgur.com/f1EHhy6.png"
+		},
+		{
+			"term": "Android",
+			"image": "https://i.imgur.com/qw9drQQ.png"
+		},
+		{
+			"term": "Health",
+			"image": "https://i.imgur.com/ljK9HqE.png"
+		},
+		{
+			"term": "Finance",
+			"image": "https://i.imgur.com/hGOweXN.png"
+		},
+		{
+			"term": "Entertainment",
+			"image": "https://i.imgur.com/I7O2nLm.png"
+		},
+		{
+			"term": "Gadget",
+			"image": "https://i.imgur.com/ddCegPU.png"
+		},
+		{
+			"term": "Travel",
+			"image": "https://i.imgur.com/GHWmjZL.png"
+		}
+	]
+}
