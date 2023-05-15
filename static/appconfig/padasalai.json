@@ -21,7 +21,7 @@
 	},
 	"notification": {
 		"fcm_notification_topic": "blogger_news_app_topic",
-		"onesignal_app_id": "e8bda855-c53d-4420-9ef3-e9886c0062e3"
+		"onesignal_app_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 	},
 	"ads": {
 		"ad_status": "1",
@@ -52,8 +52,8 @@
 		"ironsource_app_key": "85460dcd",
 		"ironsource_banner_id": "DefaultBanner",
 		"ironsource_interstitial_id": "DefaultInterstitial",
-		"interstitial_ad_interval": 3,
-		"native_ad_index": 4
+		"interstitial_ad_interval": 2,
+		"native_ad_index": 5
 	},
 	"labels": [
 		{
