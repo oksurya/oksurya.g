@@ -21,18 +21,18 @@
 	},
 	"notification": {
 		"fcm_notification_topic": "blogger_news_app_topic",
-		"onesignal_app_id": "00000000-0000-0000-0000-000000000000"
+		"onesignal_app_id": "e8bda855-c53d-4420-9ef3-e9886c0062e3"
 	},
 	"ads": {
 		"ad_status": "1",
 		"ad_type": "admob",
 		"backup_ads": "none",
-		"admob_publisher_id": "pub-3940256099942544",
-		"admob_app_id": "ca-app-pub-3940256099942544~3347511713",
-		"admob_banner_unit_id": "ca-app-pub-3940256099942544/6300978111",
-		"admob_interstitial_unit_id": "ca-app-pub-3940256099942544/1033173712",
-		"admob_native_unit_id": "ca-app-pub-3940256099942544/2247696110",
-		"admob_app_open_ad_unit_id": "ca-app-pub-3940256099942544/3419835294",
+		"admob_publisher_id": "pub-8969631451621170",
+		"admob_app_id": "cca-app-pub-8969631451621170~1673058520",
+		"admob_banner_unit_id": "ca-app-pub-8969631451621170/4531156151",
+		"admob_interstitial_unit_id": "ca-app-pub-8969631451621170/9807533568",
+		"admob_native_unit_id": "ca-app-pub-8969631451621170/6391032731",
+		"admob_app_open_ad_unit_id": "ca-app-pub-8969631451621170/6064617729",
 		"ad_manager_banner_unit_id": "/6499/example/banner",
 		"ad_manager_interstitial_unit_id": "/6499/example/interstitial",
 		"ad_manager_native_unit_id": "/6499/example/native",
@@ -52,8 +52,8 @@
 		"ironsource_app_key": "85460dcd",
 		"ironsource_banner_id": "DefaultBanner",
 		"ironsource_interstitial_id": "DefaultInterstitial",
-		"interstitial_ad_interval": 3,
-		"native_ad_index": 5
+		"interstitial_ad_interval": 1,
+		"native_ad_index": 10
 	},
 	"labels": [
 		{
