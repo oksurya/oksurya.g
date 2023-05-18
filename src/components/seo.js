@@ -36,6 +36,7 @@ const Seo = ({ description, title, image, children, schemaMarkup }) => {
   return (
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+
       <meta name="description" content={metaDescription} />
       <meta property="image" content={ogImageUrl} />
       <link rel="canonical" href={ogUrl} />
@@ -58,6 +59,8 @@ const Seo = ({ description, title, image, children, schemaMarkup }) => {
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       }
       {children}
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8969631451621170"
+     crossorigin="anonymous"></script>
     </>
   )
 }
